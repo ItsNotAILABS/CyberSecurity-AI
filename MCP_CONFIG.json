@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "mesie-career-cybersecurity": {
+      "command": "python",
+      "args": [
+        "mcp-server/server.py"
+      ],
+      "env": {
+        "MESIE_CAREER_PILLAR": "cybersecurity"
+      }
+    }
+  }
+}
