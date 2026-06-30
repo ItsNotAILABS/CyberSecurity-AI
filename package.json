@@ -1,0 +1,54 @@
+{
+  "name": "nova-os-sdk",
+  "version": "1.0.0",
+  "description": "NOVA-OS — Sovereign AI operating system SDK. 23 native engines, φ-mathematics tokenizer, desktop AGI, chat terminal. Zero external AI dependencies.",
+  "type": "module",
+  "main": ".nova/build/organism/organism/sdk/index.js",
+  "types": ".nova/build/organism/organism/sdk/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./.nova/build/organism/organism/sdk/index.js",
+      "types": "./.nova/build/organism/organism/sdk/index.d.ts"
+    },
+    "./desktop": {
+      "import": "./.nova/build/organism/organism/desktop/index.js",
+      "types": "./.nova/build/organism/organism/desktop/index.d.ts"
+    },
+    "./sdk": {
+      "import": "./.nova/build/organism/organism/sdk/index.js",
+      "types": "./.nova/build/organism/organism/sdk/index.d.ts"
+    }
+  },
+  "bin": {
+    "nova-os": ".nova/build/organism/organism/sdk/NovaOSRunner.js"
+  },
+  "files": [
+    ".nova/build/organism",
+    "src/organism",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "build:organism": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "node tests/run.mjs"
+  },
+  "keywords": [
+    "ai", "sdk", "agi", "nova", "sovereign", "desktop",
+    "tokenizer", "golden-ratio", "fibonacci", "phi",
+    "native", "multi-modal", "chat", "terminal",
+    "engine", "protocol", "wire", "attestation",
+    "nova-os", "operating-system"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItsNotAILABS/NATIVE-NOVA-PROTOCOL.git"
+  },
+  "author": "Casa de Medina",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "devDependencies": {
+    "typescript": "5.4"
+  }
+}

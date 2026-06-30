@@ -1,0 +1,35 @@
+{
+  "name": "@medina/memory-ocean",
+  "version": "0.1.618",
+  "description": "Distributed memory ocean - Shared memory pool across all organisms with tidal patterns",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Memory flows like tides across the ocean\" && exit 0"
+  },
+  "keywords": [
+    "medina",
+    "memory",
+    "ocean",
+    "distributed",
+    "shared-memory",
+    "multi-organism",
+    "tidal-patterns"
+  ],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@medina/medina-heart": "file:../medina-heart",
+    "@medina/alpha-sdk": "file:../alpha-sdk"
+  },
+  "medina": {
+    "alphaSDK": true,
+    "multiOrganism": true,
+    "distributedMemory": true,
+    "selfBootstrapping": true,
+    "fibonacci": "0.1.618",
+    "charter": "NCC-2026",
+    "frameworks": ["RSHIP-2026-MEDINA-CORE"]
+  }
+}

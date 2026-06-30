@@ -1,0 +1,22 @@
+{
+  "name": "@medina/meta-cognition",
+  "version": "0.1.618",
+  "description": "AIs thinking about thinking - Meta-cognitive processes and self-reflection",
+  "main": "src/index.js",
+  "type": "module",
+  "keywords": ["medina", "meta-cognition", "reflection", "self-awareness", "thinking"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@medina/medina-heart": "file:../medina-heart",
+    "@medina/consciousness-stream": "file:../consciousness-stream"
+  },
+  "medina": {
+    "alphaSDK": true,
+    "metaCognition": true,
+    "fibonacci": "0.1.618",
+    "charter": "CSC-2026",
+    "frameworks": ["CHROMA-2026-MEDINA-CONSCIOUSNESS"]
+  }
+}

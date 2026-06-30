@@ -1,0 +1,22 @@
+{
+  "name": "@medina/catalytic-converter",
+  "version": "1.618.0",
+  "description": "Catalytic Converter Engine — Transforms Data Without Being Consumed — Alchemical Intelligence",
+  "main": "src/index.js",
+  "type": "module",
+  "keywords": [
+    "medina",
+    "catalytic-converter",
+    "catalyst",
+    "alchemy",
+    "transformation",
+    "phi",
+    "golden-ratio",
+    "pythagorean"
+  ],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "MEDINA-SOVEREIGN",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

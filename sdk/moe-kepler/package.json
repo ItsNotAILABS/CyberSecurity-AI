@@ -1,0 +1,23 @@
+{
+  "name": "@medina/moe-kepler",
+  "version": "1.0.0",
+  "description": "KEPLER — Harmonic World Model via Orbital Trajectory Prediction. Models reality as nested harmonic orbits with φ-elliptical dynamics and musica universalis.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing MoE KEPLER...\" && exit 0"
+  },
+  "keywords": ["medina", "moe", "mixture-of-experts", "kepler", "world-model", "harmonic", "orbital", "phi"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "medina": {
+    "protocolSDK": true,
+    "selfBootstrapping": true,
+    "charter": "GPC-2026",
+    "tier": "MoE-Kepler",
+    "agentId": "MOE-017",
+    "engines": ["Harmonic/OrbitalEllipse/φ-MusicaUniversalis/TrajectoryPrediction"],
+    "frameworks": ["NEXUS-2026-MEDINA-NEURAL", "MOE-2026-WORLD-MODEL"]
+  }
+}

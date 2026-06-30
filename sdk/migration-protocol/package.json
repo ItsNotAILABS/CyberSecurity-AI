@@ -1,0 +1,31 @@
+{
+  "name": "@medina/migration-protocol",
+  "version": "0.1.618",
+  "description": "Seamless organism migration across platforms with <100ms downtime",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "keywords": [
+    "medina",
+    "migration",
+    "cross-platform",
+    "state-transfer",
+    "phi",
+    "golden-ratio"
+  ],
+  "author": "Casa de Medina",
+  "license": "PROPRIETARY",
+  "dependencies": {
+    "@medina/medina-heart": "^1.1.618"
+  },
+  "medina": {
+    "charter": "MPC-2026",
+    "frameworks": ["RSHIP-2026-MEDINA-CORE"],
+    "fibonacci": {
+      "stage": 0,
+      "version": "0.1.618"
+    }
+  }
+}

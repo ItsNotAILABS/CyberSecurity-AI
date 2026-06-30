@@ -1,0 +1,43 @@
+id: "GEOMETRY_LOCK_001"
+subjects:
+  - id: "atlas://sovereign/geometry-lock"
+    rules:
+      - name: "BLOCK_UNKEYED_CALLS"
+        when:
+          type: "ANY"
+        then:
+          - action: "REQUIRE"
+            target: "GEOMETRIC_KEY_TOKEN"
+            arg: "proto-226"
+          - action: "REQUIRE"
+            target: "RESONANCE_CHECK"
+            arg: "R_gt_phi_inverse"
+      - name: "DENY_EXPIRED_WINDOWS"
+        when:
+          field: "window_delta"
+          value: "expired"
+        then:
+          - action: "FORBID"
+            target: "CALL_FORWARD"
+          - action: "REQUIRE"
+            target: "SENTINEL_ALERT"
+            arg: "atlas://sovereign/geometry-lock"
+      - name: "ALLOW_RESONANT_CALLER"
+        when:
+          field: "resonance"
+          value: "above_threshold"
+        then:
+          - action: "ALLOW"
+            target: "CALL_FORWARD"
+          - action: "ALLOW"
+            target: "EXCHANGE_CONTRACT_ACTIVATE"
+            arg: "GEOMETRY_LOCK_PIPELINE_001"
+      - name: "REVOCATION_IMMUTABLE"
+        when:
+          field: "op"
+          value: "revoke"
+        then:
+          - action: "ALLOW"
+            target: "REVOKE_ENVELOPE"
+          - action: "FORBID"
+            target: "UNREVOKE_WITHOUT_CONSENSUS"

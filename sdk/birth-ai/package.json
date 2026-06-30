@@ -1,0 +1,32 @@
+{
+  "name": "@medina/birth-ai",
+  "version": "1.0.0",
+  "description": "Product SDK for creating AI companions, assistants, characters, and agents",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing AI birth...\" && exit 0"
+  },
+  "keywords": [
+    "medina",
+    "ai",
+    "companion",
+    "assistant",
+    "character",
+    "agent",
+    "birth",
+    "living-ai"
+  ],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@medina/medina-heart": "file:../medina-heart"
+  },
+  "medina": {
+    "productSDK": true,
+    "selfBootstrapping": true,
+    "charter": "NCC-2026",
+    "frameworks": ["RSHIP-2026-MEDINA-CORE"]
+  }
+}

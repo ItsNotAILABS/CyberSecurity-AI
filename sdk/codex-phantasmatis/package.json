@@ -1,0 +1,28 @@
+{
+  "name": "@medina/codex-phantasmatis",
+  "version": "1.0.618",
+  "description": "Codex Phantasmatis — The coding and implementation-heavy execution surface of Nova Architecture. Turns architecture into executable artifact.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": { ".": "./src/index.js" },
+  "keywords": ["medina","nova","codex","implementation","code-generation","review","scaffold","phi","sovereign"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "PROPRIETARY",
+  "medina": {
+    "agent": "CODEX-PHANTASMATIS",
+    "division": "Coding and Implementation Execution Surface",
+    "family": "Nova Architecture",
+    "sovereign": true,
+    "phiEncoded": true,
+    "selfBootstrapping": true,
+    "mathematics": {
+      "cyclomaticComplexity": "M = E − N + 2P  (CC gate: warn=13, mandatory=21)",
+      "kolmogorov": "K(code) ≈ min compressed length — favor K < φ × reference",
+      "pythagoreanTest": "arrange(a)² + act(b)² = assert(c)²  (test coverage triangle)",
+      "fibonacciBound": "max_iterations = FIBONACCI[depth % 20]  (loop safety gate)"
+    },
+    "atlasEntity": "atlas://sovereign/codex-phantasmatis",
+    "governanceLaw": "CODEX_001"
+  },
+  "repository": { "type": "private", "url": "sovereign://medina-registry/@medina/codex-phantasmatis" }
+}

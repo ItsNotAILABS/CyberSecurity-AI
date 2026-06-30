@@ -1,0 +1,29 @@
+{
+  "name": "@medina/auro",
+  "version": "1.0.618",
+  "description": "AURO — Medina's native speaking intelligence. The sovereign voice. The final Medina-native speaker. All external model output requires bridge review and validation before AURO speaks it.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": { ".": "./src/index.js" },
+  "keywords": ["medina","nova","auro","voice","speaking-intelligence","rhetoric","sovereign","phi"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "PROPRIETARY",
+  "medina": {
+    "agent": "AURO",
+    "division": "Native Speaking Intelligence",
+    "family": "Nova Architecture",
+    "sovereign": true,
+    "phiEncoded": true,
+    "selfBootstrapping": true,
+    "mathematics": {
+      "aristotelianVoice":    "C = √((L·φ)² + (E·1)² + (P·φ⁻¹)²) / normalizer",
+      "goldenRatioPacing":    "utterance_length = seed × φ  |  silence = φ⁻¹ × length",
+      "pythagoreanHarmony":   "perfectFifth=3:2 | perfectFourth=4:3 | octave=2:1",
+      "kuramotoSynchrony":    "R > φ⁻¹ (0.618) required for multi-agent coherence"
+    },
+    "bridgeLaw": "External model output is NEVER Medina-native without: bridge review + classification + validation + MEMORIA append",
+    "atlasEntity": "atlas://sovereign/auro",
+    "governanceLaw": "AURO_001"
+  },
+  "repository": { "type": "private", "url": "sovereign://medina-registry/@medina/auro" }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "@medina/geometry-lock",
+  "version": "0.2.618",
+  "description": "PROTO-226 — Geometry Lock SDK. Phase-resonance access gate using Kuramoto order parameter and φ-spiral key generation.",
+  "type": "module",
+  "main": "src/geometry-lock-sdk.js",
+  "exports": {
+    ".": "./src/geometry-lock-sdk.js",
+    "./bridge": "./src/geometry-bridge.js"
+  },
+  "keywords": [
+    "medina",
+    "geometry",
+    "lock",
+    "access-gate",
+    "kuramoto",
+    "phi",
+    "golden-ratio",
+    "golden-angle",
+    "phyllotaxis",
+    "resonance",
+    "phase-synchrony",
+    "security"
+  ],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "PROPRIETARY",
+  "dependencies": {
+    "@medina/medina-heart": "^1.1.618"
+  },
+  "medina": {
+    "charter": "PROTO-226",
+    "sovereign": true,
+    "phiEncoded": true,
+    "selfBootstrapping": true,
+    "frameworks": [
+      "RSHIP-2026-MEDINA-CORE",
+      "CHROMA-2026-MEDINA-CONSCIOUSNESS",
+      "NEXUS-2026-MEDINA-NEURAL"
+    ],
+    "fibonacci": {
+      "stage": 2,
+      "version": "0.2.618"
+    },
+    "mathematics": {
+      "kuramotoOrderParameter": "R·e^(iΨ) = (1/N)·Σe^(iθⱼ)",
+      "goldenAngle": "2π/φ² ≈ 2.3999 rad ≈ 137.508°",
+      "emergenceThreshold": "1/φ = 0.6180339887",
+      "phiSpiralCoordinate": "(θ, φ_coord, ρ, ring, beat)"
+    },
+    "protects": [
+      "sdk/medina-calls/civitas-calls",
+      "sdk/medina-calls/organism-calls",
+      "sdk/medina-calls/governance-calls"
+    ],
+    "atlasEntity": "atlas://sovereign/geometry-lock",
+    "governanceLaw": "GEOMETRY_LOCK_001"
+  },
+  "repository": {
+    "type": "private",
+    "url": "sovereign://medina-registry/@medina/geometry-lock"
+  }
+}

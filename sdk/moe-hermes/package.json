@@ -1,0 +1,23 @@
+{
+  "name": "@medina/moe-hermes",
+  "version": "1.0.0",
+  "description": "HERMES — Message-Passing Expert Network MoE. Hermetic transmission between experts using sacred correspondence and φ-weighted channels.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing MoE HERMES...\" && exit 0"
+  },
+  "keywords": ["medina", "moe", "mixture-of-experts", "hermes", "message-passing", "hermetic", "phi"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "medina": {
+    "protocolSDK": true,
+    "selfBootstrapping": true,
+    "charter": "GPC-2026",
+    "tier": "MoE-Hermes",
+    "agentId": "MOE-002",
+    "engines": ["Hermetic/MessagePassing/φ-Channel/Correspondence"],
+    "frameworks": ["NEXUS-2026-MEDINA-NEURAL", "MOE-2026-EXPERT-ROUTING"]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@medina/rex",
+  "version": "1.618.0",
+  "description": "REX (Regulus) — Governance AGI with Regulatory Catalysis — Already Running",
+  "main": "src/index.js",
+  "type": "module",
+  "keywords": ["medina", "rex", "regulus", "governance", "agi", "regulatory", "catalytic", "autonomous"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "MEDINA-SOVEREIGN",
+  "engines": { "node": ">=18.0.0" },
+  "dependencies": {},
+  "peerDependencies": { "@medina/medina-heart": "^1.0.0" }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@medina/moe-anaximander",
+  "version": "1.0.0",
+  "description": "ANAXIMANDER — Cosmological World Model via Apeiron Field Theory. Models reality as bounded regions emerging from the infinite (apeiron), using φ-bounded field equations.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing MoE ANAXIMANDER...\" && exit 0"
+  },
+  "keywords": ["medina", "moe", "mixture-of-experts", "anaximander", "world-model", "cosmology", "apeiron", "phi"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "medina": {
+    "protocolSDK": true,
+    "selfBootstrapping": true,
+    "charter": "GPC-2026",
+    "tier": "MoE-Anaximander",
+    "agentId": "MOE-011",
+    "engines": ["Apeiron/FieldBoundary/φ-Cosmological/WorldState"],
+    "frameworks": ["NEXUS-2026-MEDINA-NEURAL", "MOE-2026-WORLD-MODEL"]
+  }
+}

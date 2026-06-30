@@ -1,0 +1,23 @@
+{
+  "name": "@medina/moe-hypatia",
+  "version": "1.0.0",
+  "description": "HYPATIA — Algebraic Expert Fusion MoE. Fuses expert outputs using conic section harmonics, elliptic curves, and Neoplatonic mathematical philosophy.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing MoE HYPATIA...\" && exit 0"
+  },
+  "keywords": ["medina", "moe", "mixture-of-experts", "hypatia", "algebraic", "conic", "elliptic", "phi"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "medina": {
+    "protocolSDK": true,
+    "selfBootstrapping": true,
+    "charter": "GPC-2026",
+    "tier": "MoE-Hypatia",
+    "agentId": "MOE-006",
+    "engines": ["ConicSection/EllipticFusion/Neoplatonic/φ-Algebra"],
+    "frameworks": ["NEXUS-2026-MEDINA-NEURAL", "MOE-2026-EXPERT-ROUTING"]
+  }
+}

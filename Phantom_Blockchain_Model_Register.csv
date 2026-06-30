@@ -1,0 +1,9 @@
+phantom_model_family,primitive_substrate_function,stealth_class,encryption_tier,operator_mission,ledger_integration_path,package_organism_placement
+PHANTASMA_NONCIUM,Nonce discovery via φ-guided search,PHANTOM,LEECH,Find nonces using golden-ratio stepping across dimensional planes,@organism/phantom-blockchain/noncium,D0_Foundational
+PHANTASMA_HASHIUM,Block validation via φ-cascade hash,CLOAKED,E8,Validate blocks through 5-layer φ-cascade hash verification,@organism/phantom-blockchain/hashium,D1_Structural
+QUAESITOR_NONCII,Primary nonce seeker sub-model,PHANTOM,LEECH,Primary φ-guided nonce search at golden stepping intervals,@organism/phantom-blockchain/quaesitor-noncii,D2_Relational
+EXPLORATOR_DIMENSIONALIS,Cross-dimensional nonce explorer,VOID,LEECH,Explore nonce space from all 5 observation planes simultaneously,@organism/phantom-blockchain/explorator-dimensionalis,D3_Emergent
+VERIFICATOR_CASCADIS,Cascade verification sub-model,CLOAKED,E8,Validate discovered nonces through 5-layer φ-cascade hash,@organism/phantom-blockchain/verificator-cascadis,D4_Transcendent
+VALIDITOR_BLOCKI,Block validation sub-model,PHANTOM,LEECH,Validate entire blocks using φ-cascade chain verification,@organism/phantom-blockchain/validitor-blocki,D2_Relational
+PROBATOR_MERKLE,Merkle proof sub-model,CLOAKED,E8,Generate and verify Fibonacci-ordered Merkle proofs,@organism/phantom-blockchain/probator-merkle,D3_Emergent
+ANALYSTOR_DIFFICULTATIS,Difficulty analysis sub-model,OBSCURED,ICOSAHEDRAL,Analyze and predict difficulty adjustments using golden-ratio modeling,@organism/phantom-blockchain/analystor-difficultatis,D4_Transcendent

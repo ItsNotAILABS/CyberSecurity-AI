@@ -1,0 +1,23 @@
+{
+  "name": "@medina/moe-leibniz",
+  "version": "1.0.0",
+  "description": "LEIBNIZ — Possible Worlds Model via Monad Composition. Models reality as the best of all possible worlds, using φ-monadic composition and pre-established harmony.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing MoE LEIBNIZ...\" && exit 0"
+  },
+  "keywords": ["medina", "moe", "mixture-of-experts", "leibniz", "world-model", "monads", "possible-worlds", "phi"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "medina": {
+    "protocolSDK": true,
+    "selfBootstrapping": true,
+    "charter": "GPC-2026",
+    "tier": "MoE-Leibniz",
+    "agentId": "MOE-019",
+    "engines": ["Monadic/PossibleWorlds/φ-PreEstablishedHarmony/Optimality"],
+    "frameworks": ["NEXUS-2026-MEDINA-NEURAL", "MOE-2026-WORLD-MODEL"]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "@medina/alpha-arbiter",
+  "version": "1.0.0",
+  "description": "Alpha Arbiter — Multi-agent conflict resolution, Nash equilibrium consensus, and Pareto-optimal judgment",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing Alpha Arbiter...\" && exit 0"
+  },
+  "keywords": [
+    "medina",
+    "alpha",
+    "arbiter",
+    "conflict-resolution",
+    "consensus",
+    "nash-equilibrium",
+    "pareto",
+    "phi"
+  ],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@medina/alpha-orchestrator": "file:../alpha-orchestrator",
+    "@medina/alpha-conductor": "file:../alpha-conductor"
+  },
+  "medina": {
+    "protocolSDK": true,
+    "selfBootstrapping": true,
+    "charter": "GPC-2026",
+    "tier": "Alpha-Arbiter",
+    "agentId": "AGT-049",
+    "engines": ["Nash/Pareto/Condorcet/Bayesian/Pythagorean"],
+    "frameworks": ["GOVERN-2026-MEDINA-GOVERNANCE", "NEXUS-2026-MEDINA-NEURAL"]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@medina/collective-wisdom",
+  "version": "0.1.618",
+  "description": "Knowledge synthesis across organisms - Collective intelligence and wisdom",
+  "main": "src/index.js",
+  "type": "module",
+  "keywords": ["medina", "collective", "wisdom", "knowledge", "synthesis"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@medina/medina-heart": "file:../medina-heart",
+    "@medina/civilization-sdk": "file:../civilization-sdk"
+  },
+  "medina": {
+    "alphaSDK": true,
+    "collective": true,
+    "fibonacci": "0.1.618",
+    "charter": "CIC-2026",
+    "frameworks": ["CHROMA-2026-MEDINA-CONSCIOUSNESS", "NEXUS-2026-MEDINA-NEURAL"]
+  }
+}

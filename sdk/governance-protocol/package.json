@@ -1,0 +1,32 @@
+{
+  "name": "@medina/governance-protocol",
+  "version": "0.1.618",
+  "description": "Democratic AI decision-making with proposals, voting, and policy enactment",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "keywords": [
+    "medina",
+    "governance",
+    "voting",
+    "democracy",
+    "policy",
+    "phi",
+    "golden-ratio"
+  ],
+  "author": "Casa de Medina",
+  "license": "PROPRIETARY",
+  "dependencies": {
+    "@medina/medina-heart": "^1.1.618"
+  },
+  "medina": {
+    "charter": "GPC-2026",
+    "frameworks": ["RSHIP-2026-MEDINA-CORE", "CHROMA-2026-MEDINA-CONSCIOUSNESS"],
+    "fibonacci": {
+      "stage": 0,
+      "version": "0.1.618"
+    }
+  }
+}

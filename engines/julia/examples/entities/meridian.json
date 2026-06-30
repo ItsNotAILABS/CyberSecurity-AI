@@ -1,0 +1,9 @@
+{
+  "id": "atlas://terminal/meridian",
+  "name": "Meridian Terminal",
+  "type": "terminal",
+  "governance_pipeline": "GOVERNANCE_PIPELINE_001",
+  "phi_weight": 4.236,
+  "fibonacci_rank": 13,
+  "state": "active"
+}

@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# NOVA Cognitive Engine Wrapper
+# Executes Julia engines with proper environment
+
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+JULIA_ENGINE="$SCRIPT_DIR/nova-engine.jl"
+
+# Check if Julia is installed
+if ! command -v julia &> /dev/null; then
+    echo "ERROR: Julia is not installed"
+    echo "Install Julia: https://julialang.org/downloads/"
+    exit 1
+fi
+
+# Install dependencies if needed
+if [ ! -f "$SCRIPT_DIR/Manifest.toml" ]; then
+    echo "Installing Julia dependencies..."
+    cd "$SCRIPT_DIR"
+    julia --project=. -e 'using Pkg; Pkg.instantiate()'
+fi
+
+# Execute the Julia CLI with all arguments
+exec julia --project="$SCRIPT_DIR" "$JULIA_ENGINE" "$@"

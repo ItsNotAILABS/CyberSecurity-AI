@@ -1,0 +1,23 @@
+{
+  "name": "@medina/moe-empedocles",
+  "version": "1.0.0",
+  "description": "EMPEDOCLES — Elemental Interaction World Model via Four Forces. Models reality through four root elements driven by Love (attraction) and Strife (repulsion), φ-weighted force dynamics.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing MoE EMPEDOCLES...\" && exit 0"
+  },
+  "keywords": ["medina", "moe", "mixture-of-experts", "empedocles", "world-model", "elemental", "forces", "phi"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "medina": {
+    "protocolSDK": true,
+    "selfBootstrapping": true,
+    "charter": "GPC-2026",
+    "tier": "MoE-Empedocles",
+    "agentId": "MOE-014",
+    "engines": ["Elemental/LoveStrife/φ-ForceBalance/CosmicCycle"],
+    "frameworks": ["NEXUS-2026-MEDINA-NEURAL", "MOE-2026-WORLD-MODEL"]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@nova-protocol/nova-wire",
+  "version": "1.0.0",
+  "description": "Fibonacci-attested wire protocol for AI. Mathematical proof of origin on every message.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": ["nova-protocol", "wire-protocol", "fibonacci-attestation", "ai-protocol"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ItsNotAILABS/nova-wire"
+  },
+  "dependencies": {
+    "@nova-protocol/phi-math": "^1.0.0",
+    "@nova-protocol/nova-tokenizer": "^1.0.0",
+    "@nova-protocol/nova-engine-registry": "^1.0.0"
+  }
+}

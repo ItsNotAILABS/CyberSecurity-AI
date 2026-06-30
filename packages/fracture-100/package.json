@@ -1,0 +1,16 @@
+{
+  "name": "@nova-protocol/fracture-100",
+  "version": "1.0.0",
+  "description": "100 technology domain intelligence classifications. The tech knowledge graph with φ-weights, Fibonacci IDs, and NOVA sovereign alternatives.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": ["fracture-100", "tech-classification", "nova-protocol", "phi-weights", "knowledge-graph"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ItsNotAILABS/fracture-100"
+  }
+}

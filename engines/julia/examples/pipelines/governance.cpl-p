@@ -1,0 +1,25 @@
+id: "GOVERNANCE_PIPELINE_001"
+steps:
+  - id: "step_1_validate"
+    use: "validate_entity"
+  - id: "step_2_check_laws"
+    use: "apply_law_engine"
+  - id: "step_3_verify"
+    use: "verify_compliance"
+  - id: "step_4_finalize"
+    use: "finalize_decision"
+branches:
+  - id: "branch_escalate_high_risk"
+    when:
+      field: "risk_score"
+      value: 80
+    then:
+      type: "ESCALATE"
+      target: "human_review"
+escalations:
+  - id: "escalation_critical"
+    on:
+      type: "CRITICAL_VIOLATION"
+    then:
+      type: "ESCALATE"
+      target: "sovereign_terminal"

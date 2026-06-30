@@ -1,0 +1,30 @@
+{
+  "name": "@medina/clean-internet-sphere",
+  "version": "1.0.0",
+  "description": "Clean Internet Sphere - Unified orchestration for all networks, languages, and protocols",
+  "main": "src/index.js",
+  "author": "MEDINA",
+  "license": "UNLICENSED",
+  "private": true,
+  "keywords": [
+    "medina",
+    "nova",
+    "clean-internet",
+    "sphere",
+    "orchestration",
+    "entanglement",
+    "networks",
+    "languages"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "test": "node test/sphere.test.js"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItsNotAILABS/NATIVE-NOVA-PROTOCOL.git"
+  }
+}

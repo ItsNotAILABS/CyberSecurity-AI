@@ -1,0 +1,30 @@
+{
+  "name": "@medina/alpha-sdk",
+  "version": "1.0.0",
+  "description": "Intelligence protocol SDK for governed AI operations",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing Alpha SDK...\" && exit 0"
+  },
+  "keywords": [
+    "medina",
+    "alpha",
+    "protocol",
+    "intelligence",
+    "governance",
+    "decision-making"
+  ],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@medina/medina-heart": "file:../medina-heart"
+  },
+  "medina": {
+    "protocolSDK": true,
+    "selfBootstrapping": true,
+    "charter": "GPC-2026",
+    "frameworks": ["GOVERN-2026-MEDINA-GOVERNANCE", "NEXUS-2026-MEDINA-NEURAL"]
+  }
+}

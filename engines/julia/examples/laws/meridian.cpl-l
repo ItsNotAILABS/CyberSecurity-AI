@@ -1,0 +1,21 @@
+id: "MERIDIAN_SOVEREIGNTY_001"
+subjects:
+  - id: "atlas://terminal/meridian"
+    rules:
+      - name: "IMMUTABLE"
+        when:
+          type: "ANY"
+        then:
+          - action: "FORBID"
+            target: "UPGRADE_DIRECT"
+          - action: "ALLOW"
+            target: "UPGRADE_VIA"
+            arg: "atlas://terminal/sovereign"
+      - name: "GOVERNANCE_CONTROL"
+        when:
+          field: "op"
+          value: "governance_check"
+        then:
+          - action: "REQUIRE"
+            target: "CONSENSUS"
+            arg: "phi_weighted"

@@ -1,0 +1,16 @@
+{
+  "name": "@nova-protocol/nova-engine-registry",
+  "version": "1.0.0",
+  "description": "23 sovereign AI engine definitions. The complete NOVA fleet — JSON + TypeScript.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": ["nova-protocol", "engine-registry", "ai-engines", "multi-model", "phi-routing"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ItsNotAILABS/nova-engine-registry"
+  }
+}

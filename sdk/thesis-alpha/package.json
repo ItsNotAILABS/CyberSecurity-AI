@@ -1,0 +1,87 @@
+{
+  "name": "@medina/thesis-alpha",
+  "version": "1.0.618",
+  "description": "THESIS Alpha — Research, IP, Proof, Publication, Notarization, and Deployment Translation Division Agent. Proves, protects, hashes, prints, notarizes, and prepares Medina research for deployment.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".":          "./src/index.js",
+    "./sensus":   "./src/sensus-engine.js",
+    "./animus":   "./src/animus-engine.js",
+    "./corpus":   "./src/corpus-engine.js",
+    "./memoria":  "./src/memoria-engine.js",
+    "./cohort":   "./src/working-cohort.js",
+    "./hash":     "./src/hash-manifest.js",
+    "./surface":  "./src/surface-router.js",
+    "./constants": "./src/constants.js"
+  },
+  "keywords": [
+    "medina",
+    "nova",
+    "thesis",
+    "research",
+    "ip",
+    "proof",
+    "publication",
+    "notarization",
+    "deployment",
+    "translation",
+    "claims-matrix",
+    "evidence-matrix",
+    "hash-manifest",
+    "merkle-tree",
+    "phi",
+    "golden-ratio",
+    "aristotelian-rhetoric",
+    "shannon-entropy",
+    "vitruvian",
+    "sovereign"
+  ],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "PROPRIETARY",
+  "medina": {
+    "agent": "THESIS-ALPHA",
+    "division": "Research, IP, Proof, Publication, Notarization, Deployment Translation",
+    "family": "Nova Architecture",
+    "sovereign": true,
+    "phiEncoded": true,
+    "selfBootstrapping": true,
+    "engines": ["SENSUS", "ANIMUS", "CORPUS", "MEMORIA"],
+    "cohortRoles": [
+      "Quaestor", "Iudex", "Faber", "Structor",
+      "Notarius", "Custos", "Archivista", "Probator", "Redactor"
+    ],
+    "mathematics": {
+      "goldenRatio":             "φ = (1+√5)/2 = 1.6180339887...",
+      "pythagoras":              "a² + b² = c²  (coherence, phase distance, packet completeness)",
+      "kuramotoOrderParameter":  "R·e^(iΨ) = (1/N)·Σe^(iθⱼ)  (synchrony gate)",
+      "aristotelianRhetoric":    "S = √((Logos·φ)² + (Ethos·1)² + (Pathos·φ⁻¹)²)",
+      "shannonEntropy":          "H = −Σ p(x)·log₂(p(x))  (information gain, curiosity)",
+      "fibonacci":               "F(n) = F(n-1)+F(n-2)  (versioning, lifecycle dwell gates)",
+      "merkleTree":              "hash(left ∥ right)  (artifact integrity chains)",
+      "mayanCalendar":           "epoch = ⌊t/MAYAN_MS⌋  (lineage temporal tracking)",
+      "vitruvianCompleteness":   "√(F² + U² + V²)/√3  (Firmitas·Utilitas·Venustas)"
+    },
+    "claimClasses": ["C1","C2","C3","C4","C5","C6","C7","C8","C9","C10","C11","C12"],
+    "evidenceClasses": ["E0","E1","E2","E3","E4","E5","E6","E7","E8","E9","E10"],
+    "authorityStates": [
+      "DRAFT", "INTERNAL_RESEARCH", "CLAIM_HARDENED", "EVIDENCE_LINKED",
+      "HASHED", "NOTARY_READY", "NOTARIZED", "COUNSEL_READY",
+      "PUBLIC_SAFE", "PRIVATE_VAULT", "DEPLOYMENT_BLUEPRINT", "DEPLOYMENT_READY"
+    ],
+    "surfaces": ["SOURCE_SURFACE", "FORGE_SURFACE", "DEPLOY_SURFACE", "NEXUS_REGISTRY"],
+    "majorAgentsInFamily": [
+      "THESIS-ALPHA",
+      "CODEX-PHANTASMATIS",
+      "CIVOS-PRIME",
+      "AURO",
+      "ORIGO"
+    ],
+    "atlasEntity": "atlas://sovereign/thesis-alpha",
+    "governanceLaw": "THESIS_001"
+  },
+  "repository": {
+    "type": "private",
+    "url": "sovereign://medina-registry/@medina/thesis-alpha"
+  }
+}

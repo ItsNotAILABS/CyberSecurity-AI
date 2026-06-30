@@ -1,0 +1,11 @@
+node_modules/
+src/frontend/node_modules/
+src/frontend/dist/
+
+# NOVA sovereign build cache
+.nova/build/
+.nova/moc/
+
+# Prototype — never commit deployment state or network configs
+canister_ids.json
+.dfx/network/ic/

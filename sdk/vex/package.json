@@ -1,0 +1,13 @@
+{
+  "name": "@medina/vex",
+  "version": "1.618.0",
+  "description": "VEX (Vexillum) — Signal Routing AI with Catalytic Signal Amplification — Already Running",
+  "main": "src/index.js",
+  "type": "module",
+  "keywords": ["medina", "vex", "vexillum", "signal-routing", "catalytic", "autonomous", "internal-ai"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "MEDINA-SOVEREIGN",
+  "engines": { "node": ">=18.0.0" },
+  "dependencies": {},
+  "peerDependencies": { "@medina/medina-heart": "^1.0.0" }
+}

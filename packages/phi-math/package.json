@@ -1,0 +1,17 @@
+{
+  "name": "@nova-protocol/phi-math",
+  "version": "1.0.0",
+  "description": "Golden-ratio mathematics library. PHI, Fibonacci hashing, Kuramoto oscillators.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --experimental-vm-modules dist/index.js"
+  },
+  "keywords": ["phi", "golden-ratio", "fibonacci", "mathematics", "nova-protocol"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ItsNotAILABS/phi-math"
+  }
+}

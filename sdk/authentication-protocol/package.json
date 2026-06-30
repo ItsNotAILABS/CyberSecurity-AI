@@ -1,0 +1,32 @@
+{
+  "name": "@medina/authentication-protocol",
+  "version": "0.1.618",
+  "description": "Secure organism identity, challenge-response authentication, and access control",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "keywords": [
+    "medina",
+    "authentication",
+    "identity",
+    "security",
+    "access-control",
+    "phi",
+    "golden-ratio"
+  ],
+  "author": "Casa de Medina",
+  "license": "PROPRIETARY",
+  "dependencies": {
+    "@medina/medina-heart": "^1.1.618"
+  },
+  "medina": {
+    "charter": "APC-2026",
+    "frameworks": ["RSHIP-2026-MEDINA-CORE", "CHROMA-2026-MEDINA-CONSCIOUSNESS"],
+    "fibonacci": {
+      "stage": 0,
+      "version": "0.1.618"
+    }
+  }
+}

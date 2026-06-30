@@ -1,0 +1,16 @@
+{
+  "name": "@nova-protocol/sovereign-elements",
+  "version": "1.0.0",
+  "description": "Mathematical element intelligences — Gold (Au-79), Silver (Ag-47), and Crimson (Cr*-161) as AI canister substrates.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": ["nova-protocol", "sovereign-elements", "gold-canister", "silver-canister", "crimson-canister", "element-intelligence"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ItsNotAILABS/sovereign-elements"
+  }
+}

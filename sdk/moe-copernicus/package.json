@@ -1,0 +1,23 @@
+{
+  "name": "@medina/moe-copernicus",
+  "version": "1.0.0",
+  "description": "COPERNICUS — Reference Frame World Model via Coordinate Transformation. Models reality through multiple reference frames with φ-rotation invariance.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing MoE COPERNICUS...\" && exit 0"
+  },
+  "keywords": ["medina", "moe", "mixture-of-experts", "copernicus", "world-model", "reference-frame", "coordinate", "phi"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "medina": {
+    "protocolSDK": true,
+    "selfBootstrapping": true,
+    "charter": "GPC-2026",
+    "tier": "MoE-Copernicus",
+    "agentId": "MOE-016",
+    "engines": ["Heliocentric/ReferenceFrame/φ-Rotation/CoordinateTransform"],
+    "frameworks": ["NEXUS-2026-MEDINA-NEURAL", "MOE-2026-WORLD-MODEL"]
+  }
+}

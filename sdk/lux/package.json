@@ -1,0 +1,13 @@
+{
+  "name": "@medina/lux",
+  "version": "1.618.0",
+  "description": "LUX (Luminare) — Illumination AI with Photonic Catalytic Conversion — Already Running",
+  "main": "src/index.js",
+  "type": "module",
+  "keywords": ["medina", "lux", "luminare", "illumination", "photonic", "catalytic", "autonomous"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "MEDINA-SOVEREIGN",
+  "engines": { "node": ">=18.0.0" },
+  "dependencies": {},
+  "peerDependencies": { "@medina/medina-heart": "^1.0.0" }
+}

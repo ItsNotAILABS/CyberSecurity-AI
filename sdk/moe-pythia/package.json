@@ -1,0 +1,23 @@
+{
+  "name": "@medina/moe-pythia",
+  "version": "1.0.0",
+  "description": "PYTHIA — Prophetic Expert Routing MoE. Pythagorean gating network that routes inputs to specialized experts via sacred geometry distance metrics.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing MoE PYTHIA...\" && exit 0"
+  },
+  "keywords": ["medina", "moe", "mixture-of-experts", "pythia", "pythagorean", "gating", "phi"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "medina": {
+    "protocolSDK": true,
+    "selfBootstrapping": true,
+    "charter": "GPC-2026",
+    "tier": "MoE-Pythia",
+    "agentId": "MOE-001",
+    "engines": ["Pythagorean/TopK/SoftmaxGating/φ-Distance"],
+    "frameworks": ["NEXUS-2026-MEDINA-NEURAL", "MOE-2026-EXPERT-ROUTING"]
+  }
+}

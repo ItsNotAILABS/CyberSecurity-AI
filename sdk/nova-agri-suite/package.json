@@ -1,0 +1,66 @@
+{
+  "name": "@nova/agri-suite",
+  "version": "1.618.0",
+  "description": "NOVA Agricultural Intelligence Suite - Unified SDK for Precision Agriculture",
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "module": "node20/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./node20/index.mjs",
+      "require": "./index.js"
+    }
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "agriculture",
+    "precision-farming",
+    "golden-ratio",
+    "fibonacci",
+    "ai",
+    "intelligence",
+    "crop-science",
+    "soil-analysis",
+    "irrigation",
+    "genetics",
+    "pest-management"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/novaprotocol/nova-agri-suite"
+  },
+  "files": [
+    "index.js",
+    "node20/",
+    "python/",
+    "julia/",
+    "matlab/",
+    "java/"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "lint": "eslint .",
+    "demo": "node node20/index.mjs"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0"
+  },
+  "nova": {
+    "portfolio": "NAIS-2026-MEDINA",
+    "classification": "Sovereign Agricultural Technology",
+    "engines": [
+      "AGRONOMIST",
+      "TERRAGENESIS",
+      "AQUAFLOW",
+      "CULTIVAR",
+      "PHENOLOGIX",
+      "BIOSENTRY"
+    ],
+    "algorithms": 12,
+    "phi": 1.6180339887498949
+  }
+}

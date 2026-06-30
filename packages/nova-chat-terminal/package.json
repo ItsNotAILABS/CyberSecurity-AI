@@ -1,0 +1,25 @@
+{
+  "name": "@nova-protocol/nova-chat-terminal",
+  "version": "1.0.0",
+  "description": "Interactive AI chat terminal with NOVA multi-engine routing. Route any prompt to any engine with one command.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "nova-chat": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": ["nova-protocol", "cli", "chat-terminal", "multi-engine", "ai-routing", "terminal"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ItsNotAILABS/nova-chat-terminal"
+  },
+  "dependencies": {
+    "@nova-protocol/phi-math": "^1.0.0",
+    "@nova-protocol/nova-tokenizer": "^1.0.0",
+    "@nova-protocol/nova-engine-registry": "^1.0.0",
+    "@nova-protocol/nova-wire": "^1.0.0"
+  }
+}

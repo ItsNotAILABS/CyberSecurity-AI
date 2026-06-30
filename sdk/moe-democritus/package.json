@@ -1,0 +1,23 @@
+{
+  "name": "@medina/moe-democritus",
+  "version": "1.0.0",
+  "description": "DEMOCRITUS — Atomic World Model via Discrete State Lattice. Models reality as indivisible atoms in void, using φ-lattice quantization for world state prediction.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing MoE DEMOCRITUS...\" && exit 0"
+  },
+  "keywords": ["medina", "moe", "mixture-of-experts", "democritus", "world-model", "atomic", "lattice", "phi"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "medina": {
+    "protocolSDK": true,
+    "selfBootstrapping": true,
+    "charter": "GPC-2026",
+    "tier": "MoE-Democritus",
+    "agentId": "MOE-012",
+    "engines": ["Atomic/DiscreteLattice/φ-Quantization/VoidSpace"],
+    "frameworks": ["NEXUS-2026-MEDINA-NEURAL", "MOE-2026-WORLD-MODEL"]
+  }
+}

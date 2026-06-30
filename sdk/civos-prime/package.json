@@ -1,0 +1,29 @@
+{
+  "name": "@medina/civos-prime",
+  "version": "1.0.618",
+  "description": "CIVOS-PRIME — High-order governing and orchestration surface. Sets law, enforces authority, routes multi-agent work, and maintains sovereign order in Nova.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": { ".": "./src/index.js" },
+  "keywords": ["medina","nova","civos","governance","orchestration","law","quorum","phi","sovereign"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "PROPRIETARY",
+  "medina": {
+    "agent": "CIVOS-PRIME",
+    "division": "High-Order Governing and Orchestration Surface",
+    "family": "Nova Architecture",
+    "sovereign": true,
+    "phiEncoded": true,
+    "selfBootstrapping": true,
+    "mathematics": {
+      "condorcetVoting":      "Majority preference over all pairs → winner",
+      "bordaCount":           "Fallback scoring when no Condorcet winner",
+      "phiQuorum":            "Q_required = φ⁻¹ × total_agents ≈ 61.8%",
+      "romanLawmaking":       "PROPOSITIO → DELIBERATIO → PROMULGATIO → LEX",
+      "pythagoreanAuthority": "d(A,B) = √(Σ transition_depth_diff²)"
+    },
+    "atlasEntity": "atlas://sovereign/civos-prime",
+    "governanceLaw": "CIVOS_001"
+  },
+  "repository": { "type": "private", "url": "sovereign://medina-registry/@medina/civos-prime" }
+}

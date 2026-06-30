@@ -1,0 +1,35 @@
+{
+  "name": "@medina/medina-registry",
+  "version": "1.0.0",
+  "description": "Sovereign Private Registry — Your own npm/git for MEDINA SDKs",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Sovereign registries validate themselves.\" && exit 0"
+  },
+  "keywords": [
+    "medina",
+    "registry",
+    "sovereign",
+    "private",
+    "npm",
+    "git",
+    "package-management",
+    "self-organizing"
+  ],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "sovereign",
+    "url": "sovereign://medina-registry"
+  },
+  "medina": {
+    "sovereign": true,
+    "registryType": "private",
+    "distributed": true,
+    "selfHosted": true,
+    "charter": "VPC-2026",
+    "frameworks": ["ATLAS-2026-MEDINA-INFRASTRUCTURE"]
+  }
+}

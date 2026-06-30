@@ -1,0 +1,32 @@
+{
+  "name": "@medina/replication-protocol",
+  "version": "0.1.618",
+  "description": "Self-replication and organism spawning with genome transfer and memory inheritance",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "keywords": [
+    "medina",
+    "replication",
+    "genome",
+    "spawning",
+    "evolution",
+    "phi",
+    "golden-ratio"
+  ],
+  "author": "Casa de Medina",
+  "license": "PROPRIETARY",
+  "dependencies": {
+    "@medina/medina-heart": "^1.1.618"
+  },
+  "medina": {
+    "charter": "RPC-2026",
+    "frameworks": ["RSHIP-2026-MEDINA-CORE"],
+    "fibonacci": {
+      "stage": 0,
+      "version": "0.1.618"
+    }
+  }
+}

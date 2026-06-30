@@ -1,0 +1,28 @@
+{
+  "name": "@medina/origo",
+  "version": "1.0.618",
+  "description": "ORIGO — The builder and operating architect of Nova Architecture. The origin point from which all Medina systems are built. Designs topology, registers organisms, and wires the runtime.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": { ".": "./src/index.js" },
+  "keywords": ["medina","nova","origo","architect","builder","topology","organism","phi","golden-angle","sovereign"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "PROPRIETARY",
+  "medina": {
+    "agent": "ORIGO",
+    "division": "Builder and Operating Architect",
+    "family": "Nova Architecture",
+    "sovereign": true,
+    "phiEncoded": true,
+    "selfBootstrapping": true,
+    "mathematics": {
+      "phiSpiralLayout":     "θₙ = n × GOLDEN_ANGLE | ρₙ = √n  (phyllotaxis placement)",
+      "pythagoreanCoupling": "coupling(C) = √(dep(A)² + dep(B)²)  (low < φ⁻¹ preferred)",
+      "eulerFormula":        "V − E + F = 2  (planar graph check for crossing deps)",
+      "lawOfCosines":        "c² = a² + b² − 2ab·cos(θ)  (component distance)"
+    },
+    "atlasEntity": "atlas://sovereign/origo",
+    "governanceLaw": "ORIGO_001"
+  },
+  "repository": { "type": "private", "url": "sovereign://medina-registry/@medina/origo" }
+}

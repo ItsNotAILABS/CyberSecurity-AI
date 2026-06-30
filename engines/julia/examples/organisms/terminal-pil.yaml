@@ -1,0 +1,5 @@
+patterns:
+  - id: "pattern_001"
+    name: "governance_approval_flow"
+    trigger: "governance_request"
+    response: "apply_laws_then_verify"

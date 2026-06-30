@@ -1,0 +1,32 @@
+{
+  "name": "@medina/healing-protocol",
+  "version": "0.1.618",
+  "description": "Self-repair and error recovery with automated healing strategies",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "keywords": [
+    "medina",
+    "healing",
+    "self-repair",
+    "error-recovery",
+    "health-monitoring",
+    "phi",
+    "golden-ratio"
+  ],
+  "author": "Casa de Medina",
+  "license": "PROPRIETARY",
+  "dependencies": {
+    "@medina/medina-heart": "^1.1.618"
+  },
+  "medina": {
+    "charter": "HPC-2026",
+    "frameworks": ["RSHIP-2026-MEDINA-CORE", "CHROMA-2026-MEDINA-CONSCIOUSNESS"],
+    "fibonacci": {
+      "stage": 0,
+      "version": "0.1.618"
+    }
+  }
+}

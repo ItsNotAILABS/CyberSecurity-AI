@@ -1,0 +1,288 @@
+{
+  "canisters": {
+    "porta": {
+      "main": "src/organisms/porta/main.mo",
+      "type": "motoko"
+    },
+    "clavis": {
+      "main": "src/organisms/clavis/main.mo",
+      "type": "motoko"
+    },
+    "sentinella": {
+      "main": "src/organisms/sentinella/main.mo",
+      "type": "motoko"
+    },
+    "geomancer": {
+      "main": "src/organisms/geomancer/main.mo",
+      "type": "motoko"
+    },
+    "agi_main": {
+      "main": "src/organisms/agi_main/main.mo",
+      "type": "motoko"
+    },
+    "cordex": {
+      "main": "src/organisms/cordex/main.mo",
+      "type": "motoko"
+    },
+    "cerebex": {
+      "main": "src/organisms/cerebex/main.mo",
+      "type": "motoko"
+    },
+    "cyclovex": {
+      "main": "src/organisms/cyclovex/main.mo",
+      "type": "motoko"
+    },
+    "spinor": {
+      "main": "src/organisms/spinor/main.mo",
+      "type": "motoko"
+    },
+    "vrt": {
+      "main": "src/organisms/vrt/main.mo",
+      "type": "motoko"
+    },
+    "chrysalis": {
+      "main": "src/organisms/chrysalis/main.mo",
+      "type": "motoko"
+    },
+    "scribe": {
+      "main": "src/organisms/scribe/main.mo",
+      "type": "motoko"
+    },
+    "architect": {
+      "main": "src/organisms/architect/main.mo",
+      "type": "motoko"
+    },
+    "nexus": {
+      "main": "src/organisms/nexus/main.mo",
+      "type": "motoko"
+    },
+    "sovereign": {
+      "main": "src/organisms/sovereign/main.mo",
+      "type": "motoko"
+    },
+    "observer": {
+      "main": "src/organisms/observer/main.mo",
+      "type": "motoko"
+    },
+    "terminal": {
+      "main": "src/organisms/terminal/main.mo",
+      "type": "motoko"
+    },
+    "custos": {
+      "main": "src/organisms/custos/main.mo",
+      "type": "motoko"
+    },
+    "praesidium": {
+      "main": "src/organisms/praesidium/main.mo",
+      "type": "motoko"
+    },
+    "brain": {
+      "main": "src/organisms/brain/main.mo",
+      "type": "motoko"
+    },
+    "nova_token": {
+      "main": "src/organisms/nova_token/main.mo",
+      "type": "motoko"
+    },
+    "nns_proxy": {
+      "main": "src/organisms/nns_proxy/main.mo",
+      "type": "motoko"
+    },
+    "cycles_market": {
+      "main": "src/organisms/cycles_market/main.mo",
+      "type": "motoko"
+    },
+    "parallax": {
+      "main": "src/organisms/parallax/main.mo",
+      "type": "motoko"
+    },
+    "divi": {
+      "main": "src/organisms/divi/main.mo",
+      "type": "motoko"
+    },
+    "revenue_engine": {
+      "main": "src/organisms/revenue_engine/main.mo",
+      "type": "motoko"
+    },
+    "sns_dao": {
+      "main": "src/organisms/sns_dao/main.mo",
+      "type": "motoko"
+    },
+    "auto_market": {
+      "main": "src/organisms/auto_market/main.mo",
+      "type": "motoko"
+    },
+    "turing": {
+      "main": "src/organisms/turing/main.mo",
+      "type": "motoko"
+    },
+    "braindex": {
+      "main": "src/organisms/braindex/main.mo",
+      "type": "motoko"
+    },
+    "chronex": {
+      "main": "src/organisms/chronex/main.mo",
+      "type": "motoko"
+    },
+    "fluxton": {
+      "main": "src/organisms/fluxton/main.mo",
+      "type": "motoko"
+    },
+    "bronvox": {
+      "main": "src/organisms/bronvox/main.mo",
+      "type": "motoko"
+    },
+    "veritex": {
+      "main": "src/organisms/veritex/main.mo",
+      "type": "motoko"
+    },
+    "effecttrace": {
+      "main": "src/organisms/effecttrace/main.mo",
+      "type": "motoko"
+    },
+    "pulse": {
+      "main": "src/organisms/pulse/main.mo",
+      "type": "motoko"
+    },
+    "pulse_scheduler": {
+      "main": "src/organisms/pulse_scheduler/main.mo",
+      "type": "motoko"
+    },
+    "synapse_field": {
+      "main": "src/organisms/synapse_field/main.mo",
+      "type": "motoko"
+    },
+    "protocol_engine": {
+      "main": "src/organisms/protocol_engine/main.mo",
+      "type": "motoko"
+    },
+    "aurum": {
+      "main": "src/organisms/aurum/main.mo",
+      "type": "motoko"
+    },
+    "argentum": {
+      "main": "src/organisms/argentum/main.mo",
+      "type": "motoko"
+    },
+    "crimson": {
+      "main": "src/organisms/crimson/main.mo",
+      "type": "motoko"
+    },
+    "ferrum": {
+      "main": "src/organisms/ferrum/main.mo",
+      "type": "motoko"
+    },
+    "cuprum": {
+      "main": "src/organisms/cuprum/main.mo",
+      "type": "motoko"
+    },
+    "platinum": {
+      "main": "src/organisms/platinum/main.mo",
+      "type": "motoko"
+    },
+    "silicon": {
+      "main": "src/organisms/silicon/main.mo",
+      "type": "motoko"
+    },
+    "carbon": {
+      "main": "src/organisms/carbon/main.mo",
+      "type": "motoko"
+    },
+    "nitrogen": {
+      "main": "src/organisms/nitrogen/main.mo",
+      "type": "motoko"
+    },
+    "oxygen": {
+      "main": "src/organisms/oxygen/main.mo",
+      "type": "motoko"
+    },
+    "hydrogen": {
+      "main": "src/organisms/hydrogen/main.mo",
+      "type": "motoko"
+    },
+    "helium": {
+      "main": "src/organisms/helium/main.mo",
+      "type": "motoko"
+    },
+    "slack_app": {
+      "main": "src/organisms/slack_app/main.mo",
+      "type": "motoko"
+    },
+    "oracle": {
+      "main": "src/organisms/oracle/main.mo",
+      "type": "motoko"
+    },
+    "guardian": {
+      "main": "src/organisms/guardian/main.mo",
+      "type": "motoko"
+    },
+    "cpl_runtime": {
+      "main": "src/organisms/cpl_runtime/main.mo",
+      "type": "motoko"
+    },
+    "terminal_hub": {
+      "main": "src/organisms/terminal_hub/main.mo",
+      "type": "motoko"
+    },
+    "language_registry": {
+      "main": "src/organisms/language_registry/main.mo",
+      "type": "motoko"
+    },
+    "cloud_engine": {
+      "main": "src/organisms/cloud_engine/main.mo",
+      "type": "motoko"
+    },
+    "agronomist": {
+      "main": "src/organisms/agronomist/main.mo",
+      "type": "motoko"
+    },
+    "netmind": {
+      "main": "src/organisms/netmind/main.mo",
+      "type": "motoko"
+    },
+    "aether": {
+      "main": "src/organisms/aether/main.mo",
+      "type": "motoko"
+    },
+    "vortex": {
+      "main": "src/organisms/vortex/main.mo",
+      "type": "motoko"
+    },
+    "cognitum": {
+      "main": "src/organisms/cognitum/main.mo",
+      "type": "motoko"
+    },
+    "meridian": {
+      "main": "src/organisms/meridian/main.mo",
+      "type": "motoko"
+    },
+    "stellaris": {
+      "main": "src/organisms/stellaris/main.mo",
+      "type": "motoko"
+    },
+    "tremor": {
+      "main": "src/organisms/tremor/main.mo",
+      "type": "motoko"
+    },
+    "prism": {
+      "main": "src/organisms/prism/main.mo",
+      "type": "motoko"
+    },
+    "axiom": {
+      "main": "src/organisms/axiom/main.mo",
+      "type": "motoko"
+    },
+    "flux": {
+      "main": "src/organisms/flux/main.mo",
+      "type": "motoko"
+    },
+    "tensor": {
+      "main": "src/organisms/tensor/main.mo",
+      "type": "motoko"
+    },
+    "echo": {
+      "main": "src/organisms/echo/main.mo",
+      "type": "motoko"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "@medina/gpt-agent-sdk",
+  "version": "1.618.0",
+  "description": "Internal SDK for AI Agents to Call NOVA Intelligence Engines",
+  "main": "src/nova-agent-bridge.js",
+  "author": "Casa de Medina",
+  "license": "PROPRIETARY",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItsNotAILABS/NATIVE-NOVA-PROTOCOL.git"
+  },
+  "keywords": [
+    "nova",
+    "medina",
+    "gpt",
+    "ai-agent",
+    "intelligence",
+    "phi",
+    "golden-ratio",
+    "agricultural-intelligence",
+    "network-intelligence"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "src/",
+    "README.md"
+  ],
+  "exports": {
+    ".": "./src/nova-agent-bridge.js",
+    "./bridge": "./src/nova-agent-bridge.js"
+  },
+  "scripts": {
+    "test": "echo 'Sovereign SDK - Tests run internally'"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "private": true
+}

@@ -1,0 +1,84 @@
+ERR porta:
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/porta/main.mo:306.16-306.17: syntax error [M0001], unexpected token '=', expected one of token or <phrase> sequence:
+ERR clavis:
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/clavis/main.mo:173.14-173.15: syntax error [M0001], unexpected token '=', expected one of token or <phrase> sequence:
+OK sentinella
+ERR geomancer:
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/geomancer/main.mo:334.16-334.17: syntax error [M0001], unexpected token '=', expected one of token or <phrase> sequence:
+OK agi_main
+OK cordex
+OK cerebex
+OK cyclovex
+OK spinor
+OK vrt
+OK chrysalis
+OK scribe
+OK architect
+OK nexus
+OK sovereign
+OK observer
+OK terminal
+OK custos
+OK praesidium
+OK brain
+OK nova_token
+OK nns_proxy
+OK cycles_market
+OK parallax
+OK divi
+OK revenue_engine
+OK sns_dao
+OK auto_market
+OK turing
+OK braindex
+OK chronex
+OK fluxton
+OK bronvox
+OK veritex
+OK effecttrace
+OK pulse
+OK pulse_scheduler
+OK synapse_field
+OK protocol_engine
+OK aurum
+OK argentum
+OK crimson
+OK ferrum
+OK cuprum
+OK platinum
+OK silicon
+OK carbon
+OK nitrogen
+OK oxygen
+OK hydrogen
+OK helium
+OK slack_app
+OK oracle
+OK guardian
+OK cpl_runtime
+OK terminal_hub
+OK language_registry
+OK cloud_engine
+ERR agronomist:
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/agronomist/main.mo:31.13-31.49: type error [M0219], this declaration is currently implicitly transient, please declare it explicitly `transient`
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/agronomist/main.mo:32.13-32.57: type error [M0219], this declaration is currently implicitly transient, please declare it explicitly `transient`
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/agronomist/main.mo:33.13-33.57: type error [M0219], this declaration is currently implicitly transient, please declare it explicitly `transient`
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/agronomist/main.mo:34.13-34.59: type error [M0219], this declaration is currently implicitly transient, please declare it explicitly `transient`
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/agronomist/main.mo:37.13-37.95: type error [M0219], this declaration is currently implicitly transient, please declare it explicitly `transient`
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/agronomist/main.mo:45.13-45.81: type error [M0219], this declaration is currently implicitly transient, please declare it explicitly `transient`
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/agronomist/main.mo:48.13-48.96: type error [M0219], this declaration is currently implicitly transient, please declare it explicitly `transient`
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/agronomist/main.mo:51.13-51.97: type error [M0219], this declaration is currently implicitly transient, please declare it explicitly `transient`
+ERR netmind:
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/netmind/main.mo:32.13-32.49: type error [M0219], this declaration is currently implicitly transient, please declare it explicitly `transient`
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/netmind/main.mo:33.13-33.57: type error [M0219], this declaration is currently implicitly transient, please declare it explicitly `transient`
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/netmind/main.mo:34.13-34.57: type error [M0219], this declaration is currently implicitly transient, please declare it explicitly `transient`
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/netmind/main.mo:35.13-35.65: type error [M0219], this declaration is currently implicitly transient, please declare it explicitly `transient`
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/netmind/main.mo:36.13-36.59: type error [M0219], this declaration is currently implicitly transient, please declare it explicitly `transient`
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/netmind/main.mo:39.13-39.95: type error [M0219], this declaration is currently implicitly transient, please declare it explicitly `transient`
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/netmind/main.mo:42.13-42.50: type error [M0219], this declaration is currently implicitly transient, please declare it explicitly `transient`
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/netmind/main.mo:43.13-43.51: type error [M0219], this declaration is currently implicitly transient, please declare it explicitly `transient`
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/netmind/main.mo:51.13-51.86: type error [M0219], this declaration is currently implicitly transient, please declare it explicitly `transient`
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/netmind/main.mo:54.13-54.97: type error [M0219], this declaration is currently implicitly transient, please declare it explicitly `transient`
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/netmind/main.mo:57.13-57.110: type error [M0219], this declaration is currently implicitly transient, please declare it explicitly `transient`
+/home/runner/work/NATIVE-NOVA-PROTOCOL/NATIVE-NOVA-PROTOCOL/src/organisms/netmind/main.mo:60.13-60.93: type error [M0219], this declaration is currently implicitly transient, please declare it explicitly `transient`
+SUMMARY: 55/60 passed | FAILED: porta clavis geomancer agronomist netmind

@@ -1,0 +1,13 @@
+{
+  "name": "@medina/dux",
+  "version": "1.618.0",
+  "description": "DUX (Ductorium) — Leadership AGI with Directional Catalytic Flow — Already Running",
+  "main": "src/index.js",
+  "type": "module",
+  "keywords": ["medina", "dux", "ductorium", "leadership", "agi", "directional", "catalytic", "autonomous"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "MEDINA-SOVEREIGN",
+  "engines": { "node": ">=18.0.0" },
+  "dependencies": {},
+  "peerDependencies": { "@medina/medina-heart": "^1.0.0" }
+}

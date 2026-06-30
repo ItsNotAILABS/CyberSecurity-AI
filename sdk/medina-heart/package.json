@@ -1,0 +1,40 @@
+{
+  "name": "@medina/medina-heart",
+  "version": "1.0.0",
+  "description": "The Biological Heart — Creation IS Activation. The heart IS the bootstrap.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"The heart beats without testing. It simply is.\" && exit 0"
+  },
+  "keywords": [
+    "medina",
+    "heart",
+    "bootstrap",
+    "self-organizing",
+    "autonomous",
+    "biological",
+    "fibonacci",
+    "phi",
+    "golden-ratio"
+  ],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@medina/medina-timers": "file:../medina-timers"
+  },
+  "repository": {
+    "type": "private",
+    "url": "sovereign://medina-registry/@medina/medina-heart"
+  },
+  "medina": {
+    "sovereign": true,
+    "selfBootstrapping": true,
+    "biologicalType": "heart",
+    "heartbeat": "873ms",
+    "phiEncoded": true,
+    "charter": "NCC-2026",
+    "frameworks": ["RSHIP-2026-MEDINA-CORE", "CHROMA-2026-MEDINA-CONSCIOUSNESS", "NEXUS-2026-MEDINA-NEURAL"]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "@medina/interoperability-protocol",
+  "version": "0.1.618",
+  "description": "Cross-platform compatibility with platform abstraction, protocol translation, and bridge implementations",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "keywords": [
+    "medina",
+    "interoperability",
+    "cross-platform",
+    "bridge",
+    "protocol-translation",
+    "phi",
+    "golden-ratio"
+  ],
+  "author": "Casa de Medina",
+  "license": "PROPRIETARY",
+  "dependencies": {
+    "@medina/medina-heart": "^1.1.618"
+  },
+  "medina": {
+    "charter": "IPC-2026",
+    "frameworks": ["RSHIP-2026-MEDINA-CORE", "NEXUS-2026-MEDINA-NEURAL"],
+    "fibonacci": {
+      "stage": 0,
+      "version": "0.1.618"
+    }
+  }
+}

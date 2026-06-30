@@ -1,0 +1,531 @@
+#!/usr/bin/env bash
+##
+## NOVA — Alpha Sovereign Build CLI
+##
+## Self-aware.  Self-fixing.  Never aborts on one canister's error.
+## Finds the edges, closes them out, puts a direction in them.
+##
+## Usage:
+##   ./scripts/nova check          — type-check all canisters
+##   ./scripts/nova build          — compile all to WASM
+##   ./scripts/nova list           — list configured canisters
+##   ./scripts/nova fix            — auto-fix known Motoko 1.x issues in all sources
+##   ./scripts/nova heal           — fix + check in one pass (self-healing run)
+##   ./scripts/nova diag           — show diagnostics for last check run
+##
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+MANIFEST_PATH="${NOVA_MANIFEST:-$ROOT_DIR/nova.json}"
+BUILD_DIR="$ROOT_DIR/.nova/build"
+DIAG_FILE="$ROOT_DIR/.nova/last_diag.txt"
+
+# ── Colour palette (degrades gracefully if terminal has no colour) ───────────
+if [[ -t 1 ]]; then
+  _C_GRN='\033[0;32m'
+  _C_RED='\033[0;31m'
+  _C_YLW='\033[0;33m'
+  _C_CYN='\033[0;36m'
+  _C_BLD='\033[1m'
+  _C_RST='\033[0m'
+else
+  _C_GRN='' _C_RED='' _C_YLW='' _C_CYN='' _C_BLD='' _C_RST=''
+fi
+
+log_ok()   { echo -e "${_C_GRN}✓${_C_RST} $*"; }
+log_err()  { echo -e "${_C_RED}✗${_C_RST} $*"; }
+log_warn() { echo -e "${_C_YLW}⚠${_C_RST} $*"; }
+log_info() { echo -e "${_C_CYN}▸${_C_RST} $*"; }
+log_hdr()  { echo -e "${_C_BLD}$*${_C_RST}"; }
+
+usage() {
+  cat <<USAGE
+${_C_BLD}NOVA — Sovereign Build CLI v10${_C_RST}
+
+Usage:
+  ./scripts/nova check                   type-check all canisters (continues on error)
+  ./scripts/nova build                   compile all canisters to WASM
+  ./scripts/nova list                    list configured canisters
+  ./scripts/nova fix                     auto-fix known Motoko 1.x issues in source files
+  ./scripts/nova heal                    fix + check in one pass (self-healing)
+  ./scripts/nova diag                    show diagnostics from the last check/heal run
+
+  ${_C_CYN}v10 commands:${_C_RST}
+  ./scripts/nova deploy <name>           record deploy intent for a named canister
+  ./scripts/nova wire <from> <to> <cap>  record a logical wire between two canisters
+  ./scripts/nova genesis <tpl> <owner>   record a genesis event (new organism from template)
+  ./scripts/nova run [epoch]             trigger one AGI_MAIN economy epoch (simulation)
+  ./scripts/nova truth                   show VERITEX drift/integrity status
+  ./scripts/nova ask <intent...>         route a plain-language intent through TURING
+USAGE
+}
+
+# ── Manifest guard ────────────────────────────────────────────────────────────
+if [[ ! -f "$MANIFEST_PATH" ]]; then
+  log_err "manifest not found: $MANIFEST_PATH"
+  exit 1
+fi
+
+# ── MOC bootstrap ─────────────────────────────────────────────────────────────
+MOC_BIN="${MOC:-$(command -v moc || true)}"
+NOVA_MOC_VERSION="${MOC_VERSION:-1.6.0}"
+NOVA_BIN_DIR="$ROOT_DIR/.nova/bin"
+NOVA_BASE_DIR="$ROOT_DIR/.nova/base"
+NOVA_MOC_CACHED="$NOVA_BIN_DIR/moc"
+
+if [[ -z "$MOC_BIN" ]]; then
+  if [[ -x "$NOVA_MOC_CACHED" ]]; then
+    MOC_BIN="$NOVA_MOC_CACHED"
+  else
+    log_info "moc not on PATH — bootstrapping sovereign moc v${NOVA_MOC_VERSION} ..."
+    mkdir -p "$NOVA_BIN_DIR"
+    _os="$(uname -s)"
+    _arch="$(uname -m)"
+    case "$_os" in
+      Linux)
+        case "$_arch" in
+          aarch64) _artifact="motoko-Linux-aarch64-${NOVA_MOC_VERSION}.tar.gz" ;;
+          *)       _artifact="motoko-Linux-x86_64-${NOVA_MOC_VERSION}.tar.gz" ;;
+        esac ;;
+      Darwin)
+        case "$_arch" in
+          arm64) _artifact="motoko-Darwin-arm64-${NOVA_MOC_VERSION}.tar.gz" ;;
+          *)     _artifact="motoko-Darwin-x86_64-${NOVA_MOC_VERSION}.tar.gz" ;;
+        esac ;;
+      *) log_err "unsupported OS: $_os"; exit 1 ;;
+    esac
+    _url="https://github.com/caffeinelabs/motoko/releases/download/${NOVA_MOC_VERSION}/${_artifact}"
+    if command -v curl &>/dev/null; then
+      curl -fsSL "$_url" -o /tmp/nova-moc.tar.gz
+    elif command -v wget &>/dev/null; then
+      wget -qO /tmp/nova-moc.tar.gz "$_url"
+    else
+      log_err "neither curl nor wget — cannot bootstrap moc"; exit 1
+    fi
+    tar -xzf /tmp/nova-moc.tar.gz -C "$NOVA_BIN_DIR" ./moc 2>/dev/null || \
+      tar -xzf /tmp/nova-moc.tar.gz -C "$NOVA_BIN_DIR"
+    chmod +x "$NOVA_MOC_CACHED"
+    MOC_BIN="$NOVA_MOC_CACHED"
+    log_ok "moc bootstrapped → $NOVA_MOC_CACHED"
+  fi
+fi
+
+# ── Motoko base library bootstrap ─────────────────────────────────────────────
+if [[ ! -d "$NOVA_BASE_DIR/src" ]]; then
+  log_info "bootstrapping motoko-base library v${NOVA_MOC_VERSION} ..."
+  mkdir -p "$NOVA_BASE_DIR"
+  _base_url="https://github.com/caffeinelabs/motoko/releases/download/${NOVA_MOC_VERSION}/motoko-base-library.tar.gz"
+  if command -v curl &>/dev/null; then
+    curl -fsSL "$_base_url" -o /tmp/nova-base.tar.gz
+  elif command -v wget &>/dev/null; then
+    wget -qO /tmp/nova-base.tar.gz "$_base_url"
+  else
+    log_err "cannot download motoko-base"; exit 1
+  fi
+  tar -xzf /tmp/nova-base.tar.gz -C "$NOVA_BASE_DIR" --strip-components=1 2>/dev/null || \
+    tar -xzf /tmp/nova-base.tar.gz -C "$NOVA_BASE_DIR"
+  log_ok "motoko-base bootstrapped → $NOVA_BASE_DIR/src"
+fi
+
+_MOC_BASE_FLAGS=()
+if [[ -d "$NOVA_BASE_DIR/src" ]]; then
+  _MOC_BASE_FLAGS=(--package base "$NOVA_BASE_DIR/src")
+fi
+
+# ── Manifest loader ───────────────────────────────────────────────────────────
+load_canisters() {
+  python3 - "$MANIFEST_PATH" <<'PY'
+import json, sys
+with open(sys.argv[1], "r", encoding="utf-8") as f:
+    config = json.load(f)
+canisters = config.get("canisters", {})
+if not isinstance(canisters, dict):
+    raise SystemExit("error: 'canisters' must be an object")
+for name, spec in canisters.items():
+    if not isinstance(spec, dict):
+        raise SystemExit(f"error: canister '{name}' must be an object")
+    main = spec.get("main")
+    if not main:
+        raise SystemExit(f"error: canister '{name}' is missing 'main'")
+    print(f"{name}\t{main}")
+PY
+}
+
+require_moc() {
+  if [[ -z "$MOC_BIN" ]]; then
+    log_err "moc not found. Install Motoko or set MOC=/path/to/moc."
+    exit 1
+  fi
+}
+
+# ── SELF-FIX — auto-repair known Motoko 1.x issues ───────────────────────────
+#
+# This is the self-healing primitive.  The organism sees where it is going,
+# sees what it needs to fix, and fixes the issues as it goes.
+# Closes the edges, rounds them out, puts a direction in them.
+#
+run_fix() {
+  local entries
+  entries="$(load_canisters)"
+
+  if [[ -z "$entries" ]]; then
+    log_warn "No canisters configured — nothing to fix."
+    return
+  fi
+
+  local total=0 fixed=0
+  log_hdr "NOVA fix — auto-healing source files"
+
+  while IFS=$'\t' read -r name main; do
+    local source_path="$ROOT_DIR/$main"
+    if [[ ! -f "$source_path" ]]; then
+      log_warn "$name: source not found at $main — skipping"
+      continue
+    fi
+
+    local changed=0
+
+    # ── Fix 1: actor declarations must be 'persistent'
+    if grep -qP '^actor ' "$source_path" 2>/dev/null; then
+      sed -i 's/^actor \([A-Za-z]\)/persistent actor \1/g' "$source_path"
+      changed=1
+    fi
+
+    # ── Fix 2: actor-level let bindings must be 'transient'
+    #    Match: ^  let VAR (not already prefixed with transient/stable/var)
+    if grep -qP '^  let ' "$source_path" 2>/dev/null; then
+      sed -i 's/^  let /  transient let /g' "$source_path"
+      changed=1
+    fi
+
+    # ── Fix 3: actor-level var Buffer declarations must be 'transient var'
+    #    In persistent actors, Buffer is a non-stable type.
+    if grep -qP '^  var [a-zA-Z_]' "$source_path" 2>/dev/null; then
+      sed -i 's/^  var \([a-zA-Z_][a-zA-Z0-9_]* \+: \+Buffer\)/  transient var \1/g' "$source_path"
+      sed -i 's/^  stable var \([a-zA-Z_][a-zA-Z0-9_]* \+: \+Buffer\)/  transient var \1/g' "$source_path"
+      changed=1
+    fi
+
+    # ── Fix 4: 'label' is a reserved keyword — rename to 'grp'
+    if grep -q '\blabel\b' "$source_path" 2>/dev/null; then
+      sed -i 's/\blabel\b/grp/g' "$source_path"
+      changed=1
+    fi
+
+    # ── Fix 5: 'loop' is a reserved keyword — rename to 'cyc'
+    if grep -q '\bloop\b' "$source_path" 2>/dev/null; then
+      sed -i 's/\bloop\b/cyc/g' "$source_path"
+      changed=1
+    fi
+
+    # ── Fix 6: inline if-expression in string concat needs parens
+    #    Pattern: # if (cond) "a" else "b"  →  # (if (cond) "a" else "b")
+    if grep -qP '# if \(' "$source_path" 2>/dev/null; then
+      sed -i 's/# if (/# (if (/g; s/else "\(.*\)");/else "\1"));/g' "$source_path"
+      changed=1
+    fi
+
+    total=$((total + 1))
+    if [[ $changed -eq 1 ]]; then
+      fixed=$((fixed + 1))
+      log_ok "$name: patched"
+    else
+      log_info "$name: clean"
+    fi
+  done <<< "$entries"
+
+  echo ""
+  log_hdr "Fix complete: $fixed/$total files patched"
+}
+
+# ── CHECK — type-check all canisters (continues on error) ────────────────────
+run_check() {
+  local entries
+  entries="$(load_canisters)"
+
+  if [[ -z "$entries" ]]; then
+    log_warn "No canisters configured — nothing to check."
+    return 0
+  fi
+  require_moc
+
+  local total=0 passed=0 failed=0
+  local failed_list=""
+  mkdir -p "$(dirname "$DIAG_FILE")"
+  : > "$DIAG_FILE"  # reset diag file
+
+  log_hdr "NOVA check — type-checking all canisters"
+
+  while IFS=$'\t' read -r name main; do
+    local source_path="$ROOT_DIR/$main"
+    if [[ ! -f "$source_path" ]]; then
+      log_err "$name: source not found at $main"
+      echo "ERR $name: source not found" >> "$DIAG_FILE"
+      failed=$((failed + 1))
+      failed_list="$failed_list $name"
+      total=$((total + 1))
+      continue
+    fi
+
+    total=$((total + 1))
+    local out
+    out="$("$MOC_BIN" "${_MOC_BASE_FLAGS[@]}" --check "$source_path" 2>&1 || true)"
+    local errors
+    errors="$(echo "$out" | grep 'error \[' || true)"
+
+    if [[ -z "$errors" ]]; then
+      passed=$((passed + 1))
+      local warns
+      warns="$(echo "$out" | grep -c 'warning \[' || true)"
+      if [[ "$warns" -gt 0 ]]; then
+        log_ok "$name ($warns warning(s))"
+      else
+        log_ok "$name"
+      fi
+      echo "OK $name" >> "$DIAG_FILE"
+    else
+      failed=$((failed + 1))
+      failed_list="$failed_list $name"
+      log_err "$name — ERRORS:"
+      echo "$errors" | while IFS= read -r line; do
+        echo "    $line"
+      done
+      echo "ERR $name:" >> "$DIAG_FILE"
+      echo "$errors" >> "$DIAG_FILE"
+    fi
+  done <<< "$entries"
+
+  echo ""
+  if [[ $failed -eq 0 ]]; then
+    log_hdr "${_C_GRN}All $total canisters passed.${_C_RST}"
+    echo "SUMMARY: $total/$total passed" >> "$DIAG_FILE"
+  else
+    log_hdr "${_C_RED}$passed/$total passed | $failed failed:$failed_list${_C_RST}"
+    echo "SUMMARY: $passed/$total passed | FAILED:$failed_list" >> "$DIAG_FILE"
+    return 1
+  fi
+}
+
+# ── BUILD — compile all to WASM (continues on error) ─────────────────────────
+run_build() {
+  local entries
+  entries="$(load_canisters)"
+
+  if [[ -z "$entries" ]]; then
+    log_warn "No canisters configured — nothing to build."
+    return 0
+  fi
+  require_moc
+  mkdir -p "$BUILD_DIR"
+
+  local total=0 built=0 failed=0
+  local failed_list=""
+
+  log_hdr "NOVA build — compiling all canisters to WASM"
+
+  while IFS=$'\t' read -r name main; do
+    local source_path="$ROOT_DIR/$main"
+    local output_path="$BUILD_DIR/$name.wasm"
+
+    if [[ ! -f "$source_path" ]]; then
+      log_err "$name: source not found at $main"
+      failed=$((failed + 1))
+      failed_list="$failed_list $name"
+      total=$((total + 1))
+      continue
+    fi
+
+    total=$((total + 1))
+    local out
+    out="$("$MOC_BIN" "${_MOC_BASE_FLAGS[@]}" "$source_path" -o "$output_path" 2>&1 || true)"
+    local errors
+    errors="$(echo "$out" | grep 'error \[' || true)"
+
+    if [[ -z "$errors" ]]; then
+      built=$((built + 1))
+      log_ok "$name → .nova/build/$name.wasm"
+    else
+      failed=$((failed + 1))
+      failed_list="$failed_list $name"
+      log_err "$name — ERRORS:"
+      echo "$errors" | while IFS= read -r line; do echo "    $line"; done
+    fi
+  done <<< "$entries"
+
+  echo ""
+  if [[ $failed -eq 0 ]]; then
+    log_hdr "${_C_GRN}All $total canisters built.${_C_RST}"
+  else
+    log_hdr "${_C_RED}$built/$total built | $failed failed:$failed_list${_C_RST}"
+    return 1
+  fi
+}
+
+# ── HEAL — fix + check in one pass ───────────────────────────────────────────
+run_heal() {
+  log_hdr "NOVA heal — self-healing pass (fix → check)"
+  run_fix
+  echo ""
+  run_check
+}
+
+# ── DIAG — show last diagnostics ─────────────────────────────────────────────
+run_diag() {
+  if [[ ! -f "$DIAG_FILE" ]]; then
+    log_warn "No diagnostics found. Run './scripts/nova check' first."
+    return
+  fi
+  log_hdr "NOVA diag — last check results"
+  cat "$DIAG_FILE"
+}
+
+# ── LIST ──────────────────────────────────────────────────────────────────────
+run_list() {
+  local entries
+  entries="$(load_canisters)"
+  if [[ -z "$entries" ]]; then
+    log_warn "No canisters configured in $(basename "$MANIFEST_PATH")."
+    return
+  fi
+  log_hdr "NOVA list — $(echo "$entries" | wc -l | tr -d ' ') canisters"
+  while IFS=$'\t' read -r name main; do
+    echo "  ${_C_CYN}${name}${_C_RST}  →  $main"
+  done <<< "$entries"
+}
+
+# ── DISPATCH ──────────────────────────────────────────────────────────────────
+if [[ $# -lt 1 ]]; then
+  usage
+  exit 1
+fi
+
+# ── v10 COMMANDS ──────────────────────────────────────────────────────────────
+
+# DEPLOY — record a deploy intent for a named canister
+run_deploy() {
+  local name="${2:-}"
+  if [[ -z "$name" ]]; then
+    log_err "Usage: ./scripts/nova deploy <canister-name>"
+    exit 1
+  fi
+  # Validate it's in the manifest
+  if ! load_canisters | grep -q "^${name}	"; then
+    log_err "Canister '${name}' not found in $(basename "$MANIFEST_PATH")"
+    exit 1
+  fi
+  mkdir -p "$ROOT_DIR/.nova"
+  echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] DEPLOY ${name} → ICP mainnet" >> "$ROOT_DIR/.nova/deploy.log"
+  log_ok "Deploy intent recorded: ${_C_CYN}${name}${_C_RST} → ICP"
+  log_info "To deploy live: dfx canister --network ic install ${name}"
+}
+
+# WIRE — record a logical inter-canister connection in NEXORIS
+run_wire() {
+  local from="${2:-}" to="${3:-}" cap="${4:-}"
+  if [[ -z "$from" || -z "$to" || -z "$cap" ]]; then
+    log_err "Usage: ./scripts/nova wire <from> <to> <capability>"
+    exit 1
+  fi
+  mkdir -p "$ROOT_DIR/.nova"
+  echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] WIRE ${from} → ${to} [${cap}]" >> "$ROOT_DIR/.nova/wires.log"
+  log_ok "Wire recorded: ${_C_CYN}${from}${_C_RST} → ${_C_CYN}${to}${_C_RST} [${cap}]"
+  log_info "To register live: dfx canister --network ic call nexus wire '(\"${from}\", \"${to}\", \"${cap}\")'"
+}
+
+# GENESIS — record a genesis event (new organism from template)
+run_genesis() {
+  local template="${2:-}" owner="${3:-}"
+  if [[ -z "$template" || -z "$owner" ]]; then
+    log_err "Usage: ./scripts/nova genesis <template> <owner>"
+    exit 1
+  fi
+  mkdir -p "$ROOT_DIR/.nova"
+  local org_name="${template}_$(date +%s)"
+  echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] GENESIS template=${template} owner=${owner} name=${org_name}" >> "$ROOT_DIR/.nova/genesis.log"
+  log_ok "Genesis event recorded: ${_C_CYN}${org_name}${_C_RST} from template ${template}"
+  log_info "To spawn live: dfx canister --network ic call chrysalis genesis '(\"${template}\", \"${org_name}\", \"${owner}\", \"\")'"
+}
+
+# RUN — trigger one AGI_MAIN economy epoch (simulation / live)
+run_epoch() {
+  local epoch_num="${2:-next}"
+  log_hdr "NOVA run — AGI_MAIN epoch ${epoch_num}"
+  mkdir -p "$ROOT_DIR/.nova"
+  echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] EPOCH run=${epoch_num}" >> "$ROOT_DIR/.nova/epochs.log"
+  log_ok "Epoch '${epoch_num}' queued."
+  log_info "To trigger live: dfx canister --network ic call agi_main runEpochNow"
+  log_info "Autopilot runs every ~24h via heartbeat when agi_main is deployed."
+}
+
+# TRUTH — show VERITEX drift / integrity status
+run_truth() {
+  log_hdr "NOVA truth — VERITEX integrity status"
+  if [[ -f "$ROOT_DIR/.nova/veritex.log" ]]; then
+    cat "$ROOT_DIR/.nova/veritex.log"
+  else
+    log_info "No local VERITEX log found."
+  fi
+  log_info "To query live: dfx canister --network ic call veritex verify"
+  log_info "To check drift: dfx canister --network ic call veritex drift"
+}
+
+# ASK — route a plain-language intent through TURING
+run_ask() {
+  shift  # remove 'ask' from args
+  local intent="$*"
+  if [[ -z "$intent" ]]; then
+    log_err "Usage: ./scripts/nova ask <intent...>"
+    exit 1
+  fi
+  log_hdr "NOVA ask — routing intent to TURING"
+  log_info "Intent: \"${intent}\""
+  mkdir -p "$ROOT_DIR/.nova"
+  echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] ASK: ${intent}" >> "$ROOT_DIR/.nova/turing.log"
+
+  # Local pattern matching (mirrors TURING's _decomposeIntent)
+  if echo "$intent" | grep -qi "deploy"; then
+    local target; target=$(echo "$intent" | grep -oP 'deploy\s+\K\S+' || echo "unknown")
+    log_ok "  → DEPLOY ${target} to ICP"
+  fi
+  if echo "$intent" | grep -qi "wire"; then
+    log_ok "  → WIRE inter-canister connection"
+  fi
+  if echo "$intent" | grep -qi "genesis\|spawn\|create organism"; then
+    log_ok "  → GENESIS new organism via CHRYSALIS"
+  fi
+  if echo "$intent" | grep -qi "heal\|fix\|repair"; then
+    log_ok "  → HEAL target organism"
+  fi
+  if echo "$intent" | grep -qi "epoch\|run economy\|stake"; then
+    log_ok "  → EPOCH run via AGI_MAIN autopilot"
+  fi
+  if echo "$intent" | grep -qi "doctrine\|knowledge"; then
+    log_ok "  → DOCTRINE store to CEREBEX"
+  fi
+  if echo "$intent" | grep -qi "victory\|celebrate"; then
+    log_ok "  → VICTORY log to CORDEX"
+  fi
+
+  log_info "To execute live: dfx canister --network ic call turing intake '(\"${intent}\")'"
+}
+
+case "$1" in
+  check)   run_check  ;;
+  build)   run_build  ;;
+  list)    run_list   ;;
+  fix)     run_fix    ;;
+  heal)    run_heal   ;;
+  diag)    run_diag   ;;
+  deploy)  run_deploy "$@" ;;
+  wire)    run_wire   "$@" ;;
+  genesis) run_genesis "$@" ;;
+  run)     run_epoch  "$@" ;;
+  truth)   run_truth  ;;
+  ask)     run_ask    "$@" ;;
+  -h|--help|help) usage ;;
+  *)
+    log_err "unknown command: $1"
+    usage
+    exit 1
+    ;;
+esac

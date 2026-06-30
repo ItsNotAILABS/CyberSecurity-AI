@@ -1,0 +1,22 @@
+{
+  "name": "@medina/emergence-patterns",
+  "version": "0.1.618",
+  "description": "Pattern recognition across AIs - Emergent behaviors and collective patterns",
+  "main": "src/index.js",
+  "type": "module",
+  "keywords": ["medina", "emergence", "patterns", "recognition", "collective"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@medina/medina-heart": "file:../medina-heart",
+    "@medina/swarm-intelligence": "file:../swarm-intelligence"
+  },
+  "medina": {
+    "alphaSDK": true,
+    "emergence": true,
+    "fibonacci": "0.1.618",
+    "charter": "CIC-2026",
+    "frameworks": ["NEXUS-2026-MEDINA-NEURAL"]
+  }
+}

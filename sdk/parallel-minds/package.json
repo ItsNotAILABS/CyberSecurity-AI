@@ -1,0 +1,22 @@
+{
+  "name": "@medina/parallel-minds",
+  "version": "0.1.618",
+  "description": "Parallel AI execution framework - Multiple AIs thinking simultaneously",
+  "main": "src/index.js",
+  "type": "module",
+  "keywords": ["medina", "parallel", "concurrent", "multi-threading", "execution"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@medina/medina-heart": "file:../medina-heart",
+    "@medina/birth-ai": "file:../birth-ai"
+  },
+  "medina": {
+    "alphaSDK": true,
+    "parallel": true,
+    "fibonacci": "0.1.618",
+    "charter": "NCC-2026",
+    "frameworks": ["CHROMA-2026-MEDINA-CONSCIOUSNESS"]
+  }
+}

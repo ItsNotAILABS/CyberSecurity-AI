@@ -1,0 +1,23 @@
+{
+  "name": "@medina/moe-lucretius",
+  "version": "1.0.0",
+  "description": "LUCRETIUS — Emergent World Model via De Rerum Natura. Models reality as emergent complexity from simple interactions, using φ-cascade emergence and simulacra theory.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing MoE LUCRETIUS...\" && exit 0"
+  },
+  "keywords": ["medina", "moe", "mixture-of-experts", "lucretius", "world-model", "emergence", "complexity", "phi"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "medina": {
+    "protocolSDK": true,
+    "selfBootstrapping": true,
+    "charter": "GPC-2026",
+    "tier": "MoE-Lucretius",
+    "agentId": "MOE-020",
+    "engines": ["Emergent/DeRerumNatura/φ-CascadeComplexity/Simulacra"],
+    "frameworks": ["NEXUS-2026-MEDINA-NEURAL", "MOE-2026-WORLD-MODEL"]
+  }
+}

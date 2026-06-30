@@ -1,0 +1,10 @@
+name: "Terminal Organism"
+capabilities:
+  - "governance_review"
+  - "law_enforcement"
+  - "consensus_building"
+  - "terminal_access"
+limits:
+  max_concurrent_tasks: 10
+  max_memory_mb: 1024
+charter: "Sovereign terminal for governance oversight"

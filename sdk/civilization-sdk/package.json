@@ -1,0 +1,32 @@
+{
+  "name": "@medina/civilization-sdk",
+  "version": "1.0.0",
+  "description": "AI Civilization SDK for creating societies of intelligent agents",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing Civilization SDK...\" && exit 0"
+  },
+  "keywords": [
+    "medina",
+    "civilization",
+    "society",
+    "governance",
+    "ai-society",
+    "collective-intelligence"
+  ],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@medina/medina-heart": "file:../medina-heart",
+    "@medina/birth-ai": "file:../birth-ai",
+    "@medina/alpha-sdk": "file:../alpha-sdk"
+  },
+  "medina": {
+    "civilizationSDK": true,
+    "selfBootstrapping": true,
+    "charter": "CIC-2026",
+    "frameworks": ["GOVERN-2026-MEDINA-GOVERNANCE", "CHROMA-2026-MEDINA-CONSCIOUSNESS"]
+  }
+}

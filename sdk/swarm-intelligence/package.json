@@ -1,0 +1,35 @@
+{
+  "name": "@medina/swarm-intelligence",
+  "version": "0.1.618",
+  "description": "Collective swarm behaviors - Emergent intelligence from coordinated AI swarms",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Swarms self-organize through local interactions\" && exit 0"
+  },
+  "keywords": [
+    "medina",
+    "swarm",
+    "intelligence",
+    "collective",
+    "emergent",
+    "coordination",
+    "multi-ai"
+  ],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@medina/medina-heart": "file:../medina-heart",
+    "@medina/birth-ai": "file:../birth-ai"
+  },
+  "medina": {
+    "alphaSDK": true,
+    "multiOrganism": true,
+    "emergent": true,
+    "selfBootstrapping": true,
+    "fibonacci": "0.1.618",
+    "charter": "CIC-2026",
+    "frameworks": ["CHROMA-2026-MEDINA-CONSCIOUSNESS"]
+  }
+}

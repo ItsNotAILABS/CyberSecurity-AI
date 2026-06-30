@@ -1,0 +1,22 @@
+{
+  "name": "@medina/evolution-engine",
+  "version": "0.1.618",
+  "description": "Self-modifying AI systems - Evolutionary algorithms and adaptive code generation",
+  "main": "src/index.js",
+  "type": "module",
+  "keywords": ["medina", "evolution", "genetic-algorithm", "self-modifying", "adaptive"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@medina/medina-heart": "file:../medina-heart",
+    "@medina/alpha-sdk": "file:../alpha-sdk"
+  },
+  "medina": {
+    "alphaSDK": true,
+    "selfModifying": true,
+    "fibonacci": "0.1.618",
+    "charter": "EAC-2026",
+    "frameworks": ["RSHIP-2026-MEDINA-CORE"]
+  }
+}

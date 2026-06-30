@@ -1,0 +1,23 @@
+{
+  "name": "@medina/moe-euclid",
+  "version": "1.0.0",
+  "description": "EUCLID — Geometric Expert Partitioning MoE. Partitions expert space using Euclidean geometry, Voronoi tessellation, and golden-ratio bisection.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing MoE EUCLID...\" && exit 0"
+  },
+  "keywords": ["medina", "moe", "mixture-of-experts", "euclid", "geometric", "voronoi", "partition", "phi"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "medina": {
+    "protocolSDK": true,
+    "selfBootstrapping": true,
+    "charter": "GPC-2026",
+    "tier": "MoE-Euclid",
+    "agentId": "MOE-004",
+    "engines": ["Euclidean/Voronoi/GoldenBisection/Tessellation"],
+    "frameworks": ["NEXUS-2026-MEDINA-NEURAL", "MOE-2026-EXPERT-ROUTING"]
+  }
+}

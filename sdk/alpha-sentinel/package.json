@@ -1,0 +1,36 @@
+{
+  "name": "@medina/alpha-sentinel",
+  "version": "1.0.0",
+  "description": "Alpha Sentinel — System health monitoring, anomaly detection, and entropy watchdog for the Alpha ensemble",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing Alpha Sentinel...\" && exit 0"
+  },
+  "keywords": [
+    "medina",
+    "alpha",
+    "sentinel",
+    "monitoring",
+    "anomaly-detection",
+    "health",
+    "entropy",
+    "phi"
+  ],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@medina/alpha-orchestrator": "file:../alpha-orchestrator",
+    "@medina/alpha-conductor": "file:../alpha-conductor"
+  },
+  "medina": {
+    "protocolSDK": true,
+    "selfBootstrapping": true,
+    "charter": "GPC-2026",
+    "tier": "Alpha-Sentinel",
+    "agentId": "AGT-048",
+    "engines": ["Mahalanobis/Shannon/Lyapunov/Fourier"],
+    "frameworks": ["GOVERN-2026-MEDINA-GOVERNANCE", "NEXUS-2026-MEDINA-NEURAL"]
+  }
+}

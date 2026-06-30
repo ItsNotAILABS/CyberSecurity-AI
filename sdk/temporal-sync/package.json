@@ -1,0 +1,22 @@
+{
+  "name": "@medina/temporal-sync",
+  "version": "0.1.618",
+  "description": "Time-synchronized multi-AI operations - Φ-based temporal coordination",
+  "main": "src/index.js",
+  "type": "module",
+  "keywords": ["medina", "temporal", "sync", "time", "coordination", "phi"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@medina/medina-heart": "file:../medina-heart",
+    "@medina/alpha-sdk": "file:../alpha-sdk"
+  },
+  "medina": {
+    "alphaSDK": true,
+    "temporal": true,
+    "fibonacci": "0.1.618",
+    "charter": "TCC-2026",
+    "frameworks": ["CHROMA-2026-MEDINA-CONSCIOUSNESS"]
+  }
+}

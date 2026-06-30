@@ -1,0 +1,34 @@
+{
+  "name": "@medina/alpha-conductor",
+  "version": "1.0.0",
+  "description": "Alpha Conductor — Harmonic synchronization and temporal flow control for Alpha agent ensemble",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing Alpha Conductor...\" && exit 0"
+  },
+  "keywords": [
+    "medina",
+    "alpha",
+    "conductor",
+    "synchronization",
+    "harmonic",
+    "tempo",
+    "phi"
+  ],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@medina/alpha-orchestrator": "file:../alpha-orchestrator"
+  },
+  "medina": {
+    "protocolSDK": true,
+    "selfBootstrapping": true,
+    "charter": "GPC-2026",
+    "tier": "Alpha-Conductor",
+    "agentId": "AGT-047",
+    "engines": ["Kuramoto/Pythagorean-Harmony/φ-Tempo/Fourier"],
+    "frameworks": ["GOVERN-2026-MEDINA-GOVERNANCE", "NEXUS-2026-MEDINA-NEURAL"]
+  }
+}

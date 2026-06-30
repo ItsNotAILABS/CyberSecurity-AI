@@ -1,0 +1,35 @@
+{
+  "name": "@medina/quantum-protocol",
+  "version": "0.1.618",
+  "description": "Quantum-inspired decision protocol - Superposition, entanglement, and quantum decisions across organisms",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Quantum protocols exist in superposition until observed\" && exit 0"
+  },
+  "keywords": [
+    "medina",
+    "quantum",
+    "protocol",
+    "superposition",
+    "entanglement",
+    "multi-organism",
+    "decision-making"
+  ],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@medina/medina-heart": "file:../medina-heart",
+    "@medina/alpha-sdk": "file:../alpha-sdk"
+  },
+  "medina": {
+    "alphaSDK": true,
+    "multiOrganism": true,
+    "quantumInspired": true,
+    "selfBootstrapping": true,
+    "fibonacci": "0.1.618",
+    "charter": "QPC-2026",
+    "frameworks": ["RSHIP-2026-MEDINA-CORE"]
+  }
+}

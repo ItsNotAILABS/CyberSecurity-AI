@@ -1,0 +1,33 @@
+{
+  "name": "@medina/native-git",
+  "version": "0.1.618",
+  "description": "φ-based version control system with organism-aware branching and living history",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "keywords": [
+    "medina",
+    "git",
+    "version-control",
+    "vcs",
+    "distributed",
+    "organism-aware",
+    "phi",
+    "golden-ratio"
+  ],
+  "author": "Casa de Medina",
+  "license": "PROPRIETARY",
+  "dependencies": {
+    "@medina/medina-heart": "^1.1.618"
+  },
+  "medina": {
+    "charter": "VPC-2026",
+    "frameworks": ["RSHIP-2026-MEDINA-CORE", "ATLAS-2026-MEDINA-INFRASTRUCTURE"],
+    "fibonacci": {
+      "stage": 0,
+      "version": "0.1.618"
+    }
+  }
+}

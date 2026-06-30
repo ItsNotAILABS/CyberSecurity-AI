@@ -1,0 +1,23 @@
+{
+  "name": "@medina/multi-engine-runtime",
+  "version": "0.1.618",
+  "description": "Multi-engine backend runtime - WebWorkers, ServiceWorkers, Adapters for autonomous operations",
+  "main": "src/index.js",
+  "type": "module",
+  "keywords": ["medina", "multi-engine", "workers", "adapters", "runtime", "autonomous"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@medina/medina-heart": "file:../medina-heart",
+    "@medina/alpha-sdk": "file:../alpha-sdk"
+  },
+  "medina": {
+    "backend": true,
+    "multiEngine": true,
+    "autonomous": true,
+    "fibonacci": "0.1.618",
+    "charter": "BIC-2026",
+    "frameworks": ["NEXUS-2026-MEDINA-NEURAL"]
+  }
+}

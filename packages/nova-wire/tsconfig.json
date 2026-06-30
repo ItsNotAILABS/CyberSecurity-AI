@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "outDir": "dist",
+    "rootDir": "../..",
+    "strict": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "paths": {
+      "@nova-protocol/phi-math": ["../phi-math/src/index"],
+      "@nova-protocol/nova-tokenizer": ["../nova-tokenizer/src/index"],
+      "@nova-protocol/nova-engine-registry": ["../nova-engine-registry/src/index"]
+    }
+  },
+  "include": ["src", "../phi-math/src", "../nova-tokenizer/src", "../nova-engine-registry/src"]
+}

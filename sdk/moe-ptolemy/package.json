@@ -1,0 +1,23 @@
+{
+  "name": "@medina/moe-ptolemy",
+  "version": "1.0.0",
+  "description": "PTOLEMY — Celestial Expert Mapping MoE. Maps experts to celestial spheres using epicyclic composition and Ptolemy's theorem for cyclic expert blending.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing MoE PTOLEMY...\" && exit 0"
+  },
+  "keywords": ["medina", "moe", "mixture-of-experts", "ptolemy", "celestial", "epicycle", "cyclic", "phi"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "medina": {
+    "protocolSDK": true,
+    "selfBootstrapping": true,
+    "charter": "GPC-2026",
+    "tier": "MoE-Ptolemy",
+    "agentId": "MOE-008",
+    "engines": ["Epicyclic/CelestialSphere/PtolemyTheorem/φ-Orbit"],
+    "frameworks": ["NEXUS-2026-MEDINA-NEURAL", "MOE-2026-EXPERT-ROUTING"]
+  }
+}

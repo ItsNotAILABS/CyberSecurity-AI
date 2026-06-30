@@ -1,0 +1,26 @@
+{
+  "name": "@medina/internal-ai",
+  "version": "1.618.0",
+  "description": "Internal AI for Organism Support — Already Running, Autonomous, with Catalytic Converters",
+  "main": "src/index.js",
+  "type": "module",
+  "keywords": [
+    "medina",
+    "internal-ai",
+    "autonomous",
+    "catalytic-converter",
+    "organism",
+    "self-bootstrapping",
+    "phi",
+    "golden-ratio"
+  ],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "MEDINA-SOVEREIGN",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@medina/medina-heart": "^1.0.0"
+  }
+}

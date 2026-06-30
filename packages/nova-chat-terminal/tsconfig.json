@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "typeRoots": ["/usr/local/lib/node_modules/webpack/node_modules/@types"],
+    "outDir": "dist",
+    "rootDir": "../..",
+    "strict": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "paths": {
+      "@nova-protocol/phi-math": ["../phi-math/src/index"],
+      "@nova-protocol/nova-tokenizer": ["../nova-tokenizer/src/index"],
+      "@nova-protocol/nova-engine-registry": ["../nova-engine-registry/src/index"],
+      "@nova-protocol/nova-wire": ["../nova-wire/src/index"]
+    }
+  },
+  "include": [
+    "src",
+    "../phi-math/src",
+    "../nova-tokenizer/src",
+    "../nova-engine-registry/src",
+    "../nova-wire/src"
+  ]
+}

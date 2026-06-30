@@ -1,0 +1,23 @@
+{
+  "name": "@medina/moe-plato",
+  "version": "1.0.0",
+  "description": "PLATO — Ideal Form Expert Abstraction MoE. Maps expert domains to Platonic solids, routing inputs through the 5 perfect forms with φ-symmetric topology.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing MoE PLATO...\" && exit 0"
+  },
+  "keywords": ["medina", "moe", "mixture-of-experts", "plato", "platonic-solids", "forms", "topology", "phi"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "medina": {
+    "protocolSDK": true,
+    "selfBootstrapping": true,
+    "charter": "GPC-2026",
+    "tier": "MoE-Plato",
+    "agentId": "MOE-010",
+    "engines": ["PlatonicSolid/IdealForm/Topology/φ-Symmetry"],
+    "frameworks": ["NEXUS-2026-MEDINA-NEURAL", "MOE-2026-EXPERT-ROUTING"]
+  }
+}

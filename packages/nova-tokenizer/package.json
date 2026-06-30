@@ -1,0 +1,19 @@
+{
+  "name": "@nova-protocol/nova-tokenizer",
+  "version": "1.0.0",
+  "description": "φ-Segmentation tokenizer. Sovereign tokenization using golden-ratio mathematics. No BPE, no merge tables.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": ["tokenizer", "phi-segmentation", "golden-ratio", "fibonacci", "nova-protocol", "nlp"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ItsNotAILABS/nova-tokenizer"
+  },
+  "dependencies": {
+    "@nova-protocol/phi-math": "^1.0.0"
+  }
+}

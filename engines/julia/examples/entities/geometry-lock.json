@@ -1,0 +1,30 @@
+{
+  "id": "atlas://sovereign/geometry-lock",
+  "name": "Geometry Lock Protocol",
+  "type": "access-gate",
+  "protocol": "PROTO-226",
+  "governance_pipeline": "GEOMETRY_LOCK_PIPELINE_001",
+  "phi_weight": 2.618,
+  "fibonacci_rank": 8,
+  "state": "active",
+  "mathematics": {
+    "lock_mechanism": "Kuramoto order parameter R·e^(iΨ) = (1/N)·Σe^(iθⱼ)",
+    "key_generation": "φ-spiral golden-angle phyllotaxis: θⱼ = (seed·φʲ·GOLDEN_ANGLE + 2πW/φ) mod 2π",
+    "resonance_threshold": "R > 1/φ = 0.6180339887",
+    "coordinate_system": "5D φ-encoded: (θ, φ_coord, ρ, ring, beat)",
+    "signing": "φ-HMAC: hash = Σ(charCode_i × φ^(i mod 13))"
+  },
+  "protects": [
+    "atlas://medina/civitas-calls",
+    "atlas://medina/organism-calls",
+    "atlas://medina/governance-calls"
+  ],
+  "constants": {
+    "phi": 1.6180339887498948,
+    "golden_angle_rad": 2.3999632297286535,
+    "golden_angle_deg": 137.50776405003785,
+    "emergence_threshold": 0.6180339887498948,
+    "phi_heartbeat_ms": 873,
+    "key_dimensions": 7
+  }
+}

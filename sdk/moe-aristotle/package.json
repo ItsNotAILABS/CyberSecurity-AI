@@ -1,0 +1,23 @@
+{
+  "name": "@medina/moe-aristotle",
+  "version": "1.0.0",
+  "description": "ARISTOTLE — Causal World Model via Four Causes Inference. Models reality through material, formal, efficient, and final causes with φ-weighted causal reasoning.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing MoE ARISTOTLE...\" && exit 0"
+  },
+  "keywords": ["medina", "moe", "mixture-of-experts", "aristotle", "world-model", "causal", "four-causes", "phi"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "medina": {
+    "protocolSDK": true,
+    "selfBootstrapping": true,
+    "charter": "GPC-2026",
+    "tier": "MoE-Aristotle",
+    "agentId": "MOE-015",
+    "engines": ["Causal/FourCauses/φ-Teleological/Entelechy"],
+    "frameworks": ["NEXUS-2026-MEDINA-NEURAL", "MOE-2026-WORLD-MODEL"]
+  }
+}

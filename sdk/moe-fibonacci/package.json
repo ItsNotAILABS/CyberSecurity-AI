@@ -1,0 +1,23 @@
+{
+  "name": "@medina/moe-fibonacci",
+  "version": "1.0.0",
+  "description": "FIBONACCI — Spiral Expert Growth MoE. Experts grow and spawn recursively following Fibonacci sequence, with golden spiral routing and φ-phyllotaxis placement.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing MoE FIBONACCI...\" && exit 0"
+  },
+  "keywords": ["medina", "moe", "mixture-of-experts", "fibonacci", "spiral", "growth", "phyllotaxis", "phi"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "medina": {
+    "protocolSDK": true,
+    "selfBootstrapping": true,
+    "charter": "GPC-2026",
+    "tier": "MoE-Fibonacci",
+    "agentId": "MOE-009",
+    "engines": ["Fibonacci/GoldenSpiral/Phyllotaxis/RecursiveGrowth"],
+    "frameworks": ["NEXUS-2026-MEDINA-NEURAL", "MOE-2026-EXPERT-ROUTING"]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@medina/nux",
+  "version": "1.618.0",
+  "description": "NUX (Nucleus) — Core Processing AGI with Nuclear Catalysis — Already Running",
+  "main": "src/index.js",
+  "type": "module",
+  "keywords": ["medina", "nux", "nucleus", "core-processing", "agi", "catalytic", "autonomous"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "MEDINA-SOVEREIGN",
+  "engines": { "node": ">=18.0.0" },
+  "dependencies": {},
+  "peerDependencies": { "@medina/medina-heart": "^1.0.0" }
+}

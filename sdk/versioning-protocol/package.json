@@ -1,0 +1,32 @@
+{
+  "name": "@medina/versioning-protocol",
+  "version": "0.1.618",
+  "description": "Fibonacci-based version evolution tracking with compatibility matrix and upgrade procedures",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "keywords": [
+    "medina",
+    "versioning",
+    "fibonacci",
+    "compatibility",
+    "upgrade",
+    "phi",
+    "golden-ratio"
+  ],
+  "author": "Casa de Medina",
+  "license": "PROPRIETARY",
+  "dependencies": {
+    "@medina/medina-heart": "^1.1.618"
+  },
+  "medina": {
+    "charter": "VPC-2026",
+    "frameworks": ["RSHIP-2026-MEDINA-CORE"],
+    "fibonacci": {
+      "stage": 0,
+      "version": "0.1.618"
+    }
+  }
+}

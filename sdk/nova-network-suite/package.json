@@ -1,0 +1,65 @@
+{
+  "name": "@nova/network-suite",
+  "version": "1.618.0",
+  "description": "NOVA Network Intelligence Suite - Unified SDK for Telecommunications Optimization",
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "module": "node20/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./node20/index.mjs",
+      "require": "./index.js"
+    }
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "telecommunications",
+    "network",
+    "golden-ratio",
+    "fibonacci",
+    "kuramoto",
+    "shannon",
+    "quantum",
+    "qkd",
+    "resilience",
+    "spectrum"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/novaprotocol/nova-network-suite"
+  },
+  "files": [
+    "index.js",
+    "node20/",
+    "python/",
+    "julia/",
+    "matlab/",
+    "java/"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "lint": "eslint .",
+    "demo": "node node20/index.mjs"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0"
+  },
+  "nova": {
+    "portfolio": "NNIS-2026-MEDINA",
+    "classification": "Sovereign Network Technology",
+    "engines": [
+      "NETMIND",
+      "MESHWEAVER",
+      "SPECTRION",
+      "SIGNALFORGE",
+      "RESILIEX",
+      "QUANTUMLATTICE"
+    ],
+    "algorithms": 13,
+    "phi": 1.6180339887498949
+  }
+}

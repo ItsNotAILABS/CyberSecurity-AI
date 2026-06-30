@@ -1,0 +1,25 @@
+{
+  "name": "@medina/alpha-tools",
+  "version": "1.0.0",
+  "description": "ALPHA TOOLS — Production adapters, plugins, and orchestration tools for NOVA sovereign infrastructure",
+  "main": "src/index.js",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js",
+    "./adapters": "./adapters/index.js",
+    "./plugins": "./plugins/index.js",
+    "./pages": "./pages/index.js"
+  },
+  "scripts": {
+    "test": "node src/validate.js",
+    "build": "node src/build.js",
+    "deploy": "node src/deploy.js"
+  },
+  "keywords": [
+    "medina", "nova", "alpha-tools", "adapters", "plugins",
+    "production", "sovereign", "orchestration", "entanglement"
+  ],
+  "author": "Casa de Medina",
+  "license": "SEE LICENSE IN ../../LICENSE.md",
+  "private": true
+}

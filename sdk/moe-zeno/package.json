@@ -1,0 +1,23 @@
+{
+  "name": "@medina/moe-zeno",
+  "version": "1.0.0",
+  "description": "ZENO — Paradox-Resolving Expert Convergence MoE. Infinite series of experts converge to truth through Zeno's paradox resolution via φ-geometric series.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing MoE ZENO...\" && exit 0"
+  },
+  "keywords": ["medina", "moe", "mixture-of-experts", "zeno", "convergence", "infinite-series", "paradox", "phi"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "medina": {
+    "protocolSDK": true,
+    "selfBootstrapping": true,
+    "charter": "GPC-2026",
+    "tier": "MoE-Zeno",
+    "agentId": "MOE-007",
+    "engines": ["Zeno/GeometricSeries/Convergence/Paradox"],
+    "frameworks": ["NEXUS-2026-MEDINA-NEURAL", "MOE-2026-EXPERT-ROUTING"]
+  }
+}

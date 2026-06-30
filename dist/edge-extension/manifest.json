@@ -1,0 +1,71 @@
+{
+  "manifest_version": 3,
+  "name": "NOVA Protocol — Sovereign AI",
+  "version": "2.0.0",
+  "description": "23 sovereign AI engines, φ-mathematics, 40 agents, 19 workers. Zero external dependencies. Your AI, your math, your protocol.",
+  "icons": {
+    "16": "icons/nova-16.png",
+    "48": "icons/nova-48.png",
+    "128": "icons/nova-128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/nova-16.png",
+      "48": "icons/nova-48.png",
+      "128": "icons/nova-128.png"
+    },
+    "default_title": "NOVA Protocol — Sovereign AI"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "sidebar.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"],
+      "css": ["content-style.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "storage",
+    "sidePanel",
+    "tabs",
+    "scripting",
+    "alarms",
+    "notifications"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "popup.html",
+        "sidebar.html",
+        "dashboard.html",
+        "icons/*",
+        "organism/web/*",
+        "workspace/*"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "commands": {
+    "toggle-sidebar": {
+      "suggested_key": { "default": "Alt+N" },
+      "description": "Toggle NOVA AI sidebar"
+    },
+    "quick-chat": {
+      "suggested_key": { "default": "Alt+Shift+N" },
+      "description": "Quick chat with NOVA"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

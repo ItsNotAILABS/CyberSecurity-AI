@@ -1,0 +1,23 @@
+{
+  "name": "@medina/moe-thales",
+  "version": "1.0.0",
+  "description": "THALES — First-Principles Expert Decomposition MoE. Decomposes complex problems into elemental experts using Thales' fundamental theorems.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing MoE THALES...\" && exit 0"
+  },
+  "keywords": ["medina", "moe", "mixture-of-experts", "thales", "first-principles", "decomposition", "phi"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "medina": {
+    "protocolSDK": true,
+    "selfBootstrapping": true,
+    "charter": "GPC-2026",
+    "tier": "MoE-Thales",
+    "agentId": "MOE-003",
+    "engines": ["Thales/Decomposition/Intercept/Proportionality"],
+    "frameworks": ["NEXUS-2026-MEDINA-NEURAL", "MOE-2026-EXPERT-ROUTING"]
+  }
+}

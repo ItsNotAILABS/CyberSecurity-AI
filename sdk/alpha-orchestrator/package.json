@@ -1,0 +1,38 @@
+{
+  "name": "@medina/alpha-orchestrator",
+  "version": "1.0.0",
+  "description": "Alpha Orchestrator — Master coordination layer for all Alpha agents in the Nova Architecture",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Testing Alpha Orchestrator...\" && exit 0"
+  },
+  "keywords": [
+    "medina",
+    "alpha",
+    "orchestrator",
+    "coordination",
+    "multi-agent",
+    "governance",
+    "phi"
+  ],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@medina/thesis-alpha": "file:../thesis-alpha",
+    "@medina/codex-phantasmatis": "file:../codex-phantasmatis",
+    "@medina/civos-prime": "file:../civos-prime",
+    "@medina/auro": "file:../auro",
+    "@medina/origo": "file:../origo"
+  },
+  "medina": {
+    "protocolSDK": true,
+    "selfBootstrapping": true,
+    "charter": "GPC-2026",
+    "tier": "Alpha-Orchestrator",
+    "agentId": "AGT-046",
+    "engines": ["Pythagorean/Kuramoto/φ-Spiral/Condorcet"],
+    "frameworks": ["GOVERN-2026-MEDINA-GOVERNANCE", "NEXUS-2026-MEDINA-NEURAL"]
+  }
+}

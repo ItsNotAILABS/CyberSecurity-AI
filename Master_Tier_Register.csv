@@ -1,0 +1,228 @@
+domain,tier_id,tier_name,source_file,type_kind,member_count,members
+ORGANISM_ARCHITECTURE,T-001,OrganismRing,models/AIFoundationModels.ts,enum,9,INTERFACE | SOVEREIGN | MEMORY | BUILD | GEOMETRY | TRANSPORT | PROOF | NATIVE_CAPABILITY | COUNSEL
+ORGANISM_ARCHITECTURE,T-002,DimensionalPlane,intelligence/ObserverIntelligence.ts,enum,5,D0_Foundational | D1_Temporal | D2_Harmonic | D3_CrossDimensional | D4_Transcendent
+ORGANISM_ARCHITECTURE,T-003,FrontendRing,Frontend_Frontier_100_Register.csv,csv_column,4,RING_0_CORE | RING_1_INNER | RING_2_MIDDLE | RING_3_OUTER
+ORGANISM_ARCHITECTURE,T-004,ArchitecturalLawDomain,Architectural_Laws_Register.csv,csv_column,8,GOLDEN_MATHEMATICS | STRUCTURE | STATE_MEMORY | OBSERVATION | COMPUTATION | SYNCHRONIZATION | COMMUNICATION | ENCRYPTION
+ORGANISM_ARCHITECTURE,T-005,LawEnforcementLevel,Architectural_Laws_Register.csv,csv_column,3,IMMUTABLE | CONSTITUTIONAL | ADAPTIVE
+ORGANISM_ARCHITECTURE,T-006,LawSourceOrganism,Architectural_Laws_Register.csv,csv_column,3,SOVEREIGN | ARCHITECT | OBSERVER
+ORGANISM_ARCHITECTURE,T-007,RenderRingLayout,organism/web/render-worker.js,constant_array,9,Core | Sovereign | Counsel | Memory | Proof | Interface | Geometry | Extension | Frontier
+ORGANISM_ARCHITECTURE,T-008,CanisterContract,nova.json,config,7,chrysalis | scribe | architect | nexus | sovereign | observer | terminal
+AGENT_WORKFORCE,T-009,AgentDivision,agents/AlphaAgentRegistry.ts,type_union,8,exterior-orchestrators | web-workers | rendering-workers | data-structure-workers | runtime-workers | model-workers | market-controllers | infrastructure-orchestrators
+AGENT_WORKFORCE,T-010,AgentTier,agents/AlphaAgentRegistry.ts,type_union,4,Worker | Specialist | Commander | AGI-Commander
+AGENT_WORKFORCE,T-011,AgentStatus,agents/AlphaAgentRegistry.ts,type_union,7,running | perceiving | synthesizing | manifesting | scaling | recovering | standby
+AGENT_WORKFORCE,T-012,AgentEngineKind,agents/AlphaAgentRegistry.ts,type_union,3,perceive | synthesize | manifest
+MARKET_OPERATIONS,T-013,CallCategory,agents/CallRegistry.ts,type_union,6,orchestration | web-intelligence | rendering | data-structures | runtime | model-operations
+MARKET_OPERATIONS,T-014,MarketSurface,agents/CallMarket.ts,type_union,3,internal | developer | ai-native
+MARKET_OPERATIONS,T-015,MarketPermission,agents/CallMarket.ts,type_union,4,read | invoke | chain | admin
+MARKET_OPERATIONS,T-016,CostClass,agents/AlphaAgentRegistry.ts,type_union,5,free | micro | standard | premium | enterprise
+MARKET_OPERATIONS,T-017,LatencyClass,agents/AlphaAgentRegistry.ts,type_union,5,realtime | fast | standard | batch | async
+MARKET_OPERATIONS,T-018,SecurityTier,agents/AlphaAgentRegistry.ts,type_union,5,public | authenticated | privileged | sovereign | quantum-sealed
+FOUNDATION_MODELS,T-019,RoutingPriority,models/AIFoundationModels.ts,enum,4,P0 | P1 | P2 | P3
+FOUNDATION_MODELS,T-020,EngineStatus,models/AIFoundationModels.ts,type_union,4,active | preview | deprecated | experimental
+FOUNDATION_MODELS,T-021,Modality,models/AIFoundationModels.ts,type_union,22,"Text | Text + Vision | Text + Vision + Audio | Text + Vision + Audio + Video | Text + Search | Text + Social | Text → Image | Text → Code | Text → Audio | Text → Video | Text → Math | Text → Music | Text → Vector | Text → Score | Text → Safety | Audio → Text | Vision → Masks | Vision → Multi | Multi → Video | Multi → Embedding | Multi → Action | Sequence → Structure"
+FOUNDATION_MODELS,T-022,IntelligenceClass,AI_Foundation_Model_Register.csv,csv_column,40,"Generative Transformer Intelligence | Constitutional AI Intelligence | Multi-modal Fusion Intelligence | Open-Weight Transformer Intelligence | Mixture-of-Experts Intelligence | Efficient Frontier Intelligence | Hybrid SSM-Transformer Intelligence | Search-Augmented Intelligence | Real-Time Social Intelligence | Diffusion Generation Intelligence | Aesthetic Diffusion Intelligence | Video Generation Intelligence | Long-Form Video Intelligence | Music Generation Intelligence | Music Understanding Intelligence | Visual Segmentation Intelligence | Unified Vision Intelligence | Speech Recognition Intelligence | Voice Synthesis Intelligence | Code Generation Intelligence | Open Code Intelligence | Mixture-of-Experts Code Intelligence | Competitive Programming Intelligence | Vector Embedding Intelligence | Retrieval-Augmented Intelligence | Relevance Scoring Intelligence | Multilingual Transformer Intelligence | Open Multilingual Intelligence | Dense Bilingual Intelligence | Small Language Model Intelligence | Open Small Model Intelligence | Mathematical Reasoning Intelligence | Safety Classification Intelligence | Protein Structure Intelligence | Robotic Transformer Intelligence | Prompt-Guided Diffusion Intelligence | Motion Generation Intelligence | Empathic AI Intelligence | Vision-Language Alignment Intelligence"
+FOUNDATION_MODELS,T-023,ParameterClass,AI_Foundation_Model_Register.csv,csv_column,24,"Frontier (>100B) | Open Frontier (405B) | Open Frontier (180B) | Open Large (70B) | Large (72B) | Large (34B) | MoE (236B/21B active) | MoE (132B/36B active) | Hybrid (52B) | Compact (27B) | Compact (14B) | Compact (1.5B) | Diffusion (>10B) | Diffusion (3.5B) | Diffusion (est. >10B) | Diffusion Transformer | Specialized | Specialized (8B) | Specialized (3.3B) | Specialized (770M) | Specialized (600M) | Specialized (428M) | Specialized (varies) | Proprietary"
+FOUNDATION_MODELS,T-024,RoutingCapability,organism/web/routing-worker.js,constant_array,14,reasoning | code-generation | vision | audio | image-generation | video-generation | music-generation | voice-synthesis | embedding | search | safety | math | multilingual | robotics
+FRONTEND_INTELLIGENCE,T-025,FrontendGroup,models/FrontendIntelligenceModels.ts,enum,10,MARKUP | STYLING | FRAMEWORK | STATE | BUILD | TESTING | GRAPHICS | COMMUNICATION | STORAGE | WEB_API
+FRONTEND_INTELLIGENCE,T-026,FrontendIntelligenceType,Frontend_Frontier_100_Register.csv,csv_column,16,structure | validation | geometry | cascade | composition | projection | transform | memory | persistence | verification | raster | stream | proxy | encapsulation | generative | intelligence
+FRONTEND_INTELLIGENCE,T-027,FractureCategory,intelligence/FractureRegistry.ts,enum,10,RENDERING | STATE | BUILD | STYLE | LANGUAGE | DATA | NETWORK | SECURITY | TESTING | DEVOPS
+LANGUAGE_AI_WORKFORCE,T-028,LanguageAIGroup,marketplace/LanguageAIWorkers.ts,type_union,10,markup | style | frontend | backend | systems | substrate | data | config | query | intelligence
+LANGUAGE_AI_WORKFORCE,T-029,AIBuildRole,marketplace/LanguageAIWorkers.ts,type_union,10,parser | generator | renderer | compiler | bundler | linter | tester | deployer | orchestrator | optimizer
+LANGUAGE_AI_WORKFORCE,T-030,AITier,marketplace/LanguageAIWorkers.ts,type_union,4,core | specialist | support | experimental
+LANGUAGE_AI_WORKFORCE,T-031,AIWorkerStatus,marketplace/LanguageAIWorkers.ts,type_union,6,idle | parsing | generating | rendering | error | complete
+LANGUAGE_AI_WORKFORCE,T-032,LanguageEngineKind,marketplace/LanguageAIWorkers.ts,type_union,3,parse | generate | render
+NOVA_NATIVE_AI,T-033,NovaAIGroup,marketplace/NativeNovaAIs.ts,reuses_LanguageAIGroup,10,markup | style | frontend | backend | systems | substrate | data | config | query | intelligence
+NOVA_NATIVE_AI,T-034,NovaIntelligenceTier,marketplace/NativeNovaAIs.ts,type_union,4,SingleModel | MultiModel | SuperIntelligent | AGI
+NOVA_NATIVE_AI,T-035,NovaOperationalMode,marketplace/NativeNovaAIs.ts,type_union,4,autonomous | collaborative | supervisory | orchestrating
+NOVA_NATIVE_AI,T-036,NovaAIStatus,marketplace/NativeNovaAIs.ts,type_union,7,dormant | perceiving | synthesizing | manifesting | complete | error | evolving
+NOVA_NATIVE_AI,T-037,NovaEngineKind,marketplace/NativeNovaAIs.ts,type_union,3,perceive | synthesize | manifest
+PROTOCOL_LAYER,T-038,ProtocolTier,protocols/AIProtocolRegistry.ts,enum,3,CORE | ORCHESTRATION | VERIFICATION
+PROTOCOL_LAYER,T-039,AdaptiveMode,protocols/AIProtocolRegistry.ts,type_union,5,STATIC | PHI_ADAPTIVE | KURAMOTO_SYNC | GOLDEN_SPIRAL | FIBONACCI_STEP
+EXTENSION_LAYER,T-040,ExtensionClass,extensions/AIExtensionRegistry.ts,enum,5,REASONING | CREATIVE | ANALYSIS | SECURITY | WORKFLOW
+EXTENSION_LAYER,T-041,EncryptionMode,extensions/AIExtensionRegistry.ts,type_union,6,NONE | FIBONACCI_HASH | PHI_CASCADE | PHANTOM_ZERO_KNOWLEDGE | E8_LATTICE | SOVEREIGN_SEAL
+EXTENSION_LAYER,T-042,ContractType,extensions/AIExtensionRegistry.ts,type_union,6,NONE | INTELLIGENCE_VERIFY | OUTPUT_ATTESTATION | CHAIN_OF_THOUGHT_PROOF | MULTI_MODEL_CONSENSUS | SOVEREIGN_EXECUTION
+SOVEREIGN_ENGINE,T-043,NovaEngineId,sdk/NovaEngineModels.ts,type_union,23,NOV-001 | NOV-002 | NOV-003 | NOV-004 | NOV-005 | NOV-006 | NOV-007 | NOV-008 | NOV-009 | NOV-010 | NOV-011 | NOV-012 | NOV-013 | NOV-014 | NOV-015 | NOV-016 | NOV-017 | NOV-018 | NOV-019 | NOV-020 | NOV-021 | NOV-022 | NOV-023
+SOVEREIGN_ENGINE,T-044,NovaWireSlug,sdk/NovaEngineModels.ts,type_union,23,cognos | profundis | fusio | lingua | stratos | memoria | vector | codex | pictor | kinema | harmonia | segmentum | scrutator | custodis | ranker | formalis | algorithmus | vox | socialis | empathos | analytica | structura | visio
+SOVEREIGN_ENGINE,T-045,NovaModality,sdk/NovaEngineModels.ts,type_union,15,text | vision | audio | video | image-gen | video-gen | audio-gen | music-gen | voice-gen | code | embedding | search | safety | math | structured
+SOVEREIGN_ENGINE,T-046,NovaResponseFormat,sdk/NovaEngineModels.ts,type_union,3,text | json | markdown
+SOVEREIGN_ENGINE,T-047,NovaFinishReason,sdk/NovaEngineModels.ts,type_union,4,stop | length | function_call | error
+SOVEREIGN_ENGINE,T-048,NovaMessageRole,sdk/NovaEngineModels.ts,type_union,4,system | user | assistant | function
+SOVEREIGN_ENGINE,T-049,EnginePopupCategory,desktop/NovaPopupController.ts,constant_record,6,Reasoning | Creative | Analysis | Code | Safety | Utility
+PHANTOM_BLOCKCHAIN,T-050,StealthLevel,models/PhantomBlockchainModels.ts,type_union,5,VISIBLE | OBSCURED | CLOAKED | PHANTOM | VOID
+PHANTOM_BLOCKCHAIN,T-051,EncryptionTier,models/PhantomBlockchainModels.ts,type_union,3,ICOSAHEDRAL | E8 | LEECH
+PHANTOM_BLOCKCHAIN,T-052,HashAlgorithm,models/PhantomBlockchainModels.ts,type_union,4,SHA256 | SCRYPT | ETHASH | PHI_CASCADE
+PHANTOM_BLOCKCHAIN,T-053,PuzzleType,models/PhantomBlockchainModels.ts,type_union,5,NONCE_DISCOVERY | HASH_COLLISION | MERKLE_PROOF | BLOCK_VALIDATION | DIFFICULTY_TARGET
+PHANTOM_BLOCKCHAIN,T-054,PhantomModelFamily,Phantom_Blockchain_Model_Register.csv,csv_column,8,PHANTASMA_NONCIUM | PHANTASMA_HASHIUM | QUAESITOR_NONCII | EXPLORATOR_DIMENSIONALIS | VERIFICATOR_CASCADIS | VALIDITOR_BLOCKI | PROBATOR_MERKLE | ANALYSTOR_DIFFICULTATIS
+OBSERVER_INTELLIGENCE,T-055,SubIntelligenceRole,intelligence/ObserverIntelligence.ts,type_union,5,police | caregiver | caretaker | guardian | sentinel
+OBSERVER_INTELLIGENCE,T-056,CareActionType,intelligence/ObserverIntelligence.ts,type_union,5,heal | protect | nurture | restore | guide
+OBSERVER_INTELLIGENCE,T-057,AlertSeverity,models/ObserverModels.ts,type_union,4,info | warning | anomaly | critical
+OBSERVER_INTELLIGENCE,T-058,PipelineStageStatus,models/ObserverModels.ts,type_union,4,pending | running | complete | failed
+CANISTER_CHEMISTRY,T-059,CanisterElementId,intelligence/canisters/SovereignCanisters.ts,type_union,12,AU | AG | CR | FE | CU | PT | SI | C | N | O | H | HE
+CANISTER_CHEMISTRY,T-060,CanisterType,intelligence/canisters/SovereignCanisters.ts,type_union,5,immutable | conductor | living | structural | primordial
+DESKTOP_RUNTIME,T-061,TerminalCommandType,desktop/NovaChatTerminal.ts,type_union,18,chat | engine | open | launch | shell | compare | explain | consensus | engines | status | history | clear | help | file | url | system | apps | unknown
+DESKTOP_RUNTIME,T-062,AppPlatform,desktop/NovaAppController.ts,type_union,4,windows | macos | linux | unknown
+DESKTOP_RUNTIME,T-063,FileActionType,desktop/NovaAppController.ts,interface_field,7,open | reveal | delete | copy | move | read | write
+DESKTOP_RUNTIME,T-064,SystemActionType,desktop/NovaAppController.ts,interface_field,8,volume | brightness | screenshot | lock | sleep | shutdown | restart | notify
+DESKTOP_RUNTIME,T-065,AppCategory,desktop/NovaAppController.ts,constant_array,8,browser | editor | terminal | media | communication | office | system | dev
+DESKTOP_RUNTIME,T-066,AuditResult,desktop/NovaAppController.ts,interface_field,3,success | failure | blocked
+DESKTOP_RUNTIME,T-067,AGIIntent,desktop/NovaDesktopAGI.ts,type_union,26,"reason | analyze_deep | fuse_multimodal | translate | quick_answer | retrieve | embed | code | generate_image | generate_video | generate_audio | segment_vision | search | safety_check | rank | math | algorithm | speak | social | empathize | analyze_data | structure | vision_align | open_app | system_action | unknown"
+DESKTOP_RUNTIME,T-068,MiniAIId,desktop/NovaChatMiniAIs.ts,type_union,5,mini-code | mini-backend | mini-math | mini-search | mini-format
+DESKTOP_RUNTIME,T-069,NovaOSServiceStatus,desktop/NovaOS.ts,type_union,4,running | stopped | starting | error
+BROWSER_EXTENSION,T-070,BrowserType,browser/NovaExtensionRuntime.ts,type_union,5,edge | chrome | firefox | safari | unknown
+BROWSER_EXTENSION,T-071,NovaMessageType,browser/NovaExtensionRuntime.ts,type_union,16,NOVA_CHAT_REQUEST | NOVA_CHAT_RESPONSE | NOVA_STREAM_CHUNK | NOVA_STREAM_END | NOVA_ENGINE_STATUS | NOVA_ACTIVATE_EXTENSION | NOVA_DEACTIVATE_EXTENSION | NOVA_GET_ENGINES | NOVA_GET_CONFIG | NOVA_SET_CONFIG | NOVA_GENERATE_IMAGE | NOVA_GENERATE_CODE | NOVA_SEARCH | NOVA_SAFETY_CHECK | NOVA_EMBED | NOVA_ERROR
+BROWSER_EXTENSION,T-072,PopupTab,browser/NovaPopupController.ts,type_union,4,chat | engines | extensions | settings
+BROWSER_EXTENSION,T-073,StorageTheme,browser/NovaExtensionRuntime.ts,interface_field,3,light | dark | auto
+BROWSER_EXTENSION,T-074,SidebarPosition,browser/NovaExtensionRuntime.ts,interface_field,2,left | right
+GENERATIVE_PLATFORM,T-075,ASTNodeKind,marketplace/GenerativeUIEngine.ts,type_union,8,element | text | slot | conditional | loop | event | style | script
+GENERATIVE_PLATFORM,T-076,LayoutType,marketplace/GenerativeUIEngine.ts,interface_field,5,flex | grid | stack | canvas | spatial
+GENERATIVE_PLATFORM,T-077,LayoutDirection,marketplace/GenerativeUIEngine.ts,interface_field,4,row | column | radial | spiral
+GENERATIVE_PLATFORM,T-078,LayoutAlignment,marketplace/GenerativeUIEngine.ts,interface_field,5,start | center | end | stretch | golden
+GENERATIVE_PLATFORM,T-079,StylePriority,marketplace/GenerativeUIEngine.ts,interface_field,2,normal | important
+GENERATIVE_PLATFORM,T-080,RenderPipelineMode,marketplace/GenerativeUIEngine.ts,interface_field,4,dom | webgpu | houdini | hybrid
+GENERATIVE_PLATFORM,T-081,InferenceMode,marketplace/GenerativeUIEngine.ts,interface_field,3,local-onnx | nova-api | hybrid
+GENERATIVE_PLATFORM,T-082,ColorHarmony,marketplace/GenerativeUIEngine.ts,interface_field,4,golden | complementary | triadic | analogous
+GENERATIVE_PLATFORM,T-083,ShadowDomMode,marketplace/GenerativeUIEngine.ts,interface_field,2,open | closed
+GENERATIVE_PLATFORM,T-084,ShaderTopology,marketplace/GenerativeUIEngine.ts,interface_field,3,triangle-list | triangle-strip | line-list
+SPATIAL_CANVAS,T-085,CanvasElementKind,marketplace/SpatialCanvasSDK.ts,type_union,10,rectangle | circle | text | image | path | group | component | annotation | connector | frame
+SPATIAL_CANVAS,T-086,CanvasAgentKind,marketplace/SpatialCanvasSDK.ts,type_union,4,layout | style | content | annotation
+SPATIAL_CANVAS,T-087,CanvasActionType,marketplace/SpatialCanvasSDK.ts,interface_field,7,create | move | resize | restyle | annotate | delete | group
+SPATIAL_CANVAS,T-088,CRDTOperationType,marketplace/SpatialCanvasSDK.ts,interface_field,4,insert | update | delete | move
+SPATIAL_CANVAS,T-089,CanvasRenderer,marketplace/SpatialCanvasSDK.ts,interface_field,2,canvas2d | webgl
+SPATIAL_CANVAS,T-090,TextAlign,marketplace/SpatialCanvasSDK.ts,interface_field,3,left | center | right
+WORKFORCE_ORCHESTRATOR,T-091,BuildIntentPriority,marketplace/AIWorkforceOrchestrator.ts,interface_field,4,critical | high | normal | low
+WORKFORCE_ORCHESTRATOR,T-092,BuildPipelineStatus,marketplace/AIWorkforceOrchestrator.ts,interface_field,4,planning | executing | complete | failed
+TOKEN_IDENTITY,T-093,TokenAIModelId,sdk/tokens/TokenAIModels.ts,type_union,5,TAM-001 | TAM-002 | TAM-003 | TAM-004 | TAM-005
+TOKEN_IDENTITY,T-094,TokenExtensionId,sdk/tokens/extensions/TokenExtensions.ts,type_union,5,TEX-001 | TEX-002 | TEX-003 | TEX-004 | TEX-005
+TOKEN_IDENTITY,T-095,TokenSDKId,sdk/tokens/extensions/TokenExtensions.ts,type_union,3,TSDK-001 | TSDK-002 | TSDK-003
+TOKEN_IDENTITY,T-096,TokenTechId,sdk/tokens/TokenTechnologies.ts,type_union,10,TT-001 | TT-002 | TT-003 | TT-004 | TT-005 | TT-006 | TT-007 | TT-008 | TT-009 | TT-010
+EXTERNAL_COMPARISON,T-097,ExternalVendor,desktop/NovaEngineComparison.ts,constant_array,5,OpenAI | Anthropic | Google | Meta | Mistral
+EXTERNAL_COMPARISON,T-098,PricingModel,desktop/NovaEngineComparison.ts,interface_field,4,per-token | subscription | free | sovereign
+CSV_REGISTERS,T-099,RegisterFile,/,file_inventory,7,AI_Foundation_Model_Register.csv | AI_Protocol_Register.csv | AI_Extension_Register.csv | Alpha_Agent_Register.csv | Phantom_Blockchain_Model_Register.csv | Architectural_Laws_Register.csv | Frontend_Frontier_100_Register.csv
+ARCHITECT_INTELLIGENCE,T-100,OrganismBlueprint,intelligence/ArchitectIntelligence.ts,interface,10,id | name | designation | position | scale | generation | capabilities | substrate | lineage | timestamp
+ARCHITECT_INTELLIGENCE,T-101,ArchitectDesignation,intelligence/ArchitectIntelligence.ts,class_identity,1,ARCHITECT — The Meta-Builder
+NEXUS_INTELLIGENCE,T-102,SubstrateNode,intelligence/NexusIntelligence.ts,interface,4,id | substrate | weight | timestamp
+NEXUS_INTELLIGENCE,T-103,Route,intelligence/NexusIntelligence.ts,interface,5,id | from | to | cost | timestamp
+NEXUS_INTELLIGENCE,T-104,Footprint,intelligence/NexusIntelligence.ts,interface,4,id | substrate | proof | timestamp
+NEXUS_INTELLIGENCE,T-105,NexusDesignation,intelligence/NexusIntelligence.ts,class_identity,1,NEXUS — The Substrate Walker
+SOVEREIGN_INTELLIGENCE,T-106,SovereignNodeStatus,intelligence/SovereignIntelligence.ts,interface_field,4,Active | Standby | Validating | Propagating
+SOVEREIGN_INTELLIGENCE,T-107,SovereignCanisterStatus,intelligence/SovereignIntelligence.ts,interface_field,5,Registered | Spinning | Active | Dormant | Migrating
+SOVEREIGN_INTELLIGENCE,T-108,SovereignNode,intelligence/SovereignIntelligence.ts,interface,8,id | position | weight | sector | identity | epoch | status | nodeAffinity
+SOVEREIGN_INTELLIGENCE,T-109,SovereignBlock,intelligence/SovereignIntelligence.ts,interface,7,index | prevHash | timestamp | epoch | validatorSet | stateRoot | goldenProof
+SOVEREIGN_INTELLIGENCE,T-110,ConsensusRound,intelligence/SovereignIntelligence.ts,interface,8,roundId | epoch | proposal | votes | totalWeight | threshold | achieved | timestamp
+SOVEREIGN_INTELLIGENCE,T-111,SovereignDesignation,intelligence/SovereignIntelligence.ts,class_identity,1,SOVEREIGN — The Substrate Itself
+TERMINAL_INTELLIGENCE,T-112,CommandResult,intelligence/TerminalIntelligence.ts,interface,6,id | command | target | result | success | timestamp
+TERMINAL_INTELLIGENCE,T-113,OrganismStatus,intelligence/TerminalIntelligence.ts,interface,5,name | designation | canister | alive | subModels
+TERMINAL_INTELLIGENCE,T-114,AuditEntry,intelligence/TerminalIntelligence.ts,interface,5,id | organism | action | detail | timestamp
+TERMINAL_INTELLIGENCE,T-115,DashboardView,intelligence/TerminalIntelligence.ts,interface,9,total_organisms | total_sub_models | total_nodes | total_canisters | total_blocks | total_observations | current_epoch | golden_scale | uptime
+TERMINAL_INTELLIGENCE,T-116,TerminalDesignation,intelligence/TerminalIntelligence.ts,class_identity,1,TERMINAL — The Admin Command Interface
+SCRIBE_INTELLIGENCE,T-117,DocumentCategory,intelligence/ScribeIntelligence.ts,type_union,8,Research | Architecture | Theory | Vision | Implementation | Synthesis | Chronicle | Genesis
+SCRIBE_INTELLIGENCE,T-118,ClassifiedDocument,intelligence/ScribeIntelligence.ts,interface,7,id | title | content | category | generation | goldenWeight | timestamp
+SCRIBE_INTELLIGENCE,T-119,SynthesizedPaper,intelligence/ScribeIntelligence.ts,interface,7,id | title | abstract | categories | sourceCount | generation | timestamp
+SCRIBE_INTELLIGENCE,T-120,ScribeDesignation,intelligence/ScribeIntelligence.ts,class_identity,1,SCRIBE — The Document Organism
+FRACTURE_ANALYSIS,T-121,FractureAnalysis,models/FractureModels.ts,interface,8,fractureId | name | category | goldenPrimitives | complexityScore | sovereignAdvantage | fibonacciDecomposition | timestamp
+FRACTURE_ANALYSIS,T-122,FractureComparison,models/FractureModels.ts,interface,7,fractureA | fractureB | resonanceDelta | categoryOverlap | goldenRatio | verdict | timestamp
+FRACTURE_ANALYSIS,T-123,SovereignAlternative,models/FractureModels.ts,interface,7,fractureName | sovereignName | latinDesignation | goldenPrimitive | implementation | phiAdvantage | timestamp
+FRACTURE_ANALYSIS,T-124,FractureObservation,models/FractureModels.ts,interface,7,fractureId | name | plane | obsvScore | anomalyProb | resonance | timestamp
+FRACTURE_ANALYSIS,T-125,FractureProcessors,models/FractureModels.ts,class_set,4,FractureAnalyzer | FractureComparator | FractureSynthesizer | FractureObserver
+SOLVER_SYNTHESIZER,T-126,SolverResult,models/ObserverSolverSynthesizers.ts,interface,5,pattern | confidence | dimensions | proof | timestamp
+SOLVER_SYNTHESIZER,T-127,TheoryResult,models/ObserverSolverSynthesizers.ts,interface,6,hypothesis | validated | confidence | evidence | dimensions | timestamp
+SOLVER_SYNTHESIZER,T-128,SolverProcessors,models/ObserverSolverSynthesizers.ts,class_set,2,SynthesistaPatternorum | TheoricusInterdimensionalis
+ROUTING_ENGINE,T-129,RoutingRequest,models/AIFoundationRouter.ts,interface,5,requiredCapabilities | preferredRing | preferredModality | minPriority | requireActive
+ROUTING_ENGINE,T-130,FusionChain,models/AIFoundationRouter.ts,interface,6,chainId | models | phiWeights | totalScore | modalities | timestamp
+ROUTING_ENGINE,T-131,RouterStatus,models/AIFoundationRouter.ts,interface,7,totalModels | activeWires | totalRoutes | totalFusions | averageLatency | kuramotoR | goldenWeight
+PROTOCOL_ENGINE,T-132,ProtocolRuntimeState,protocols/AIProtocolEngine.ts,interface,8,protocolId | active | executionCount | lastExecution | adaptiveState | encryptionHash | resonance | kuramotoPhase
+PROTOCOL_ENGINE,T-133,AdaptiveUpdate,protocols/AIProtocolEngine.ts,interface,6,paramName | oldValue | newValue | adaptiveMode | phiFactor | timestamp
+PROTOCOL_ENGINE,T-134,ProtocolEngineStatus,protocols/AIProtocolEngine.ts,interface,7,totalProtocols | activeProtocols | totalExecutions | totalAdaptations | kuramotoR | averageResonance | heartbeatMs
+EXTENSION_ENGINE,T-135,EncryptionState,extensions/AIExtensionEngine.ts,interface,9,extensionId | mode | active | keyHash | cascadeRounds | phantomProof | latticeVectors | integrityScore | timestamp
+EXTENSION_ENGINE,T-136,ContractState,extensions/AIExtensionEngine.ts,interface,8,extensionId | contractType | verified | verificationHash | consensusModels | consensusWeight | chainProof | timestamp
+EXTENSION_ENGINE,T-137,ExtensionEngineStatus,extensions/AIExtensionEngine.ts,interface,9,totalExtensions | activeExtensions | totalEngineBindings | activeEngineBindings | encryptedExtensions | contractedExtensions | kuramotoR | totalGoldenWeight | heartbeatMs
+EXTENSION_ENGINE,T-138,EdgeManifest,extensions/AIExtensionEngine.ts,interface,10,name | version | description | manifest_version | permissions | content_scripts | background | action | icons | host_permissions
+API_CLIENT,T-139,NovaAPIConfig,sdk/NovaAPIClient.ts,interface,7,apiKey | baseUrl | timeout | maxRetries | sovereignMode | onRequest | onResponse
+API_CLIENT,T-140,NovaWireRequest,sdk/NovaAPIClient.ts,interface,5,wireEndpoint | method | body | timestamp | requestHash
+API_CLIENT,T-141,NovaWireResponse,sdk/NovaAPIClient.ts,interface,6,wireEndpoint | status | body | attestationHash | latencyMs | timestamp
+API_CLIENT,T-142,WireAPIEndpoint,sdk/NovaAPIClient.ts,interface_set,23,NovaCognosAPI | NovaProfundisAPI | NovaFusioAPI | NovaLinguaAPI | NovaStratosAPI | NovaMemoriaAPI | NovaVectorAPI | NovaCodexAPI | NovaPictorAPI | NovaKinemaAPI | NovaHarmoniaAPI | NovaSegmentumAPI | NovaScrutatorAPI | NovaCustodisAPI | NovaRankerAPI | NovaFormalisAPI | NovaAlgorithmusAPI | NovaVoxAPI | NovaSocialisAPI | NovaEmpathosAPI | NovaAnalyticaAPI | NovaStructuraAPI | NovaVisioAPI
+SDK_PACKAGE,T-143,NovaSDKManifest,sdk/NovaSDKPackage.ts,interface,14,name | displayName | version | description | author | license | homepage | repository | keywords | engines | capabilities | exports | publicRepoIdeas | apiVersion
+SDK_PACKAGE,T-144,SDKExportType,sdk/NovaSDKPackage.ts,interface_field,4,function | class | constant | type
+SDK_PACKAGE,T-145,SDKExport,sdk/NovaSDKPackage.ts,interface,4,name | type | description | example
+SDK_PACKAGE,T-146,PublicRepoIdea,sdk/NovaSDKPackage.ts,interface,6,name | repo | description | audience | uniqueValue | estimatedFiles
+TOKEN_TECHNOLOGY,T-147,TokenTechnology,sdk/tokens/TokenTechnologies.ts,interface,11,id | name | latinName | element | description | phiWeight | fibonacciIdentity | capabilities | aiIntelligence | maxThroughput | specialization
+TOKEN_TECHNOLOGY,T-148,TokenAICore,sdk/tokens/TokenTechnologies.ts,interface,5,name | purpose | algorithmClass | inputModalities | outputFormat
+TOKEN_TECHNOLOGY,T-149,TokenProcessResult,sdk/tokens/TokenTechnologies.ts,interface,6,technologyId | inputText | tokenCount | processingTimeMs | tokens | attestation
+TOKEN_TECHNOLOGY,T-150,ProcessedToken,sdk/tokens/TokenTechnologies.ts,interface,5,id | text | weight | depth | resonance
+TOKEN_AI_MODELS,T-151,TokenAICapability,sdk/tokens/TokenAIModels.ts,interface,5,name | method | description | inputType | outputType
+TOKEN_AI_MODELS,T-152,TokenAIModel,sdk/tokens/TokenAIModels.ts,interface,7,id | name | latinName | description | phiWeight | fibonacciIdentity | capabilities
+TOKEN_AI_MODELS,T-153,TokenAnalysisResult,sdk/tokens/TokenAIModels.ts,interface,7,modelId | capability | input | output | tokenCount | attestation | timestamp
+TOKEN_EXTENSIONS,T-154,TokenExtension,sdk/tokens/extensions/TokenExtensions.ts,interface,7,id | name | latinName | description | phiWeight | fibonacciIdentity | aiPurpose
+TOKEN_EXTENSIONS,T-155,TokenSDKDefinition,sdk/tokens/extensions/TokenExtensions.ts,interface,8,id | name | packageName | description | phiWeight | fibonacciIdentity | exports | usageExample
+WORKER_FLEET,T-156,WorkerName,organism/web/organism-bridge.js,constant_array,19,engine | agent | memory | routing | protocol | safety | shield | crypto | render | production | extension | telemetry | infra | scheduler | stream | contract | marketplace | university | career
+WORKER_FLEET,T-157,WorkerHouse,organism/web/organism-bridge.js,constant_array,8,Brain | Protocol | Shield | Production | Infrastructure | Market | University | Career
+WORKER_FLEET,T-158,WorkerHouseBrain,organism/web/organism-bridge.js,division,4,engine | agent | memory | routing
+WORKER_FLEET,T-159,WorkerHouseProtocol,organism/web/organism-bridge.js,division,1,protocol
+WORKER_FLEET,T-160,WorkerHouseShield,organism/web/organism-bridge.js,division,3,safety | shield | crypto
+WORKER_FLEET,T-161,WorkerHouseProduction,organism/web/organism-bridge.js,division,3,render | production | extension
+WORKER_FLEET,T-162,WorkerHouseInfrastructure,organism/web/organism-bridge.js,division,4,telemetry | infra | scheduler | stream
+WORKER_FLEET,T-163,WorkerHouseMarket,organism/web/organism-bridge.js,division,2,contract | marketplace
+WORKER_FLEET,T-164,WorkerHouseUniversity,organism/web/organism-bridge.js,division,1,university
+WORKER_FLEET,T-165,WorkerHouseCareer,organism/web/organism-bridge.js,division,1,career
+SHIELD_DEFENSE,T-166,ShieldLayer,organism/web/shield-worker.js,constant_array,5,Perimeter | Authentication | Authorization | Encryption | Quantum Seal
+SHIELD_DEFENSE,T-167,ShieldLayerType,organism/web/shield-worker.js,constant_array,5,firewall | identity | access | crypto | quantum
+SHIELD_DEFENSE,T-168,ThreatType,organism/web/shield-worker.js,constant_array,10,injection | xss | csrf | privilege-escalation | data-exfil | brute-force | ddos | supply-chain | zero-day | insider
+SAFETY_SCANNING,T-169,SafetyCategory,organism/web/safety-worker.js,constant_array,8,toxicity | hate_speech | harassment | self_harm | sexual_content | violence | prompt_injection | pii_exposure
+SAFETY_SCANNING,T-170,GuardModel,organism/web/safety-worker.js,constant_array,3,AIF-040 Llama Guard 3 | NOV-CUS Nova Custodis | EXT-013 Nova Shield
+SAFETY_SCANNING,T-171,GuardRing,organism/web/safety-worker.js,constant_array,2,Counsel | Sovereign
+CAREER_ACADEMY,T-172,CareerRole,organism/web/career-worker.js,constant_array,8,Exterior Orchestrator | Web Intelligence Analyst | Rendering Engineer | Data Architect | Runtime Engineer | Model Scientist | Market Strategist | Infrastructure Commander
+CAREER_ACADEMY,T-173,CareerSkill,organism/web/career-worker.js,constant_array,20,routing | api-management | orchestration | web-crawling | indexing | extraction | caching | scene-rendering | compositing | rasterization | animation | trees | graphs | streams | spatial | execution | scheduling | profiling | sandboxing | model-selection
+CAREER_ACADEMY,T-174,CareerLevel,organism/web/career-worker.js,interface_field,5,1 | 2 | 3 | 4 | 5
+UNIVERSITY_SYSTEM,T-175,UniversityFaculty,organism/web/university-worker.js,constant_array,8,Exterior Systems | Web Intelligence | Rendering Arts | Data Architecture | Runtime Engineering | Model Science | Market Economics | Infrastructure Operations
+UNIVERSITY_SYSTEM,T-176,CurriculumLevel,organism/web/university-worker.js,constant_array,5,foundational | intermediate | advanced | expert | sovereign
+UNIVERSITY_SYSTEM,T-177,CurriculumSize,organism/web/university-worker.js,computed,40,5 courses × 8 faculties
+PRODUCTION_PIPELINE,T-178,ProductId,organism/web/production-worker.js,constant_array,8,PROD-001 Exterior Gateway | PROD-002 Web Intelligence Suite | PROD-003 Rendering Engine | PROD-004 Data Structure Core | PROD-005 Runtime Platform | PROD-006 Model Laboratory | PROD-007 Market Exchange | PROD-008 Infrastructure Fabric
+PRODUCTION_PIPELINE,T-179,PipelineStage,organism/web/production-worker.js,constant_array,7,source | build | test | security | stage | canary | production
+PRODUCTION_PIPELINE,T-180,ProductStatus,organism/web/production-worker.js,interface_field,4,production | staging | testing | offline
+SCHEDULER_SYSTEM,T-181,SchedulerQueue,organism/web/scheduler-worker.js,constant_array,5,default | high | low | background | critical
+SCHEDULER_SYSTEM,T-182,TaskPriority,organism/web/scheduler-worker.js,phi_weighted,4,φ^0 critical | φ^-1 high | φ^-2 normal | φ^-3 low
+STREAM_TRANSPORT,T-183,StreamChannel,organism/web/stream-worker.js,constant_array,9,interface | sovereign | memory | build | geometry | transport | proof | native | counsel
+STREAM_TRANSPORT,T-184,StreamBufferCapacity,organism/web/stream-worker.js,fibonacci_constant,1,987
+SLA_CONTRACTS,T-185,SLAContract,organism/web/contract-worker.js,constant_array,8,SLA-001 Engine Availability | SLA-002 Routing Latency | SLA-003 Safety Scan Rate | SLA-004 Memory Retrieval | SLA-005 Consensus Threshold | SLA-006 Encryption Throughput | SLA-007 Agent Response Time | SLA-008 Extension Invocation
+SLA_CONTRACTS,T-186,SLAMetric,organism/web/contract-worker.js,constant_array,8,uptime | latency_ms | scan_success_rate | retrieval_ms | consensus_rate | encryptions_per_s | agent_latency_ms | ext_success_rate
+CRYPTO_OPERATIONS,T-187,CryptoFunction,organism/web/crypto-worker.js,function_set,4,phiCascade | e8Seal | leechHash | icosahedralRotate
+CRYPTO_OPERATIONS,T-188,CryptoLawReference,organism/web/crypto-worker.js,law_reference,4,LAW-EN-016 φ-cascade | LAW-EN-019 E8 seal | LAW-EN-018 Leech lattice | LAW-EN-020 icosahedral rotation
+INFRASTRUCTURE_MONITORING,T-189,InfraSubsystem,organism/web/infra-worker.js,constant_array,13,engine-core | agent-fleet | memory-bank | protocol-stack | safety-guard | render-pipeline | routing-table | crypto-vault | contract-layer | telemetry-hub | extension-runtime | marketplace | scheduler
+INFRASTRUCTURE_MONITORING,T-190,HealthStatus,organism/web/infra-worker.js,interface_field,3,healthy | degraded | critical
+INFRASTRUCTURE_MONITORING,T-191,DeployStrategy,organism/web/infra-worker.js,interface_field,2,blue-green | canary
+QUERY_SCHEMA,T-192,NovaChatRequest,sdk/NovaEngineModels.ts,interface,9,engineId | messages | temperature | maxTokens | topP | stream | functions | responseFormat | attestation
+QUERY_SCHEMA,T-193,NovaChatResponse,sdk/NovaEngineModels.ts,interface,10,id | engineId | choices | usage | attestationHash | phiAlignment | latencyMs | modelVersion | wireSlug | timestamp
+QUERY_SCHEMA,T-194,NovaEmbeddingRequest,sdk/NovaEngineModels.ts,interface,4,engineId | input | dimensions | attestation
+QUERY_SCHEMA,T-195,NovaEmbeddingResponse,sdk/NovaEngineModels.ts,interface,5,id | embeddings | usage | attestationHash | latencyMs
+QUERY_SCHEMA,T-196,NovaImageRequest,sdk/NovaEngineModels.ts,interface,7,engineId | prompt | negativePrompt | width | height | steps | seed
+QUERY_SCHEMA,T-197,NovaImageResponse,sdk/NovaEngineModels.ts,interface,5,id | images | usage | attestationHash | latencyMs
+QUERY_SCHEMA,T-198,NovaVideoRequest,sdk/NovaEngineModels.ts,interface,6,engineId | prompt | durationSeconds | width | height | fps
+QUERY_SCHEMA,T-199,NovaVideoResponse,sdk/NovaEngineModels.ts,interface,5,id | videoUrl | usage | attestationHash | latencyMs
+QUERY_SCHEMA,T-200,NovaAudioRequest,sdk/NovaEngineModels.ts,interface,5,engineId | text | voice | speed | format
+QUERY_SCHEMA,T-201,NovaAudioResponse,sdk/NovaEngineModels.ts,interface,5,id | audioData | usage | attestationHash | latencyMs
+QUERY_SCHEMA,T-202,NovaCodeRequest,sdk/NovaEngineModels.ts,interface,6,engineId | prompt | language | maxTokens | temperature | context
+QUERY_SCHEMA,T-203,NovaCodeResponse,sdk/NovaEngineModels.ts,interface,5,id | code | usage | attestationHash | latencyMs
+QUERY_SCHEMA,T-204,NovaSearchRequest,sdk/NovaEngineModels.ts,interface,4,engineId | query | maxResults | domain
+QUERY_SCHEMA,T-205,NovaSearchResponse,sdk/NovaEngineModels.ts,interface,5,id | results | usage | attestationHash | latencyMs
+QUERY_SCHEMA,T-206,NovaSafetyRequest,sdk/NovaEngineModels.ts,interface,3,engineId | content | categories
+QUERY_SCHEMA,T-207,NovaSafetyResponse,sdk/NovaEngineModels.ts,interface,5,id | safe | categories | attestationHash | latencyMs
+QUERY_SCHEMA,T-208,NovaRankRequest,sdk/NovaEngineModels.ts,interface,4,engineId | query | documents | topK
+QUERY_SCHEMA,T-209,NovaRankResponse,sdk/NovaEngineModels.ts,interface,5,id | rankings | usage | attestationHash | latencyMs
+BLUEPRINT_SCHEMA,T-210,AIFoundationModel,models/AIFoundationModels.ts,interface,15,id | wireSlug | name | latinName | ring | modality | priority | capabilities | contextWindow | phiWeight | fibonacciIdentity | attestation | engineStatus | providerSource | parameterClass
+BLUEPRINT_SCHEMA,T-211,RoutingResult,models/AIFoundationModels.ts,interface,8,model | ring | score | phiWeight | latencyEstimate | fusionEligible | attestationValid | timestamp
+BLUEPRINT_SCHEMA,T-212,WireState,models/AIFoundationModels.ts,interface,7,wireSlug | active | requestCount | avgLatency | lastRequest | successRate | kuramotoPhase
+BLUEPRINT_SCHEMA,T-213,FrontendIntelligenceModel,models/FrontendIntelligenceModels.ts,interface,14,id | name | latinName | group | intelligenceType | ring | capabilities | phiWeight | fibonacciId | status | wireAffinity | lawReference | description | goldenPrimitive
+BLUEPRINT_SCHEMA,T-214,PhantomState,models/PhantomBlockchainModels.ts,interface,7,stealthLevel | encryptionTier | hashAlgorithm | cloakHash | phantomProof | latticeVector | timestamp
+BLUEPRINT_SCHEMA,T-215,PhantomSubModel,models/PhantomBlockchainModels.ts,interface,10,id | name | latinName | family | puzzleType | stealthLevel | encryptionTier | phiWeight | fibonacciIdentity | capabilities
+BLUEPRINT_SCHEMA,T-216,AlphaAgent,agents/AlphaAgentRegistry.ts,interface,14,id | name | latinName | division | tier | engines | capabilities | costClass | latencyClass | securityTier | callSignature | phiWeight | fibonacciIdentity | status
+BLUEPRINT_SCHEMA,T-217,AIProtocol,protocols/AIProtocolRegistry.ts,interface,12,id | name | latinName | tier | ring | engines | adaptiveMode | parameters | phiWeight | fibonacciIdentity | attestation | status
+BLUEPRINT_SCHEMA,T-218,AIExtension,extensions/AIExtensionRegistry.ts,interface,14,id | name | latinName | extensionClass | ring | engineBindings | encryptionMode | contractType | capabilities | phiWeight | fibonacciIdentity | attestation | description | status
+BLUEPRINT_SCHEMA,T-219,NativeNovaAI,marketplace/NativeNovaAIs.ts,interface,12,name | latin | group | tier | mode | caps | purpose | law | engines | phiWeight | fibonacciId | status
+BLUEPRINT_SCHEMA,T-220,LanguageAI,marketplace/LanguageAIWorkers.ts,interface,12,id | name | latinName | group | buildRole | tier | engines | capabilities | phiWeight | fibonacciId | status | lawReference
+BLUEPRINT_SCHEMA,T-221,NovaEngineDefinition,sdk/NovaEngineModels.ts,interface,15,id | wireSlug | name | latinName | description | modalities | contextWindow | maxOutput | phiWeight | fibonacciIdentity | attestation | providerType | familyId | status | capabilities
+NOVA_OS_CONFIG,T-222,NovaOSSystem,workspace/settings/nova-os.json,config,7,name | version | codename | sovereignMode | defaultEngine | mathPrecision | phiConstant
+NOVA_OS_CONFIG,T-223,TokenizerConfig,workspace/settings/nova-os.json,config,5,vocabularySize | segmentationMethod | hashMethod | minTokenLength | maxTokenLength
+NOVA_OS_CONFIG,T-224,SecurityConfig,workspace/settings/nova-os.json,config,3,fibonacciAttestation | e8LatticeEncryption | sovereignKeyManagement
+NOVA_OS_CONFIG,T-225,CanisterConfig,workspace/settings/nova-os.json,config,5,enableSovereign | elementTable | goldAU | silverAG | crimson
+NOVA_OS_CONFIG,T-226,ChatConfig,workspace/settings/nova-os.json,config,5,enableMiniAIs | miniCodeHelper | miniBackendTools | historyLimit | phiWeightedContext
+NOVA_OS_CONFIG,T-227,EngineConfig,workspace/settings/nova-os.json,config,5,enableAll | defaultContextWindow | maxContextWindow | attestationRequired | wireProtocol

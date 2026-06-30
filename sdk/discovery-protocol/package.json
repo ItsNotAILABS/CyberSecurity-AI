@@ -1,0 +1,32 @@
+{
+  "name": "@medina/discovery-protocol",
+  "version": "0.1.618",
+  "description": "Organism discovery, capability advertisement, and connection establishment",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "keywords": [
+    "medina",
+    "discovery",
+    "capability",
+    "connection",
+    "networking",
+    "phi",
+    "golden-ratio"
+  ],
+  "author": "Casa de Medina",
+  "license": "PROPRIETARY",
+  "dependencies": {
+    "@medina/medina-heart": "^1.1.618"
+  },
+  "medina": {
+    "charter": "DPC-2026",
+    "frameworks": ["RSHIP-2026-MEDINA-CORE", "NEXUS-2026-MEDINA-NEURAL"],
+    "fibonacci": {
+      "stage": 0,
+      "version": "0.1.618"
+    }
+  }
+}

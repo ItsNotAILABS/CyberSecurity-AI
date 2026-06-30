@@ -1,0 +1,22 @@
+{
+  "name": "@medina/adaptive-learning",
+  "version": "0.1.618",
+  "description": "Cross-organism learning protocols - Shared learning across all AIs",
+  "main": "src/index.js",
+  "type": "module",
+  "keywords": ["medina", "learning", "adaptive", "cross-organism", "knowledge-transfer"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@medina/medina-heart": "file:../medina-heart",
+    "@medina/memory-ocean": "file:../memory-ocean"
+  },
+  "medina": {
+    "alphaSDK": true,
+    "learning": true,
+    "fibonacci": "0.1.618",
+    "charter": "EAC-2026",
+    "frameworks": ["RSHIP-2026-MEDINA-CORE", "NEXUS-2026-MEDINA-NEURAL"]
+  }
+}

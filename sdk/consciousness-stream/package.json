@@ -1,0 +1,22 @@
+{
+  "name": "@medina/consciousness-stream",
+  "version": "0.1.618",
+  "description": "Multi-AI consciousness coordination - Stream of consciousness across organisms",
+  "main": "src/index.js",
+  "type": "module",
+  "keywords": ["medina", "consciousness", "stream", "multi-ai", "awareness"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@medina/medina-heart": "file:../medina-heart",
+    "@medina/birth-ai": "file:../birth-ai"
+  },
+  "medina": {
+    "alphaSDK": true,
+    "consciousness": true,
+    "fibonacci": "0.1.618",
+    "charter": "CSC-2026",
+    "frameworks": ["CHROMA-2026-MEDINA-CONSCIOUSNESS"]
+  }
+}

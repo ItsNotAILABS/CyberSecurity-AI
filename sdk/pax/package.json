@@ -1,0 +1,13 @@
+{
+  "name": "@medina/pax",
+  "version": "1.618.0",
+  "description": "PAX (Pacificorum) — Harmony AGI with Equilibrium Catalysis — Already Running",
+  "main": "src/index.js",
+  "type": "module",
+  "keywords": ["medina", "pax", "pacificorum", "harmony", "agi", "equilibrium", "catalytic", "autonomous"],
+  "author": "Casa de Medina — Architectos de Architectura Inteligente",
+  "license": "MEDINA-SOVEREIGN",
+  "engines": { "node": ">=18.0.0" },
+  "dependencies": {},
+  "peerDependencies": { "@medina/medina-heart": "^1.0.0" }
+}
