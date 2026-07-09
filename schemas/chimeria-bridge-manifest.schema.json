@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ItsNotAILABS/CyberSecurity-AI/schemas/chimeria-bridge-manifest.schema.json",
+  "title": "CHIMERIA Approved Bridge Manifest",
+  "type": "object",
+  "required": ["project", "version", "public_summary", "release_boundary", "evidence_level"],
+  "properties": {
+    "project": {"type": "string"},
+    "version": {"type": "string"},
+    "status": {"type": "string"},
+    "public_summary": {"type": "string"},
+    "approved_capabilities": {"type": "array", "items": {"type": "string"}},
+    "approved_products": {"type": "array", "items": {"type": "string"}},
+    "approved_controls": {"type": "array", "items": {"type": "string"}},
+    "release_boundary": {"type": "string"},
+    "evidence_level": {"type": "string"},
+    "generated_at": {"type": "string"}
+  },
+  "additionalProperties": true
+}
