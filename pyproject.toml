@@ -1,12 +1,12 @@
 [project]
 name = "mesie-career-cybersecurity"
-version = "1.1.0"
-description = "CyberSecurity-AI: public-safe cybersecurity MCP intelligence with protected CHIMERIA bridge"
+version = "1.2.0"
+description = "CyberSecurity-AI: public-safe cybersecurity MCP platform with CLI, HTTP demo API, and protected CHIMERIA bridge"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [{ name = "Alfredo Medina Hernandez" }]
-keywords = ["cybersecurity", "mcp", "career-intelligence", "MESIE", "CHIMERIA", "defensive-ai"]
+keywords = ["cybersecurity", "mcp", "career-intelligence", "MESIE", "CHIMERIA", "defensive-ai", "security-platform"]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Developers",
@@ -22,6 +22,8 @@ classifiers = [
 [project.scripts]
 mesie_career_cybersecurity = "mcp_server.server:main"
 cybersecurity-ai-mcp = "mcp_server.server:main"
+cybersecurity-ai = "mcp_server.cli:main"
+cybersecurity-ai-http = "mcp_server.http_server:main"
 
 [tool.setuptools]
 packages = ["mcp_server"]
