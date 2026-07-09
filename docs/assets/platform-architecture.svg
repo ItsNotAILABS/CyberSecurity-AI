@@ -1,0 +1,62 @@
+<svg width="1400" height="760" viewBox="0 0 1400 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CyberSecurity-AI platform architecture">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#020617"/><stop offset="1" stop-color="#111827"/></linearGradient>
+    <linearGradient id="box" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e3a8a"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#93c5fd"/></marker>
+    <style>
+      .title{font:800 42px Inter,Segoe UI,Arial;fill:#f8fafc}.sub{font:600 20px Inter,Segoe UI,Arial;fill:#bfdbfe}.box{fill:url(#box);stroke:#38bdf8;stroke-width:2}.priv{fill:#1c1917;stroke:#f59e0b;stroke-width:2}.safe{fill:#052e16;stroke:#22c55e;stroke-width:2}.txt{font:700 20px Inter,Segoe UI,Arial;fill:#f8fafc}.small{font:500 15px Inter,Segoe UI,Arial;fill:#cbd5e1}.line{stroke:#93c5fd;stroke-width:3;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1400" height="760" fill="url(#bg)"/>
+  <text x="60" y="70" class="title">CyberSecurity-AI Platform Architecture</text>
+  <text x="62" y="105" class="sub">Public-safe MCP platform with CLI, HTTP demo API, and approved CHIMERIA private bridge</text>
+
+  <rect x="60" y="160" width="260" height="120" rx="22" class="box"/>
+  <text x="88" y="205" class="txt">AI Clients</text>
+  <text x="88" y="236" class="small">Claude, Cursor, Grok MCP</text>
+  <text x="88" y="260" class="small">terminal + local agents</text>
+
+  <rect x="390" y="135" width="250" height="80" rx="18" class="box"/>
+  <text x="420" y="178" class="txt">MCP stdio</text>
+  <text x="420" y="200" class="small">mcp_server.server</text>
+
+  <rect x="390" y="235" width="250" height="80" rx="18" class="box"/>
+  <text x="420" y="278" class="txt">CLI</text>
+  <text x="420" y="300" class="small">mcp_server.cli</text>
+
+  <rect x="390" y="335" width="250" height="80" rx="18" class="box"/>
+  <text x="420" y="378" class="txt">HTTP API</text>
+  <text x="420" y="400" class="small">127.0.0.1:8767</text>
+
+  <rect x="730" y="170" width="280" height="150" rx="24" class="safe"/>
+  <text x="760" y="215" class="txt">Public-Safe Core</text>
+  <text x="760" y="248" class="small">career taxonomy</text>
+  <text x="760" y="272" class="small">platform routes</text>
+  <text x="760" y="296" class="small">policy boundary</text>
+
+  <rect x="730" y="365" width="280" height="140" rx="24" class="safe"/>
+  <text x="760" y="410" class="txt">Market Packets</text>
+  <text x="760" y="443" class="small">buyers + use cases</text>
+  <text x="760" y="467" class="small">safe demo flows</text>
+  <text x="760" y="491" class="small">proof boundaries</text>
+
+  <rect x="1080" y="205" width="260" height="210" rx="26" class="priv"/>
+  <text x="1112" y="250" class="txt">CHIMERIA Bridge</text>
+  <text x="1112" y="283" class="small">approved manifest only</text>
+  <text x="1112" y="307" class="small">private_trunk_exposed=false</text>
+  <text x="1112" y="331" class="small">no private code export</text>
+  <text x="1112" y="355" class="small">safe fields only</text>
+
+  <rect x="560" y="570" width="340" height="100" rx="22" fill="#0f172a" stroke="#a78bfa" stroke-width="2"/>
+  <text x="595" y="612" class="txt">Proof + Release Lane</text>
+  <text x="595" y="642" class="small">pytest, MCP smoke, docs, PR receipts</text>
+
+  <path d="M320 210 C350 210 360 175 390 175" class="line"/>
+  <path d="M320 225 C350 250 360 275 390 275" class="line"/>
+  <path d="M320 240 C350 310 360 375 390 375" class="line"/>
+  <path d="M640 175 C685 185 700 220 730 235" class="line"/>
+  <path d="M640 275 C690 280 700 290 730 300" class="line"/>
+  <path d="M640 375 C685 390 700 420 730 435" class="line"/>
+  <path d="M1010 250 C1040 250 1050 270 1080 290" class="line"/>
+  <path d="M870 505 C840 540 800 560 760 570" class="line"/>
+</svg>

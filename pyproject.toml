@@ -1,13 +1,36 @@
 [project]
 name = "mesie-career-cybersecurity"
-version = "1.0.0"
-description = "MESIE Career MCP — cybersecurity pillar"
+version = "1.2.0"
+description = "CyberSecurity-AI: public-safe cybersecurity MCP platform with CLI, HTTP demo API, and protected CHIMERIA bridge"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
+authors = [{ name = "Alfredo Medina Hernandez" }]
+keywords = ["cybersecurity", "mcp", "career-intelligence", "MESIE", "CHIMERIA", "defensive-ai", "security-platform"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Information Technology",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Security",
+]
 
 [project.scripts]
 mesie_career_cybersecurity = "mcp_server.server:main"
+cybersecurity-ai-mcp = "mcp_server.server:main"
+cybersecurity-ai = "mcp_server.cli:main"
+cybersecurity-ai-http = "mcp_server.http_server:main"
+
+[tool.setuptools]
+packages = ["mcp_server"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
 
 [build-system]
 requires = ["setuptools>=68"]
