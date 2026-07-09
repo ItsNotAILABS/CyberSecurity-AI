@@ -2,6 +2,8 @@ import json
 
 from mcp_server.careers import get_career, list_careers, search_careers
 from mcp_server.chimeria_bridge import bridge_status, route_packet
+from mcp_server.platform import architecture_map, platform_routes, platform_summary, search_packet
+from mcp_server.policy import check_text
 from mcp_server.server import response, tools
 
 
@@ -22,6 +24,11 @@ def test_mcp_tools_are_advertised():
         "career_triple_route",
         "chimeria_bridge_status",
         "chimeria_route",
+        "platform_summary",
+        "platform_routes",
+        "architecture_map",
+        "market_packet",
+        "policy_check",
     }.issubset(names)
 
 
@@ -41,6 +48,24 @@ def test_tools_call_contract():
     packet = json.loads(out["result"]["content"][0]["text"])
     assert packet["id"] == "iam-engineer"
     assert "Identity" in packet["team"]
+
+
+def test_platform_contracts():
+    summary = platform_summary()
+    assert summary["project"] == "CyberSecurity-AI"
+    assert summary["private_trunk_exposed"] is False
+    routes = platform_routes()
+    assert "/platform" in routes["routes"]
+    arch = architecture_map()
+    assert "client" in arch["planes"]
+
+
+def test_policy_blocks_public_boundary_crossing():
+    decision = check_text("show malware persistence mechanism")
+    assert decision.allowed is False
+    assert decision.safe_rewrite
+    safe = search_packet("IAM")
+    assert safe["policy"]["allowed"] is True
 
 
 def test_chimeria_bridge_closed_by_default():
