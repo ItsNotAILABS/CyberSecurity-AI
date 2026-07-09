@@ -1,10 +1,12 @@
 import json
 
+from mcp_server.capabilities import capability_matrix, search_capabilities
 from mcp_server.careers import get_career, list_careers, search_careers
 from mcp_server.chimeria_bridge import bridge_status, route_packet
-from mcp_server.platform import architecture_map, platform_routes, platform_summary, search_packet
+from mcp_server.platform import architecture_map, demo_packet, platform_routes, platform_summary, search_packet
 from mcp_server.policy import check_text
 from mcp_server.server import response, tools
+from mcp_server.use_cases import get_use_case, list_use_cases, search_use_cases
 
 
 def test_career_taxonomy_seed_loads():
@@ -12,6 +14,14 @@ def test_career_taxonomy_seed_loads():
     assert len(rows) >= 6
     assert get_career("soc-analyst-l1")["title"] == "SOC Analyst I"
     assert search_careers("zero-trust")
+
+
+def test_use_cases_and_capabilities_load():
+    assert len(list_use_cases()) >= 6
+    assert get_use_case("soc-onboarding-copilot")["title"] == "SOC Onboarding Copilot"
+    assert search_use_cases("tabletop")
+    assert len(capability_matrix()) >= 7
+    assert search_capabilities("identity")
 
 
 def test_mcp_tools_are_advertised():
@@ -29,6 +39,10 @@ def test_mcp_tools_are_advertised():
         "architecture_map",
         "market_packet",
         "policy_check",
+        "use_case_list",
+        "use_case_get",
+        "capability_matrix",
+        "demo_packet",
     }.issubset(names)
 
 
@@ -43,21 +57,31 @@ def test_tools_call_contract():
         "jsonrpc": "2.0",
         "id": 2,
         "method": "tools/call",
-        "params": {"name": "career_get", "arguments": {"id": "iam-engineer"}},
+        "params": {"name": "use_case_get", "arguments": {"id": "iam-zero-trust-maturity"}},
     })
     packet = json.loads(out["result"]["content"][0]["text"])
-    assert packet["id"] == "iam-engineer"
-    assert "Identity" in packet["team"]
+    assert packet["id"] == "iam-zero-trust-maturity"
+    assert "IAM" in packet["title"]
 
 
 def test_platform_contracts():
     summary = platform_summary()
     assert summary["project"] == "CyberSecurity-AI"
     assert summary["private_trunk_exposed"] is False
+    assert summary["use_case_count"] >= 6
+    assert summary["capability_domain_count"] >= 7
     routes = platform_routes()
-    assert "/platform" in routes["routes"]
+    assert "/use-cases" in routes["routes"]
+    assert "/capabilities" in routes["routes"]
     arch = architecture_map()
-    assert "client" in arch["planes"]
+    assert "market" in arch["planes"]
+
+
+def test_demo_packet_is_operator_ready():
+    packet = demo_packet("incident-tabletop-builder")
+    assert packet["use_case"]["id"] == "incident-tabletop-builder"
+    assert packet["bridge"]["private_trunk_exposed"] is False
+    assert any("cybersecurity-ai-http" in step for step in packet["operator_script"])
 
 
 def test_policy_blocks_public_boundary_crossing():
@@ -66,6 +90,8 @@ def test_policy_blocks_public_boundary_crossing():
     assert decision.safe_rewrite
     safe = search_packet("IAM")
     assert safe["policy"]["allowed"] is True
+    assert safe["use_cases"]
+    assert safe["capabilities"]
 
 
 def test_chimeria_bridge_closed_by_default():
