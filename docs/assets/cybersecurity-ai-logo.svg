@@ -1,0 +1,32 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CyberSecurity-AI logo">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="0.45" stop-color="#1d4ed8"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#020617" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="360" rx="34" fill="#020617"/>
+  <path d="M0 280 C220 170 350 370 590 230 C820 95 930 220 1200 80 L1200 360 L0 360 Z" fill="url(#g)" opacity="0.22"/>
+  <g filter="url(#shadow)">
+    <path d="M170 72 L278 118 V196 C278 260 232 298 170 318 C108 298 62 260 62 196 V118 Z" fill="url(#g)" stroke="#93c5fd" stroke-width="4"/>
+    <path d="M170 108 L234 136 V195 C234 231 211 254 170 270 C129 254 106 231 106 195 V136 Z" fill="#020617" opacity="0.78"/>
+    <circle cx="170" cy="180" r="38" fill="none" stroke="#22c55e" stroke-width="8"/>
+    <path d="M152 180 L166 194 L193 158" fill="none" stroke="#bfdbfe" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="330" y="150" fill="#f8fafc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="70" font-weight="800">CyberSecurity-AI</text>
+  <text x="334" y="205" fill="#93c5fd" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="28" font-weight="600">Public-safe cybersecurity intelligence for MCP, CLI, HTTP, and CHIMERIA bridge workflows</text>
+  <g transform="translate(334 238)">
+    <rect x="0" y="0" width="118" height="38" rx="19" fill="#0f172a" stroke="#38bdf8"/>
+    <text x="24" y="25" fill="#e0f2fe" font-family="Inter, Segoe UI, Arial" font-size="16" font-weight="700">MCP</text>
+    <rect x="132" y="0" width="100" height="38" rx="19" fill="#0f172a" stroke="#22c55e"/>
+    <text x="160" y="25" fill="#dcfce7" font-family="Inter, Segoe UI, Arial" font-size="16" font-weight="700">CLI</text>
+    <rect x="246" y="0" width="118" height="38" rx="19" fill="#0f172a" stroke="#a78bfa"/>
+    <text x="274" y="25" fill="#ede9fe" font-family="Inter, Segoe UI, Arial" font-size="16" font-weight="700">HTTP</text>
+    <rect x="378" y="0" width="210" height="38" rx="19" fill="#0f172a" stroke="#f59e0b"/>
+    <text x="406" y="25" fill="#fef3c7" font-family="Inter, Segoe UI, Arial" font-size="16" font-weight="700">CHIMERIA Bridge</text>
+  </g>
+</svg>
