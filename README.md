@@ -1,40 +1,46 @@
-# mesie-career-cybersecurity
+# CyberSecurity-AI
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![MCP](https://img.shields.io/badge/MCP-stdio-green.svg)](https://modelcontextprotocol.io)
-[![Careers](https://img.shields.io/badge/Careers-200-orange.svg)](#overview)
+[![Boundary](https://img.shields.io/badge/Boundary-defensive%20AI-purple.svg)](docs/PRODUCTION_BOUNDARY.md)
 
-**200 compressed Cybersecurity careers** as an MCP stdio server for **Grok, Claude, Cursor, Antigravity**, and any MCP host.
+**CyberSecurity-AI** is a public-safe cybersecurity intelligence MCP for career mapping, defensive workforce readiness, SOC/IR/GRC/IAM planning, and platform-native assistant workflows.
 
-Part of **[MESIE Career MCP Triple Protocol](https://github.com/FreddyCreates/Multi-Element-Spectral-Intelligence-Engine-MESIE)** — Loom P1 + MCP Colony P2 + Bridge P3.
+It is the market-facing cybersecurity lane for the Medina / MESIE ecosystem, with an optional protected bridge to the private **CHIMERIA** trunk. The bridge consumes only approved public-safe manifests and does not expose private CHIMERIA implementation details.
 
-## Overview
+## What It Does
 
-| | |
-|---|---|
-| **Pillar** | Cybersecurity |
-| **Careers** | 200 |
-| **Tagline** | SOC, IR, pentest, GRC, IAM, zero-trust, threat intel |
-| **Protocol** | MESIE-CAREER-TRIPLE-PROTOCOL/1.0 |
-| **HTTP hub** | `http://127.0.0.1:8767` (universal) |
+- Exposes cybersecurity career intelligence through MCP stdio.
+- Supports SOC, incident response, GRC, IAM, cloud security, zero-trust, and threat-intelligence use cases.
+- Runs in MCP-compatible clients such as Claude Desktop, Cursor, Grok-compatible hosts, local terminals, and internal agent stacks.
+- Provides a protected `chimeria_bridge_status` and `chimeria_route` path for approved private manifests.
+- Keeps the public repo defensive, educational, marketable, and safe.
 
-## Triple Protocol
+## Tools
 
-```
-  AI Client ──P2──▶ Career MCP (this repo)
-                      │
-         P1 Loom ◀────┼────▶ P3 Bridge (:8750 / :8767)
-                      │
-                 200 careers (compressed)
-```
+| Tool | Description |
+|------|-------------|
+| `career_list` | List careers by team/stage |
+| `career_get` | Full compressed public-safe career profile |
+| `career_search` | Keyword search across roles and capabilities |
+| `career_invoke` | Create a safe career intelligence packet for platform use |
+| `career_triple_route` | MESIE P1/P2/P3 routing map plus CHIMERIA bridge status |
+| `chimeria_bridge_status` | Check approved private CHIMERIA manifest connection |
+| `chimeria_route` | Route a public-safe packet toward the private CHIMERIA bridge boundary |
 
 ## Quick Start
 
 ```bash
-git clone https://github.com/FreddyCreates/mesie-career-cybersecurity.git
-cd mesie-career-cybersecurity
-pip install -e .
-python mcp-server/server.py
+git clone https://github.com/ItsNotAILABS/CyberSecurity-AI.git
+cd CyberSecurity-AI
+python -m pip install -e .
+python -m mcp_server.server
+```
+
+After install, the console script is also available:
+
+```bash
+cybersecurity-ai-mcp
 ```
 
 ## MCP Configuration
@@ -42,29 +48,72 @@ python mcp-server/server.py
 ```json
 {
   "mcpServers": {
-    "mesie-career-cybersecurity": {
+    "cybersecurity-ai": {
       "command": "python",
-      "args": ["mcp-server/server.py"],
-      "cwd": "/path/to/mesie-career-cybersecurity",
-      "env": { "MESIE_CAREER_PILLAR": "cybersecurity" }
+      "args": ["-m", "mcp_server.server"],
+      "cwd": "/absolute/path/to/CyberSecurity-AI",
+      "env": {
+        "MESIE_CAREER_PILLAR": "cybersecurity"
+      }
     }
   }
 }
 ```
 
-## Tools
+## Optional CHIMERIA Bridge
 
-| Tool | Description |
-|------|-------------|
-| `career_list` | List careers by team/stage |
-| `career_get` | Full compressed profile |
-| `career_search` | Keyword search |
-| `career_invoke` | Pulse + federated envelope |
-| `career_triple_route` | P1/P2/P3 routing map |
+CHIMERIA is the private trunk. CyberSecurity-AI can use CHIMERIA only through an approved bridge manifest.
 
-## Research
+```bash
+export CHIMERIA_BRIDGE_MANIFEST=/secure/path/public_bridge_manifest.json
+```
 
-See [Working Paper](../deliverables/research/CAREER_MCP_TRIPLE_PROTOCOL_WORKING_PAPER.md) in the parent MESIE repo.
+or:
+
+```bash
+export CHIMERIA_BRIDGE_DIR=/secure/path/chimeria-bridge
+```
+
+The public adapter only reads approved fields and always reports:
+
+```json
+{
+  "private_trunk_exposed": false
+}
+```
+
+## Smoke Test
+
+```bash
+printf '{"jsonrpc":"2.0","id":1,"method":"tools/list","params":{}}\n' | python -m mcp_server.server
+```
+
+## Test
+
+```bash
+python -m pip install -e .
+python -m pytest -q
+```
+
+## Market Position
+
+CyberSecurity-AI is designed for:
+
+- AI builders who need a cybersecurity MCP.
+- Cybersecurity teams mapping roles, skills, and workflows.
+- Training providers building SOC, IR, GRC, IAM, and cloud-security curricula.
+- Enterprise pilots that need a safe public intelligence layer with a private defense trunk behind it.
+
+See:
+
+- [Platform Marketing Pack](docs/PLATFORM_MARKETING.md)
+- [MCP Client Setup](docs/MCP_CLIENTS.md)
+- [Production Boundary](docs/PRODUCTION_BOUNDARY.md)
+- [CHIMERIA Bridge](docs/CHIMERIA_BRIDGE.md)
+
+## Boundary
+
+CyberSecurity-AI is defensive and educational. It does not provide exploit instructions, malware workflows, unauthorized-access guidance, or private CHIMERIA trunk implementation details.
 
 ## License
 
