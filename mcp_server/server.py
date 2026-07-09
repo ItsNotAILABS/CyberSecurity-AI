@@ -1,8 +1,8 @@
 """CyberSecurity-AI MCP stdio server.
 
-This implements a small, dependency-light MCP-compatible JSON-RPC surface so the
-repo can run in Claude Desktop, Cursor, Grok-compatible MCP hosts, and other
-stdio clients without waiting on a large framework dependency.
+This implements a dependency-light MCP-compatible JSON-RPC surface so the repo
+can run in Claude Desktop, Cursor, Grok-compatible MCP hosts, and other stdio
+clients without waiting on a large framework dependency.
 """
 
 from __future__ import annotations
@@ -13,9 +13,11 @@ from typing import Any, Callable
 
 from .careers import get_career, list_careers, search_careers
 from .chimeria_bridge import bridge_status, route_packet
+from .platform import architecture_map, market_packet, platform_routes, platform_summary
+from .policy import check_text
 
 SERVER_NAME = "cybersecurity-ai"
-SERVER_VERSION = "1.1.0"
+SERVER_VERSION = "1.2.0"
 
 
 def _tool(name: str, description: str, schema: dict[str, Any]) -> dict[str, Any]:
@@ -24,75 +26,18 @@ def _tool(name: str, description: str, schema: dict[str, Any]) -> dict[str, Any]
 
 def tools() -> list[dict[str, Any]]:
     return [
-        _tool(
-            "career_list",
-            "List public-safe cybersecurity careers by optional team or stage.",
-            {
-                "type": "object",
-                "properties": {
-                    "team": {"type": "string"},
-                    "stage": {"type": "string"},
-                },
-                "additionalProperties": False,
-            },
-        ),
-        _tool(
-            "career_get",
-            "Get one public-safe compressed career profile by id.",
-            {
-                "type": "object",
-                "required": ["id"],
-                "properties": {"id": {"type": "string"}},
-                "additionalProperties": False,
-            },
-        ),
-        _tool(
-            "career_search",
-            "Search public-safe cybersecurity careers and capability categories.",
-            {
-                "type": "object",
-                "required": ["query"],
-                "properties": {"query": {"type": "string"}},
-                "additionalProperties": False,
-            },
-        ),
-        _tool(
-            "career_invoke",
-            "Create a defensive career intelligence packet for a safe platform use case.",
-            {
-                "type": "object",
-                "required": ["intent"],
-                "properties": {
-                    "intent": {"type": "string"},
-                    "career_id": {"type": "string"},
-                    "platform": {"type": "string"},
-                },
-                "additionalProperties": False,
-            },
-        ),
-        _tool(
-            "career_triple_route",
-            "Return the MESIE P1/P2/P3 route map and CHIMERIA private-bridge status.",
-            {"type": "object", "properties": {}, "additionalProperties": False},
-        ),
-        _tool(
-            "chimeria_bridge_status",
-            "Check whether an approved private CHIMERIA bridge manifest is available.",
-            {"type": "object", "properties": {}, "additionalProperties": False},
-        ),
-        _tool(
-            "chimeria_route",
-            "Route a public-safe intent packet toward the private CHIMERIA bridge manifest boundary.",
-            {
-                "type": "object",
-                "required": ["intent"],
-                "properties": {
-                    "intent": {"type": "string"},
-                    "payload": {"type": "object"},
-                },
-                "additionalProperties": False,
-            },
-        ),
+        _tool("career_list", "List public-safe cybersecurity careers by optional team or stage.", {"type": "object", "properties": {"team": {"type": "string"}, "stage": {"type": "string"}}, "additionalProperties": False}),
+        _tool("career_get", "Get one public-safe compressed career profile by id.", {"type": "object", "required": ["id"], "properties": {"id": {"type": "string"}}, "additionalProperties": False}),
+        _tool("career_search", "Search public-safe cybersecurity careers and capability categories.", {"type": "object", "required": ["query"], "properties": {"query": {"type": "string"}}, "additionalProperties": False}),
+        _tool("career_invoke", "Create a defensive career intelligence packet for a safe platform use case.", {"type": "object", "required": ["intent"], "properties": {"intent": {"type": "string"}, "career_id": {"type": "string"}, "platform": {"type": "string"}}, "additionalProperties": False}),
+        _tool("career_triple_route", "Return the MESIE P1/P2/P3 route map and CHIMERIA private-bridge status.", {"type": "object", "properties": {}, "additionalProperties": False}),
+        _tool("chimeria_bridge_status", "Check whether an approved private CHIMERIA bridge manifest is available.", {"type": "object", "properties": {}, "additionalProperties": False}),
+        _tool("chimeria_route", "Route a public-safe intent packet toward the private CHIMERIA bridge manifest boundary.", {"type": "object", "required": ["intent"], "properties": {"intent": {"type": "string"}, "payload": {"type": "object"}}, "additionalProperties": False}),
+        _tool("platform_summary", "Return the full CyberSecurity-AI platform packet for demos, pilots, and marketing.", {"type": "object", "properties": {}, "additionalProperties": False}),
+        _tool("platform_routes", "Return MCP, HTTP, CLI, and bridge route inventory.", {"type": "object", "properties": {}, "additionalProperties": False}),
+        _tool("architecture_map", "Return the platform architecture planes and data flows.", {"type": "object", "properties": {}, "additionalProperties": False}),
+        _tool("market_packet", "Create a market-safe positioning packet for an audience.", {"type": "object", "properties": {"audience": {"type": "string"}}, "additionalProperties": False}),
+        _tool("policy_check", "Check a phrase against the public CyberSecurity-AI boundary.", {"type": "object", "required": ["text"], "properties": {"text": {"type": "string"}}, "additionalProperties": False}),
     ]
 
 
@@ -110,6 +55,11 @@ def call_tool(name: str, args: dict[str, Any] | None = None) -> dict[str, Any]:
         "career_triple_route": lambda a: triple_route(),
         "chimeria_bridge_status": lambda a: bridge_status(),
         "chimeria_route": lambda a: route_packet(str(a.get("intent", "")), a.get("payload") if isinstance(a.get("payload"), dict) else {}),
+        "platform_summary": lambda a: platform_summary(),
+        "platform_routes": lambda a: platform_routes(),
+        "architecture_map": lambda a: architecture_map(),
+        "market_packet": lambda a: market_packet(str(a.get("audience", "platform buyers"))),
+        "policy_check": lambda a: check_text(str(a.get("text", ""))).to_dict(),
     }
     if name not in handlers:
         return _content({"error": "unknown_tool", "name": name})
@@ -117,31 +67,32 @@ def call_tool(name: str, args: dict[str, Any] | None = None) -> dict[str, Any]:
 
 
 def career_invoke(args: dict[str, Any]) -> dict[str, Any]:
+    intent = str(args.get("intent", ""))
+    decision = check_text(intent)
+    if not decision.allowed:
+        return {"policy": decision.to_dict(), "career": None, "safe_use_only": True}
     career_id = str(args.get("career_id", "")).strip()
     career = get_career(career_id) if career_id else None
     return {
-        "intent": args.get("intent"),
+        "intent": intent,
         "platform": args.get("platform", "generic-mcp-host"),
         "career": career,
         "safe_use_only": True,
-        "blocked_scope": [
-            "exploit instructions",
-            "malware or persistence workflows",
-            "unauthorized access guidance",
-            "private CHIMERIA trunk internals",
-        ],
-        "bridge": route_packet("career-intelligence", {"career_id": career_id, "intent": args.get("intent")}),
+        "policy": decision.to_dict(),
+        "blocked_scope": ["exploit instructions", "malware or persistence workflows", "unauthorized access guidance", "private CHIMERIA trunk internals"],
+        "bridge": route_packet("career-intelligence", {"career_id": career_id, "intent": intent}),
     }
 
 
 def triple_route() -> dict[str, Any]:
     return {
-        "protocol": "MESIE-CAREER-TRIPLE-PROTOCOL/1.1",
-        "p1_loom": "career taxonomy and memory lane",
+        "protocol": "MESIE-CAREER-TRIPLE-PROTOCOL/1.2",
+        "p1_loom": "career taxonomy, platform memory, and market-safe role intelligence",
         "p2_mcp": "stdio MCP tools exposed by this package",
         "p3_bridge": "optional approved CHIMERIA public manifest bridge",
         "http_hub_default": "http://127.0.0.1:8767",
         "private_trunk_exposed": False,
+        "platform": platform_summary(),
         "chimeria": bridge_status(),
     }
 
@@ -152,11 +103,7 @@ def response(req: dict[str, Any]) -> dict[str, Any]:
     params = req.get("params") if isinstance(req.get("params"), dict) else {}
 
     if method == "initialize":
-        result = {
-            "protocolVersion": "2024-11-05",
-            "serverInfo": {"name": SERVER_NAME, "version": SERVER_VERSION},
-            "capabilities": {"tools": {}},
-        }
+        result = {"protocolVersion": "2024-11-05", "serverInfo": {"name": SERVER_NAME, "version": SERVER_VERSION}, "capabilities": {"tools": {}}}
     elif method == "tools/list":
         result = {"tools": tools()}
     elif method == "tools/call":
