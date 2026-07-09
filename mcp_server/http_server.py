@@ -1,9 +1,4 @@
-"""Local HTTP demo API for CyberSecurity-AI.
-
-This is dependency-free and intentionally local-first. It is for demos,
-local dashboards, platform pilots, and browser testing. It does not claim
-external deployment.
-"""
+"""Local HTTP demo API for CyberSecurity-AI."""
 
 from __future__ import annotations
 
@@ -12,10 +7,12 @@ import json
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
 
+from .capabilities import capability_matrix
 from .careers import list_careers
 from .chimeria_bridge import bridge_status
-from .platform import architecture_map, platform_routes, platform_summary, search_packet
+from .platform import architecture_map, demo_packet, platform_routes, platform_summary, search_packet
 from .policy import boundary_packet
+from .use_cases import get_use_case, list_use_cases
 
 
 def _json_bytes(payload: dict | list) -> bytes:
@@ -23,25 +20,29 @@ def _json_bytes(payload: dict | list) -> bytes:
 
 
 class CyberSecurityAIHandler(BaseHTTPRequestHandler):
-    server_version = "CyberSecurityAIHTTP/1.2"
+    server_version = "CyberSecurityAIHTTP/1.3"
 
-    def do_GET(self) -> None:  # noqa: N802 - stdlib hook
+    def do_GET(self) -> None:  # noqa: N802
         parsed = urlparse(self.path)
         query = parse_qs(parsed.query)
         path = parsed.path.rstrip("/") or "/"
-
         if path == "/":
-            payload = {
-                "service": "CyberSecurity-AI",
-                "docs": ["/health", "/platform", "/careers", "/search?q=iam", "/bridge", "/architecture", "/routes"],
-                "private_trunk_exposed": False,
-            }
+            payload = {"service": "CyberSecurity-AI", "docs": ["/health", "/platform", "/careers", "/use-cases", "/capabilities", "/search?q=iam", "/demo?use_case=soc-onboarding-copilot", "/bridge", "/architecture", "/routes"], "private_trunk_exposed": False}
         elif path == "/health":
             payload = {"ok": True, "service": "CyberSecurity-AI", "private_trunk_exposed": False, "boundary": boundary_packet()}
         elif path == "/platform":
             payload = platform_summary()
         elif path == "/careers":
             payload = {"careers": list_careers()}
+        elif path == "/use-cases":
+            payload = {"use_cases": list_use_cases(buyer=query.get("buyer", [None])[0])}
+        elif path == "/use-case":
+            use_case_id = query.get("id", [""])[0]
+            payload = get_use_case(use_case_id) or {"error": "use_case_not_found", "id": use_case_id}
+        elif path == "/capabilities":
+            payload = {"capability_matrix": capability_matrix()}
+        elif path == "/demo":
+            payload = demo_packet(query.get("use_case", ["soc-onboarding-copilot"])[0])
         elif path == "/search":
             payload = search_packet(query.get("q", [""])[0])
         elif path == "/bridge":
@@ -55,7 +56,7 @@ class CyberSecurityAIHandler(BaseHTTPRequestHandler):
             return
         self._send(payload)
 
-    def log_message(self, format: str, *args: object) -> None:  # noqa: A002 - stdlib signature
+    def log_message(self, format: str, *args: object) -> None:  # noqa: A002
         return
 
     def _send(self, payload: dict | list, status: int = 200) -> None:
