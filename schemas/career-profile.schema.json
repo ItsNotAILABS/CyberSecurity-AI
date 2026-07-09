@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ItsNotAILABS/CyberSecurity-AI/schemas/career-profile.schema.json",
+  "title": "CyberSecurity-AI Career Profile",
+  "type": "object",
+  "required": ["id", "title", "team", "stage", "summary", "skills", "platforms", "safe_uses"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "title": {"type": "string"},
+    "team": {"type": "string"},
+    "stage": {"type": "string"},
+    "summary": {"type": "string"},
+    "skills": {"type": "array", "items": {"type": "string"}},
+    "platforms": {"type": "array", "items": {"type": "string"}},
+    "safe_uses": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}
