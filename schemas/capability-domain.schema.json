@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ItsNotAILABS/CyberSecurity-AI/schemas/capability-domain.schema.json",
+  "title": "CyberSecurity-AI Capability Domain",
+  "type": "object",
+  "required": ["domain", "capabilities", "outputs", "maturity"],
+  "properties": {
+    "domain": {"type": "string"},
+    "capabilities": {"type": "array", "items": {"type": "string"}},
+    "outputs": {"type": "array", "items": {"type": "string"}},
+    "maturity": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}
