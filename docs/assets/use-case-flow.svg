@@ -1,0 +1,23 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CyberSecurity-AI real use case flow">
+  <defs>
+    <radialGradient id="r" cx="25%" cy="15%" r="80%"><stop offset="0" stop-color="#1d4ed8"/><stop offset=".5" stop-color="#020617"/><stop offset="1" stop-color="#020617"/></radialGradient>
+    <linearGradient id="b" x1="0" x2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#172554"/></linearGradient>
+    <marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto"><path d="M0,0 L0,8 L12,4 z" fill="#93c5fd"/></marker>
+    <style>.t{font:800 46px Inter,Segoe UI,Arial;fill:#f8fafc}.s{font:600 21px Inter,Segoe UI,Arial;fill:#bfdbfe}.h{font:800 24px Inter,Segoe UI,Arial;fill:#f8fafc}.p{font:500 17px Inter,Segoe UI,Arial;fill:#cbd5e1}.box{fill:url(#b);stroke:#38bdf8;stroke-width:2}.green{fill:#052e16;stroke:#22c55e;stroke-width:2}.gold{fill:#1c1917;stroke:#f59e0b;stroke-width:2}.line{stroke:#93c5fd;stroke-width:3;fill:none;marker-end:url(#a)}</style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#r)"/>
+  <text x="70" y="82" class="t">CyberSecurity-AI Real Use Flow</text>
+  <text x="72" y="120" class="s">Buyer problem → safe platform tools → proof-ready outputs → optional CHIMERIA bridge</text>
+
+  <rect x="70" y="190" width="290" height="150" rx="28" class="box"/><text x="100" y="238" class="h">Buyer Problem</text><text x="100" y="274" class="p">SOC onboarding</text><text x="100" y="302" class="p">IR tabletop</text><text x="100" y="330" class="p">GRC ownership</text>
+  <rect x="440" y="175" width="310" height="180" rx="28" class="green"/><text x="470" y="224" class="h">Policy Boundary</text><text x="470" y="262" class="p">defensive only</text><text x="470" y="290" class="p">no exploit workflows</text><text x="470" y="318" class="p">no private trunk leak</text>
+  <rect x="830" y="145" width="330" height="240" rx="28" class="box"/><text x="860" y="194" class="h">Platform Intelligence</text><text x="860" y="232" class="p">career profiles</text><text x="860" y="260" class="p">use-case catalog</text><text x="860" y="288" class="p">capability matrix</text><text x="860" y="316" class="p">demo packets</text><text x="860" y="344" class="p">MCP/CLI/HTTP routes</text>
+  <rect x="1240" y="190" width="290" height="150" rx="28" class="gold"/><text x="1270" y="238" class="h">CHIMERIA Bridge</text><text x="1270" y="274" class="p">approved manifest</text><text x="1270" y="302" class="p">safe fields only</text><text x="1270" y="330" class="p">trunk remains private</text>
+
+  <path d="M360 265 C390 265 410 265 440 265" class="line"/><path d="M750 265 C785 265 800 265 830 265" class="line"/><path d="M1160 265 C1190 265 1210 265 1240 265" class="line"/>
+
+  <rect x="110" y="530" width="310" height="170" rx="28" class="box"/><text x="140" y="578" class="h">MCP Output</text><text x="140" y="616" class="p">tools/list + tools/call</text><text x="140" y="644" class="p">career_invoke</text><text x="140" y="672" class="p">demo_packet</text>
+  <rect x="500" y="530" width="310" height="170" rx="28" class="box"/><text x="530" y="578" class="h">CLI Output</text><text x="530" y="616" class="p">cybersecurity-ai demo</text><text x="530" y="644" class="p">capabilities</text><text x="530" y="672" class="p">market packets</text>
+  <rect x="890" y="530" width="310" height="170" rx="28" class="box"/><text x="920" y="578" class="h">HTTP/Dashboard</text><text x="920" y="616" class="p">/platform</text><text x="920" y="644" class="p">/use-cases</text><text x="920" y="672" class="p">/demo</text>
+  <rect x="1280" y="530" width="230" height="170" rx="28" class="green"/><text x="1310" y="578" class="h">Proof Lane</text><text x="1310" y="616" class="p">pytest</text><text x="1310" y="644" class="p">CI</text><text x="1310" y="672" class="p">schemas</text>
+</svg>

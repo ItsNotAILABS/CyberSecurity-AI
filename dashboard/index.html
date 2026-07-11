@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CyberSecurity-AI Platform Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">MCP · CLI · HTTP · CHIMERIA Bridge</p>
+        <h1>CyberSecurity-AI</h1>
+        <p class="lede">Public-safe cybersecurity intelligence for career mapping, SOC readiness, GRC workflows, IAM maturity, cloud security, AI product enablement, and approved private CHIMERIA bridge packets.</p>
+        <div class="actions">
+          <a href="../docs/ARCHITECTURE.md">Architecture</a>
+          <a href="../docs/FLOWS.md">Flows</a>
+          <a href="../docs/API.md">API</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <span class="status">private_trunk_exposed=false</span>
+        <h2>Local demo command</h2>
+        <pre>cybersecurity-ai-http --host 127.0.0.1 --port 8767</pre>
+        <p>Open <code>/platform</code>, <code>/use-cases</code>, <code>/capabilities</code>, <code>/demo</code>, and <code>/bridge</code>.</p>
+      </div>
+    </section>
+
+    <section class="grid four">
+      <article><h3>MCP</h3><p>Tool surface for Claude Desktop, Cursor, Grok-compatible clients, and local agents.</p></article>
+      <article><h3>CLI</h3><p>Operator packets for platform demos, buyer workflows, market scripts, and bridge checks.</p></article>
+      <article><h3>HTTP</h3><p>Dependency-free local API for browser dashboards and integration pilots.</p></article>
+      <article><h3>CHIMERIA</h3><p>Approved-manifest bridge that protects the private trunk while enabling public-safe context.</p></article>
+    </section>
+
+    <section class="panel">
+      <div>
+        <p class="eyebrow">Real use cases</p>
+        <h2>Built for actual cyber program workflows</h2>
+      </div>
+      <div class="use-cases">
+        <article><h3>SOC Onboarding Copilot</h3><p>Role packets, first-week plan, escalation checklist, analyst skill map.</p></article>
+        <article><h3>Incident Tabletop Builder</h3><p>Tabletop agenda, RACI map, evidence checklist, executive update packet.</p></article>
+        <article><h3>GRC Control Owner Map</h3><p>Control-owner matrix, evidence plan, policy literacy brief, risk summary.</p></article>
+        <article><h3>IAM Maturity Planner</h3><p>SSO, MFA, RBAC, PAM, lifecycle automation, access review roadmap.</p></article>
+        <article><h3>AI Security Enablement</h3><p>Safe MCP security vocabulary and workflow layer for AI product teams.</p></article>
+        <article><h3>CHIMERIA Private Demo</h3><p>Approved manifest packet, release boundary proof, no private trunk disclosure.</p></article>
+      </div>
+    </section>
+
+    <section class="diagram">
+      <img src="../docs/assets/platform-architecture.svg" alt="CyberSecurity-AI platform architecture">
+    </section>
+
+    <section class="terminal">
+      <p class="eyebrow">Operator script</p>
+      <pre>python -m pip install -e . pytest
+python -m pytest -q
+cybersecurity-ai platform
+cybersecurity-ai use-cases
+cybersecurity-ai capabilities
+cybersecurity-ai demo --use-case soc-onboarding-copilot
+printf '{"jsonrpc":"2.0","id":1,"method":"tools/list","params":{}}\n' | python -m mcp_server.server</pre>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ItsNotAILABS/CyberSecurity-AI/schemas/use-case.schema.json",
+  "title": "CyberSecurity-AI Use Case",
+  "type": "object",
+  "required": ["id", "title", "buyer", "problem", "workflow", "outputs", "mcp_tools", "safety_boundary"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "title": {"type": "string"},
+    "buyer": {"type": "string"},
+    "problem": {"type": "string"},
+    "workflow": {"type": "array", "items": {"type": "string"}},
+    "outputs": {"type": "array", "items": {"type": "string"}},
+    "mcp_tools": {"type": "array", "items": {"type": "string"}},
+    "safety_boundary": {"type": "string"}
+  },
+  "additionalProperties": false
+}
