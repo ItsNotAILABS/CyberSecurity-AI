@@ -1,0 +1,13 @@
+{
+  "schema":"nexus.capability.v1",
+  "component":"cybersecurity-ai",
+  "repository":"ItsNotAILABS/CyberSecurity-AI",
+  "role":"public-safe-defensive-security-intelligence-plane",
+  "actions":["security.capability.map","security.tabletop.build","security.control.map","security.maturity.assess","security.policy.check","security.chimeria.route_safe","security.receipt"],
+  "risk_tiers":{"security.capability.map":"read","security.tabletop.build":"plan","security.control.map":"read","security.maturity.assess":"read","security.policy.check":"read","security.chimeria.route_safe":"governed","security.receipt":"read"},
+  "produces":["nexus.context-pack.v1","nexus.policy-decision.v1","nexus.execution-receipt.v1","nexus.handoff.v1"],
+  "consumes":["nexus.task.v1","nexus.policy-decision.v1","nexus.budget.v1","nexus.artifact.v1"],
+  "limits":{"defensive_only":true,"private_chimeria_trunk_exposed":false,"offensive_execution":false,"autonomous_neutralization":false,"private_reasoning_export":false},
+  "proof":{"state":"source","private_bridge_requires_approved_manifest":true},
+  "authority":"ItsNotAILABS/nexus"
+}
